@@ -10,6 +10,6 @@ public class GioskcafeApplication {
 		SpringApplication.run(GioskcafeApplication.class, args);
 	}
 
-
+ // 김진규 왔다감
 
 }
