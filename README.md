@@ -10,11 +10,16 @@
     <th>팀원</th>
     <th>팀원</th>
     <th>팀원</th>
+    <th>팀원</th>
   </tr>
   <tr>
     <td align="center">
       <img src="https://avatars.githubusercontent.com/u/49386594?v=4" width="100px" height="100px"><br>
       <a href="https://github.com/ebzm00"><b>함규상</b></a>
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/143667221?v=4" width="100px" height="100px"><br>
+      <a href="https://github.com/p-seonggeun"><b>박성근</b></a>
     </td>
   </tr>
 </table>
