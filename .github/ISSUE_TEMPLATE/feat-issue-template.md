@@ -1,6 +1,6 @@
 ---
 name: feat-issue-template
-about: 이슈 발행 시 사용하는 템플릿
+about: 기능 개발 이슈 발행 시 사용하는 템플릿
 title: ''
 labels: ''
 assignees: ''
