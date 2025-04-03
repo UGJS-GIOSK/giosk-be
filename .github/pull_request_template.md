@@ -1,12 +1,3 @@
----
-name: PR 템플릿
-about: 해당 PR 생성 템플릿을 사용하여 PR에 대한 내용을 작성해주세요.
-title: ''
-labels: ''
-assignees: ''
-
----
-
 ## 🚅 PR 한 줄 요약
 
 PR을 한줄로 요약해주세요.
