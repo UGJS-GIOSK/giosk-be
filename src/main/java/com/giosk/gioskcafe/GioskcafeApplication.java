@@ -9,10 +9,4 @@ public class GioskcafeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GioskcafeApplication.class, args);
 	}
-
-
-
-
-
-
 }
