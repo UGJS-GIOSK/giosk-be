@@ -21,5 +21,17 @@
       <img src="https://avatars.githubusercontent.com/u/143667221?v=4" width="100px" height="100px"><br>
       <a href="https://github.com/p-seonggeun"><b>박성근</b></a>
     </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/80741423?v=4" width="100px" height="100px"><br>
+      <a href="https://github.com/km1031kim"><b>김진규</b></a>
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/127205198?v=4" width="100px" height="100px"><br>
+      <a href="https://github.com/Mukjin"><b>임진묵</b></a>
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/187302608?v=4" width="100px" height="100px"><br>
+      <a href="https://github.com/hyori526"><b>장효리</b></a>
+    </td>
   </tr>
 </table>
