@@ -13,5 +13,5 @@ public class GioskcafeApplication {
 
 	// ㅌㅌㅌㅌ 테스트
 	//테스트
-	//ㄴ ㅓㄴㅁㅇ뤄만루
+	//ㄴ ㅓㄴㅁㅇ뤄만루ㄴㄹ
 }
