@@ -11,6 +11,10 @@ spring:
     password: ${DB_PASSWORD:}
     driver-class-name: org.h2.Driver
 
+  sql:
+    init:
+      mode: ${SQL_INIT_MODE:always}
+
   jpa:
     hibernate:
       ddl-auto: ${JPA_DDL_AUTO:create}
@@ -18,6 +22,7 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
+    defer-datasource-initialization: ${JPA_DDI:false}
 
 logging:
   level:
