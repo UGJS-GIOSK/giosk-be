@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GioskcafeApplication {
+public class GioskCafeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GioskcafeApplication.class, args);
+		SpringApplication.run(GioskCafeApplication.class, args);
 	}
 }
