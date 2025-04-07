@@ -22,7 +22,7 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
-    defer-datasource-initialization: ${JPA_DDI:false}
+    defer-datasource-initialization: ${JPA_DDI:true}
 
 logging:
   level:
