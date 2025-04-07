@@ -1,7 +1,9 @@
 package com.giosk.gioskcafe.common;
 
+import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
+@Getter
 public class ApiResponse<T> {
     private int statusCode;
     private String message;

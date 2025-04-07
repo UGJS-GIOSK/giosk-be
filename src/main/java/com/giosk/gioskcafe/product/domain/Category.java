@@ -1,5 +1,9 @@
 package com.giosk.gioskcafe.product.domain;
 
+
+import lombok.Getter;
+
+@Getter
 public enum Category {
     DECAF("디카페인"),
     SMOOTHIE_FRAPPE("스무디&프라페"),
