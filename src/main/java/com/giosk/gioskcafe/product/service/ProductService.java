@@ -22,7 +22,7 @@ import java.util.NoSuchElementException;
 public class ProductService {
 
     private final ProductRepository productRepository;
-    private final S3Uploader s3Uploader;
+//    private final S3Uploader s3Uploader;
 
     //카테고리 별 조회 기능
     public Page<CategoryProductResponse> getProductsByCategory(Category category, Pageable pageable) {
