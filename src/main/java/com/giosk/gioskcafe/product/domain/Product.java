@@ -4,13 +4,16 @@ package com.giosk.gioskcafe.product.domain;
 import com.giosk.gioskcafe.common.BaseEntity;
 import com.giosk.gioskcafe.option.domain.OptionGroup;
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class Product extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,6 +34,7 @@ public class Product extends BaseEntity {
     private ProductStatus status;
 
     @Column(nullable = false)
+    @Lob
     private String image;
 
     @Embedded

@@ -2,7 +2,6 @@ package com.giosk.gioskcafe.product.controller;
 
 import com.giosk.gioskcafe.common.ApiResponse;
 import com.giosk.gioskcafe.product.domain.Category;
-import com.giosk.gioskcafe.product.domain.Product;
 import com.giosk.gioskcafe.product.dto.CategoryProductResponse;
 import com.giosk.gioskcafe.product.dto.ProductResponse;
 import com.giosk.gioskcafe.product.dto.ProductStatusResponse;
@@ -13,10 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor

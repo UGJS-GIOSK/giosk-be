@@ -34,3 +34,16 @@ springdoc:
     path: /v3/api-docs
   swagger-ui:
     path: /swagger-ui.html
+
+# aws cloud
+cloud:
+  aws:
+    credentials:
+      accessKey: ${AWS_ACCESS_KEY} # IAM의 Access Key
+      secretKey: ${AWS_SECRET_KEY} # IAM의 Secret Key
+    region:
+      static: ${AWS_REGION:ap-northeast-2} # 환경변수 없으면 기본값 서울 리전
+    stack:
+      auto: false
+    s3:
+      bucket: ${AWS_S3_BUCKET} # S3 버킷 이름

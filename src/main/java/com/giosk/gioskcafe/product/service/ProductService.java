@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 
 @Service
@@ -23,6 +22,7 @@ import java.util.Optional;
 public class ProductService {
 
     private final ProductRepository productRepository;
+    private final S3Uploader s3Uploader;
 
     //카테고리 별 조회 기능
     public Page<CategoryProductResponse> getProductsByCategory(Category category, Pageable pageable) {
@@ -61,4 +61,5 @@ public class ProductService {
 
         return ProductResponse.from(findProduct);
     }
+
 }
