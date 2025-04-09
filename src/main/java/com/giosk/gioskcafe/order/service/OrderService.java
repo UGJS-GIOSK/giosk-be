@@ -6,21 +6,18 @@ import com.giosk.gioskcafe.option.repository.OptionRepository;
 import com.giosk.gioskcafe.order.domain.Order;
 import com.giosk.gioskcafe.order.domain.OrderProduct;
 import com.giosk.gioskcafe.order.domain.OrderProductOption;
-import com.giosk.gioskcafe.order.dto.OrderResponse;
 import com.giosk.gioskcafe.order.repository.OrderProductOptionRepository;
 import com.giosk.gioskcafe.order.repository.OrderProductRepository;
 import com.giosk.gioskcafe.order.repository.OrderRepository;
 import com.giosk.gioskcafe.product.domain.Product;
 import com.giosk.gioskcafe.product.dto.OrderProductRequest;
 import com.giosk.gioskcafe.product.repository.ProductRepository;
-import com.giosk.gioskcafe.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -44,8 +41,7 @@ public class OrderService {
                 .takeout(false)
                 .orderedAt(LocalDateTime.now())
                 .build();
-
-        log.info("{}", order.getOrderProducts());
+        Order savedOrder = orderRepository.save(order);
 
         orderProductRequests
                 .forEach(orderProductRequest -> {
@@ -58,8 +54,9 @@ public class OrderService {
                     OrderProduct orderProduct = OrderProduct.builder()
                             .quantity(quantity)
                             .product(product)
+                            .order(savedOrder)
                             .build();
-                    orderProduct.changeOrder(order);
+                    OrderProduct savedOrderProduct = orderProductRepository.save(orderProduct);
 
                     Map<Integer, OptionRequest> optionGroups = orderProductRequest.getOptionGroups();
                     optionGroups.keySet()
@@ -71,15 +68,12 @@ public class OrderService {
 
                                 OrderProductOption orderProductOption = OrderProductOption.builder()
                                         .option(option)
+                                        .orderProduct(savedOrderProduct)
                                         .build();
-                                orderProductOption.changeOrderProduct(orderProduct);
                                 orderProductOptionRepository.save(orderProductOption);
                             });
-
-                    orderProductRepository.save(orderProduct);
                 });
-        orderRepository.save(order);
 
-        return order;
+        return savedOrder;
     }
 }
