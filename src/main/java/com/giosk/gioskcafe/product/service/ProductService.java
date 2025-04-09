@@ -28,13 +28,13 @@ public class ProductService {
     public Page<CategoryProductResponse> getProductsByCategory(Category category, Pageable pageable) {
 
         // [1] Repository에서 카테고리 기준으로 상품 페이지 조회
-        Page<Product> productPage = productRepository.findByCategory(category,pageable);
+        Page<Product> productPage = productRepository.findByCategory(category, pageable);
         // [2] Product 엔티리를 DTO로 변환 후 반환
         return productPage.map(CategoryProductResponse::from);
 
     }
 
-    public Page<Category> getCategory (Pageable pageable) {
+    public Page<Category> getCategory(Pageable pageable) {
         // 여기가 리스트로 변환하는 부분
         List<Category> allCategories = Arrays.asList(Category.values());
 

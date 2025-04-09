@@ -14,7 +14,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class Payment extends BaseEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
@@ -36,4 +37,8 @@ public class Payment extends BaseEntity {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
     private Order order;
+
+    public void changeStatus(PaymentStatus status) {
+        this.status = status;
+    }
 }

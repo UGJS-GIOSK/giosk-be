@@ -29,6 +29,7 @@ public class ProductStatusResponse {
 
     /**
      * Product 엔티티 객체를 productStatusResponse로 변환하는 정적 메서드
+     *
      * @param product product 엔티티
      * @return productStatusResponse로 응답 객체
      */

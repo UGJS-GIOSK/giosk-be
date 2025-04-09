@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class GioskCafeApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(GioskCafeApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(GioskCafeApplication.class, args);
+    }
 }

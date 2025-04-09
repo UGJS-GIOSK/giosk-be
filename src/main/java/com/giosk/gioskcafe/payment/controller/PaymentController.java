@@ -8,7 +8,11 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestClientResponseException;
 
 @Slf4j
 @RestController
@@ -35,9 +39,17 @@ public class PaymentController {
         if (request.isNotSameAmount(getAmount(session, request))) {
             return ApiResponse.error(HttpStatus.BAD_REQUEST, "결제 정보가 유효하지 않습니다.");
         }
-
         session.removeAttribute(request.getOrderId());
-        paymentService.requestConfirm(request);
+
+        try {
+            paymentService.requestConfirm(request);
+        } catch (RestClientResponseException ex) {
+            paymentService.requestCancel(request);
+            return ApiResponse.error(HttpStatus.valueOf(ex.getStatusCode().value()), ex.getResponseBodyAsString());
+        } catch (RuntimeException e) {
+            paymentService.requestCancel(request);
+            return ApiResponse.error(HttpStatus.INTERNAL_SERVER_ERROR, "서버 내부에서 오류가 발생했습니다.");
+        }
         return ApiResponse.success(null);
     }
 

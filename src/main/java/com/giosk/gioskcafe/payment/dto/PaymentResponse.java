@@ -11,4 +11,5 @@ public class PaymentResponse {
     private String requestedAt;
     private String approvedAt;
     private int totalAmount;
+
 }
