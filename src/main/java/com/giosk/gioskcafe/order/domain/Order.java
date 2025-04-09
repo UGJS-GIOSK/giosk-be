@@ -2,7 +2,7 @@ package com.giosk.gioskcafe.order.domain;
 
 import com.giosk.gioskcafe.common.BaseEntity;
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -11,6 +11,9 @@ import java.util.List;
 @Entity
 @Getter
 @Table(name = "Orders")
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class Order extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,5 +28,7 @@ public class Order extends BaseEntity {
     private LocalDateTime orderedAt;
 
     @OneToMany(mappedBy = "order")
+    @Builder.Default
     private List<OrderProduct> orderProducts = new ArrayList<>();
+
 }

@@ -33,8 +33,7 @@ public class Product extends BaseEntity {
     @Enumerated(value = EnumType.STRING)
     private ProductStatus status;
 
-    @Column(nullable = false)
-    @Lob
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String image;
 
     @Embedded
