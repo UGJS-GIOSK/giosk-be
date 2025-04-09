@@ -18,9 +18,6 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("/api/v1")
 @Tag(name = "Product API", description = "Product API 입니다.")
-@CrossOrigin(origins = {
-        "http://localhost:5173"
-})
 public class ProductController {
 
     private final ProductService productService;

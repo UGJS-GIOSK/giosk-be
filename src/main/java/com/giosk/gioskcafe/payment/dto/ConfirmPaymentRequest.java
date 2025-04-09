@@ -14,4 +14,7 @@ public class ConfirmPaymentRequest {
     private int amount;
     private List<OrderProductRequest> cart;
 
+    public boolean isNotSameAmount(int amount) {
+        return this.amount != amount;
+    }
 }

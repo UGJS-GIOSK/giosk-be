@@ -46,11 +46,8 @@ public class PaymentService {
         HttpHeaders headers = createHttpHeader();
         HttpEntity<Map<String, Object>> httpEntity = new HttpEntity<>(requestBody, headers);
 
-        log.info("토스 호출 전");
         ResponseEntity<PaymentResponse> result = restTemplate.exchange(URL, HttpMethod.POST, httpEntity, PaymentResponse.class);
         PaymentResponse paymentResponse = result.getBody();
-        log.info("토스 호출 후");
-        log.info("결과: {}", paymentResponse);
 
         Order order = orderService.createOrder(request.getCart());
 
