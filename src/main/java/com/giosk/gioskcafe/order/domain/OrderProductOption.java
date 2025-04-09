@@ -3,10 +3,13 @@ package com.giosk.gioskcafe.order.domain;
 import com.giosk.gioskcafe.common.BaseEntity;
 import com.giosk.gioskcafe.option.domain.Option;
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
 @Entity
 @Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class OrderProductOption extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

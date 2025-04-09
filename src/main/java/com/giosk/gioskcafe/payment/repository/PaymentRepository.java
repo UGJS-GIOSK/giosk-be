@@ -1,4 +1,8 @@
 package com.giosk.gioskcafe.payment.repository;
 
-public class PaymentRepository {
+import com.giosk.gioskcafe.payment.domain.Payment;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PaymentRepository extends JpaRepository<Payment, Long> {
+
 }

@@ -3,13 +3,16 @@ package com.giosk.gioskcafe.order.domain;
 import com.giosk.gioskcafe.common.BaseEntity;
 import com.giosk.gioskcafe.product.domain.Product;
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class OrderProduct extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +27,7 @@ public class OrderProduct extends BaseEntity {
     private Product product;
 
     @OneToMany(mappedBy = "orderProduct")
+    @Builder.Default
     private List<OrderProductOption> orderProductOptions = new ArrayList<>();
 
     private int quantity;

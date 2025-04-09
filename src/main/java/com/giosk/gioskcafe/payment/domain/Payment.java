@@ -3,12 +3,15 @@ package com.giosk.gioskcafe.payment.domain;
 import com.giosk.gioskcafe.common.BaseEntity;
 import com.giosk.gioskcafe.order.domain.Order;
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class Payment extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +31,7 @@ public class Payment extends BaseEntity {
     private LocalDateTime requestedAt;
 
     @Column(nullable = false)
-    private LocalDateTime modifiedAt;
+    private LocalDateTime approvedAt;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
