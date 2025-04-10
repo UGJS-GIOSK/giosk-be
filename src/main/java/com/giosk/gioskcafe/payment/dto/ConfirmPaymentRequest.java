@@ -23,4 +23,5 @@ public class ConfirmPaymentRequest {
     public boolean isNotSameAmount(int amount) {
         return this.amount != amount;
     }
+
 }

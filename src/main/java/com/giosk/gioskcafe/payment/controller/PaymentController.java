@@ -53,6 +53,7 @@ public class PaymentController {
         } catch (RuntimeException e) {
             paymentService.requestCancel(request);
             memberService.revoke(request);
+            log.error(e.getMessage());
             return ApiResponse.error(HttpStatus.INTERNAL_SERVER_ERROR, "서버 내부에서 오류가 발생했습니다.");
         }
         return ApiResponse.success(null);

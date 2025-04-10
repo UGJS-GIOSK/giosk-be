@@ -50,7 +50,7 @@ public class PaymentService {
 
         PaymentResponse paymentResponse = result.getBody();
 
-        Order order = orderService.createOrder(request.getCart());
+        Order order = orderService.createOrder(request);
 
         Payment payment = Payment.builder()
                 .paymentKey(paymentResponse.getPaymentKey())

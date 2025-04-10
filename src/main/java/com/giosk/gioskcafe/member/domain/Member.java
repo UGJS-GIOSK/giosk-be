@@ -24,5 +24,30 @@ public class Member extends BaseEntity {
     @Column(nullable = false)
     private int coupon;
 
+    public void useCoupon() {
+        this.coupon -= 1;
+    }
 
+    public void accumulateStamp(int stamp) {
+        this.stamp += stamp;
+        alterCoupon(stamp);
+    }
+
+    public void revokeStampAndCoupon(int stamp) {
+        alterStamp();
+        this.stamp -= stamp;
+        alterCoupon(stamp);
+    }
+
+    private void alterCoupon(int stamp) {
+        if (stamp >= 10) {
+            this.coupon += stamp / 10;
+            this.stamp %= 10;
+        }
+    }
+
+    private void alterStamp() {
+        this.stamp += this.coupon * 10;
+        this.coupon = 0;
+    }
 }

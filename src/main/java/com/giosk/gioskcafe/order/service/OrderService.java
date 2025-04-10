@@ -9,6 +9,7 @@ import com.giosk.gioskcafe.order.domain.OrderProductOption;
 import com.giosk.gioskcafe.order.repository.OrderProductOptionRepository;
 import com.giosk.gioskcafe.order.repository.OrderProductRepository;
 import com.giosk.gioskcafe.order.repository.OrderRepository;
+import com.giosk.gioskcafe.payment.dto.ConfirmPaymentRequest;
 import com.giosk.gioskcafe.product.domain.Product;
 import com.giosk.gioskcafe.product.dto.OrderProductRequest;
 import com.giosk.gioskcafe.product.repository.ProductRepository;
@@ -34,11 +35,13 @@ public class OrderService {
     private final OrderProductRepository orderProductRepository;
     private final OrderProductOptionRepository orderProductOptionRepository;
 
-    public Order createOrder(List<OrderProductRequest> orderProductRequests) {
+    public Order createOrder(ConfirmPaymentRequest request) {
+        List<OrderProductRequest> orderProductRequests = request.getCart();
+
         Order order = Order.builder()
-                .stamp(false)
-                .coupon(false)
-                .takeout(false)
+                .stamp(request.isStamp())
+                .coupon(request.isCoupon())
+                .takeout(request.isTakeout())
                 .orderedAt(LocalDateTime.now())
                 .build();
         Order savedOrder = orderRepository.save(order);

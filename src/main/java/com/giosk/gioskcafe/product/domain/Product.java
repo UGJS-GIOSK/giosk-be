@@ -42,4 +42,8 @@ public class Product extends BaseEntity {
 
     @OneToMany(mappedBy = "product")
     private List<OptionGroup> optionGroups = new ArrayList<>();
+
+    public boolean isDrink() {
+        return this.category != Category.DESSERT;
+    }
 }
