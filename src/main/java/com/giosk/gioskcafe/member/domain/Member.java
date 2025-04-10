@@ -2,10 +2,13 @@ package com.giosk.gioskcafe.member.domain;
 
 import com.giosk.gioskcafe.common.BaseEntity;
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
 @Entity
 @Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class Member extends BaseEntity {
 
     @Id
@@ -20,5 +23,6 @@ public class Member extends BaseEntity {
 
     @Column(nullable = false)
     private int coupon;
+
 
 }

@@ -1,6 +1,7 @@
 package com.giosk.gioskcafe.payment.controller;
 
 import com.giosk.gioskcafe.common.ApiResponse;
+import com.giosk.gioskcafe.member.service.MemberService;
 import com.giosk.gioskcafe.payment.dto.ConfirmPaymentRequest;
 import com.giosk.gioskcafe.payment.dto.SaveAmountRequest;
 import com.giosk.gioskcafe.payment.service.PaymentService;
@@ -21,6 +22,7 @@ import org.springframework.web.client.RestClientResponseException;
 public class PaymentController {
 
     private final PaymentService paymentService;
+    private final MemberService memberService;
 
     @PostMapping("/temp")
     public ApiResponse<String> temporalSavePaymentInfo(HttpSession session, @RequestBody SaveAmountRequest request) {
@@ -43,11 +45,14 @@ public class PaymentController {
 
         try {
             paymentService.requestConfirm(request);
+            memberService.applyStampWithCouponRule(request);
         } catch (RestClientResponseException ex) {
             paymentService.requestCancel(request);
+            memberService.revoke(request);
             return ApiResponse.error(HttpStatus.valueOf(ex.getStatusCode().value()), ex.getResponseBodyAsString());
         } catch (RuntimeException e) {
             paymentService.requestCancel(request);
+            memberService.revoke(request);
             return ApiResponse.error(HttpStatus.INTERNAL_SERVER_ERROR, "서버 내부에서 오류가 발생했습니다.");
         }
         return ApiResponse.success(null);
