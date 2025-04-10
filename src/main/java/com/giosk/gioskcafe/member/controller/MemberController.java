@@ -14,7 +14,7 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    @GetMapping
+    @PostMapping
     public ApiResponse<?> getUser(@RequestBody MemberRequest request) {
         MemberResponse response = memberService.getUser(request.getPhoneNumber());
 
