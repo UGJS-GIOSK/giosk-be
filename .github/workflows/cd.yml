@@ -42,12 +42,16 @@ jobs:
         run: |
           COMMIT_SHA=$(git rev-parse HEAD)
           SHORT_SHA=$(echo ${COMMIT_SHA} | cut -c1-7)
+          echo 'COMMIT_SHA' ${COMMIT_SHA}
+          echo 'SHORT_SHA' ${SHORT_SHA}
           docker build -t ${{secrets.DOCKER_REPO}}:$SHORT_SHA .
 
       - name: Push Docker Image
         run: |
           COMMIT_SHA=$(git rev-parse HEAD)
           SHORT_SHA=$(echo ${COMMIT_SHA} | cut -c1-7)
+          echo ${COMMIT_SHA}
+          echo ${SHORT_SHA}
           docker push ${{secrets.DOCKER_REPO}}:$SHORT_SHA
           docker tag ${{secrets.DOCKER_REPO}}:$SHORT_SHA ${{secrets.DOCKER_REPO}}:latest
           docker push ${{secrets.DOCKER_REPO}}:latest
