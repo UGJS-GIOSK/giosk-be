@@ -74,6 +74,6 @@ public class OrderService {
                             });
                 });
 
-        return savedOrder;
+        return order;
     }
 }

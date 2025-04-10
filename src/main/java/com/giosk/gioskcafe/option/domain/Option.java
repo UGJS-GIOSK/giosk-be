@@ -8,7 +8,8 @@ import lombok.Getter;
 @Getter
 public class Option extends BaseEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private int price;

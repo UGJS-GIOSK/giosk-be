@@ -12,7 +12,8 @@ import lombok.*;
 @AllArgsConstructor
 public class OrderProductOption extends BaseEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     // 하나의 주문상품에 대한 옵션 확인 필요

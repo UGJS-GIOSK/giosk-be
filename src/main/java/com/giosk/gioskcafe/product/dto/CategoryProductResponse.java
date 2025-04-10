@@ -1,6 +1,5 @@
 package com.giosk.gioskcafe.product.dto;
 
-
 import com.giosk.gioskcafe.product.domain.Product;
 import com.giosk.gioskcafe.product.domain.ProductStatus;
 import lombok.AllArgsConstructor;
@@ -33,6 +32,7 @@ public class CategoryProductResponse {
 
     /**
      * Product 엔티티 객체를 CategoryProductResponse 변환하는 정적 메서드
+     *
      * @param product product 엔티티
      * @return CategoryProductResponse 응답 객체
      */
