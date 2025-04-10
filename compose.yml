@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: giosk
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: rootpassword
+    volumes:
+      - giosk:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d giosk" ]
+      interval: 10s
+      retries: 5
+
+  backend:
+    image: ghcr.io/p-seonggeun/giosk:latest
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
+
+volumes:
+  giosk:
