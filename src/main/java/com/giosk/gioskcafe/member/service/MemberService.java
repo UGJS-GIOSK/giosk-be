@@ -11,9 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -67,15 +65,21 @@ public class MemberService {
     }
 
     public int countDrinkOrderProduct(List<OrderProductRequest> orderProductRequests) {
+        Map<Long, Integer> count = new HashMap<>();
+
+        orderProductRequests
+                .forEach(orderProductRequest -> count.put(orderProductRequest.getProductId(), orderProductRequest.getQuantity()));
+
         List<Long> productIds = orderProductRequests.stream()
                 .map(OrderProductRequest::getProductId)
                 .collect(Collectors.toList());
 
         List<Product> products = productRepository.findAllById(productIds);
 
-        return (int) products.stream()
+        return products.stream()
                 .filter(Product::isDrink)
-                .count();
+                .mapToInt(product -> count.get(product.getId()))
+                .sum();
     }
 
 }
