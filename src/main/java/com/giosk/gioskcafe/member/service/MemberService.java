@@ -38,16 +38,16 @@ public class MemberService {
     }
 
     public void applyStampWithCouponRule(ConfirmPaymentRequest request) {
+        Long memberId = request.getMemberId();
+        Member member = memberRepository.findByMemberId(memberId)
+                .orElseThrow(() -> new NoSuchElementException("존재하지 않는 회원 정보입니다."));
+
+        if (request.isCoupon()) {
+            member.useCoupon();
+            return;
+        }
+
         if (request.isStamp()) {
-            Long memberId = request.getMemberId();
-            Member member = memberRepository.findByMemberId(memberId)
-                    .orElseThrow(() -> new NoSuchElementException("존재하지 않는 회원 정보입니다."));
-
-            if (request.isCoupon()) {
-                member.useCoupon();
-                return;
-            }
-
             int stampCount = countDrinkOrderProduct(request.getCart());
             member.accumulateStamp(stampCount);
         }

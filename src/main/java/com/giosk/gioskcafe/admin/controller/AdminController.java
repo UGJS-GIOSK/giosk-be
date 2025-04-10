@@ -1,4 +1,57 @@
 package com.giosk.gioskcafe.admin.controller;
 
+import com.giosk.gioskcafe.admin.dto.LoginRequest;
+import com.giosk.gioskcafe.common.ApiResponse;
+import com.giosk.gioskcafe.payment.dto.AdminPaymentResponse;
+import com.giosk.gioskcafe.payment.service.PaymentService;
+import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/v1/admin")
+@RequiredArgsConstructor
 public class AdminController {
+
+    private static final String ADMIN_PASSWORD = "ADMIN";
+
+    private final PaymentService paymentService;
+
+    @PostMapping("/login")
+    public ApiResponse<String> login(@RequestBody LoginRequest request, HttpSession session) {
+        if (ADMIN_PASSWORD.equals(request.getPassword())) {
+            session.setAttribute("admin", true);
+            return ApiResponse.success("로그인 성공");
+        }
+        return ApiResponse.error(HttpStatus.BAD_REQUEST, "비밀번호가 일치하지 않습니다.");
+    }
+
+    @PostMapping("/logout")
+    public ApiResponse<String> logout(HttpSession session) {
+        if (isAdmin(session)) {
+            session.removeAttribute("admin");
+            return ApiResponse.success("로그아웃 성공");
+        }
+        return ApiResponse.error(HttpStatus.FORBIDDEN, "권한이 없습니다.");
+    }
+
+    @GetMapping("/payments")
+    public ApiResponse<List<AdminPaymentResponse>> getAdminPaymentResponses(HttpSession session) {
+        if (isAdmin(session)) {
+            List<AdminPaymentResponse> response = paymentService.getAdminPaymentResponses();
+            return ApiResponse.success(response);
+        }
+
+        return ApiResponse.error(HttpStatus.FORBIDDEN, "권한이 없습니다.");
+    }
+
+    private boolean isAdmin(HttpSession session) {
+        if (session.getAttribute("admin") == null) {
+            return false;
+        }
+        return (boolean) session.getAttribute("admin");
+    }
 }

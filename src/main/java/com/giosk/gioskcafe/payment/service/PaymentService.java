@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.giosk.gioskcafe.order.domain.Order;
 import com.giosk.gioskcafe.order.service.OrderService;
 import com.giosk.gioskcafe.payment.domain.Payment;
+import com.giosk.gioskcafe.payment.dto.AdminPaymentResponse;
 import com.giosk.gioskcafe.payment.dto.ConfirmPaymentRequest;
 import com.giosk.gioskcafe.payment.dto.PaymentResponse;
 import com.giosk.gioskcafe.payment.repository.PaymentRepository;
@@ -19,6 +20,7 @@ import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.util.Base64;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Slf4j
@@ -73,6 +75,15 @@ public class PaymentService {
         HttpEntity<Map<String, Object>> httpEntity = new HttpEntity<>(requestBody, headers);
 
         restTemplate.exchange(cancelUrl, HttpMethod.POST, httpEntity, PaymentResponse.class);
+    }
+
+    public List<AdminPaymentResponse> getAdminPaymentResponses() {
+        List<Payment> payments = paymentRepository.findAll();
+
+        return payments.stream()
+                .map(payment -> AdminPaymentResponse.from(payment))
+                .toList();
+
     }
 
     private HashMap<String, Object> createRequestBody(String paymentKey, String orderId, int amount) {
