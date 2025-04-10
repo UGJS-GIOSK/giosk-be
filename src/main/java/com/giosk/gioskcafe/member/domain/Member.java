@@ -30,18 +30,18 @@ public class Member extends BaseEntity {
 
     public void accumulateStamp(int stamp) {
         this.stamp += stamp;
-        alterCoupon(stamp);
+        alterCoupon();
     }
 
     public void revokeStampAndCoupon(int stamp) {
         alterStamp();
         this.stamp -= stamp;
-        alterCoupon(stamp);
+        alterCoupon();
     }
 
-    private void alterCoupon(int stamp) {
-        if (stamp >= 10) {
-            this.coupon += stamp / 10;
+    private void alterCoupon() {
+        if (this.stamp >= 10) {
+            this.coupon += this.stamp / 10;
             this.stamp %= 10;
         }
     }

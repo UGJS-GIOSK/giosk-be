@@ -66,7 +66,6 @@ public class MemberService {
 
     public int countDrinkOrderProduct(List<OrderProductRequest> orderProductRequests) {
         Map<Long, Integer> count = new HashMap<>();
-
         orderProductRequests
                 .forEach(orderProductRequest -> count.put(orderProductRequest.getProductId(), orderProductRequest.getQuantity()));
 
