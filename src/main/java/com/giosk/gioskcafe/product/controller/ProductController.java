@@ -64,4 +64,13 @@ public class ProductController {
         Page<ProductStatusResponse> response = productService.getProducts(pageable);
         return ResponseEntity.ok(ApiResponse.success(response));
     }
+
+    @PatchMapping("/products/{productId}/status")
+    @Tag(name = "Product API")
+    @Operation(summary = "개별 상품 상태 변경", description = "개별 상품의 상태를 변경합니다.")
+    public ResponseEntity<?> toggleProductStatus(@PathVariable Long productId) {
+        productService.toggleProductStatus(productId);
+
+        return ResponseEntity.ok(ApiResponse.success(null));
+    }
 }

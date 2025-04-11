@@ -62,4 +62,10 @@ public class ProductService {
         return ProductResponse.from(findProduct);
     }
 
+    public void toggleProductStatus(Long productId) {
+        Product findProduct = productRepository.findProductById(productId)
+                .orElseThrow(() -> new NoSuchElementException("상품이 존재하지 않습니다."));
+
+        findProduct.changeStatus();
+    }
 }

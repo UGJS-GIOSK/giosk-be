@@ -46,4 +46,12 @@ public class Product extends BaseEntity {
     public boolean isDrink() {
         return this.category != Category.DESSERT;
     }
+
+    public void changeStatus() {
+        if (status == ProductStatus.SELLING) {
+            status = ProductStatus.OUT_OF_STOCK;
+        } else {
+            status = ProductStatus.SELLING;
+        }
+    }
 }
