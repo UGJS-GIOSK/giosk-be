@@ -1,4 +1,3 @@
-
 --- PRODUCT ---
 INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
                      calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
