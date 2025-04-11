@@ -1,6 +1,7 @@
 package com.giosk.gioskcafe.order.domain;
 
 import com.giosk.gioskcafe.common.BaseEntity;
+import com.giosk.gioskcafe.member.domain.Member;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,6 +21,11 @@ public class Order extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Setter
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
+
     private boolean stamp;
 
     private boolean takeout;
@@ -32,4 +38,10 @@ public class Order extends BaseEntity {
     @Builder.Default
     private List<OrderProduct> orderProducts = new ArrayList<>();
 
+    public int countStamp() {
+        return orderProducts.stream()
+                .filter(orderProduct -> orderProduct.getProduct().isDrink())
+                .mapToInt(orderproduct -> orderproduct.getQuantity())
+                .sum();
+    }
 }

@@ -1,5 +1,7 @@
 package com.giosk.gioskcafe.order.service;
 
+import com.giosk.gioskcafe.member.domain.Member;
+import com.giosk.gioskcafe.member.repository.MemberRepository;
 import com.giosk.gioskcafe.option.domain.Option;
 import com.giosk.gioskcafe.option.dto.OptionRequest;
 import com.giosk.gioskcafe.option.repository.OptionRepository;
@@ -34,6 +36,7 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final OrderProductRepository orderProductRepository;
     private final OrderProductOptionRepository orderProductOptionRepository;
+    private final MemberRepository memberRepository;
 
     public Order createOrder(ConfirmPaymentRequest request) {
         List<OrderProductRequest> orderProductRequests = request.getCart();
@@ -44,6 +47,14 @@ public class OrderService {
                 .takeout(request.isTakeout())
                 .orderedAt(LocalDateTime.now())
                 .build();
+
+        if (request.isStamp()) {
+            Long memberId = request.getMemberId();
+            Member member = memberRepository.findByMemberId(memberId)
+                    .orElseThrow(() -> new NoSuchElementException("존재하지 않는 회원 정보입니다."));
+            order.setMember(member);
+        }
+
         Order savedOrder = orderRepository.save(order);
 
         orderProductRequests
@@ -77,6 +88,6 @@ public class OrderService {
                             });
                 });
 
-        return order;
+        return savedOrder;
     }
 }

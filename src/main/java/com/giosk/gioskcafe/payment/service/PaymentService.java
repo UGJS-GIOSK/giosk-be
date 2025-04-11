@@ -1,9 +1,11 @@
 package com.giosk.gioskcafe.payment.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.giosk.gioskcafe.admin.dto.CancelPaymentRequest;
+import com.giosk.gioskcafe.member.domain.Member;
 import com.giosk.gioskcafe.order.domain.Order;
 import com.giosk.gioskcafe.order.service.OrderService;
 import com.giosk.gioskcafe.payment.domain.Payment;
+import com.giosk.gioskcafe.payment.domain.PaymentStatus;
 import com.giosk.gioskcafe.payment.dto.AdminPaymentResponse;
 import com.giosk.gioskcafe.payment.dto.ConfirmPaymentRequest;
 import com.giosk.gioskcafe.payment.dto.PaymentResponse;
@@ -18,10 +20,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
-import java.util.Base64;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Slf4j
 @Service
@@ -74,7 +73,40 @@ public class PaymentService {
         HttpHeaders headers = createHttpHeader();
         HttpEntity<Map<String, Object>> httpEntity = new HttpEntity<>(requestBody, headers);
 
+        ResponseEntity<PaymentResponse> result = restTemplate.exchange(cancelUrl, HttpMethod.POST, httpEntity, PaymentResponse.class);
+        if (result.getStatusCode().value() != HttpStatus.OK.value()) {
+            throw new HttpClientErrorException(result.getStatusCode());
+        }
+    }
+
+    public boolean requestCancel(CancelPaymentRequest request) {
+        String paymentKey = request.getPaymentKey();
+        String cancelUrl = String.format(CANCEL_URL, paymentKey);
+        String cancelReason = "결제 취소";
+
+        HashMap<String, Object> requestBody = createRequestBody(cancelReason);
+        HttpHeaders headers = createHttpHeader();
+        HttpEntity<Map<String, Object>> httpEntity = new HttpEntity<>(requestBody, headers);
+
         restTemplate.exchange(cancelUrl, HttpMethod.POST, httpEntity, PaymentResponse.class);
+        ResponseEntity<PaymentResponse> result = restTemplate.exchange(cancelUrl, HttpMethod.POST, httpEntity, PaymentResponse.class);
+        if (result.getStatusCode().value() != HttpStatus.OK.value()) {
+            throw new HttpClientErrorException(result.getStatusCode());
+        }
+
+        PaymentResponse paymentResponse = result.getBody();
+        Payment payment = paymentRepository.findByPaymentKey(paymentResponse.getPaymentKey())
+                .orElseThrow(() -> new NoSuchElementException("존재하지 않는 결제 정보입니다."));
+        payment.changeStatus(PaymentStatus.CANCELED);
+
+        Order order = payment.getOrder();
+        if (order.isStamp()) {
+            Member member = order.getMember();
+            int cancelStamp = order.countStamp();
+            member.revokeStampAndCoupon(cancelStamp);
+        }
+
+        return true;
     }
 
     public List<AdminPaymentResponse> getAdminPaymentResponses() {
@@ -83,7 +115,6 @@ public class PaymentService {
         return payments.stream()
                 .map(payment -> AdminPaymentResponse.from(payment))
                 .toList();
-
     }
 
     private HashMap<String, Object> createRequestBody(String paymentKey, String orderId, int amount) {
@@ -111,5 +142,12 @@ public class PaymentService {
         String secretKey = "test_gsk_docs_OaPz8L5KdmQXkzRz3y47BMw6";
         String encodedKey = Base64.getEncoder().encodeToString((secretKey + ":").getBytes(StandardCharsets.UTF_8));
         return "Basic " + encodedKey;
+    }
+
+    public AdminPaymentResponse getAdminPaymentResponse(String paymentKey) {
+        Payment payment = paymentRepository.findByPaymentKey(paymentKey)
+                .orElseThrow(() -> new NoSuchElementException("존재하지 않는 결제 정보입니다."));
+
+        return AdminPaymentResponse.from(payment);
     }
 }

@@ -1,5 +1,6 @@
 package com.giosk.gioskcafe.order.dto;
 
+import com.giosk.gioskcafe.member.dto.MemberResponse;
 import com.giosk.gioskcafe.order.domain.Order;
 import lombok.Builder;
 import lombok.Data;
@@ -12,6 +13,7 @@ import java.util.List;
 public class OrderResponse {
 
     private Long id;
+    private MemberResponse memberResponse;
     private boolean stamp;
     private boolean takeout;
     private boolean coupon;
@@ -22,6 +24,7 @@ public class OrderResponse {
     public static OrderResponse from(Order order) {
         return OrderResponse.builder()
                 .id(order.getId())
+                .memberResponse(MemberResponse.from(order.getMember()))
                 .stamp(order.isStamp())
                 .takeout(order.isTakeout())
                 .coupon(order.isCoupon())

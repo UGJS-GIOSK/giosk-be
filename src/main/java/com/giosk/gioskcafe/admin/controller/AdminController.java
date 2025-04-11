@@ -1,5 +1,6 @@
 package com.giosk.gioskcafe.admin.controller;
 
+import com.giosk.gioskcafe.admin.dto.CancelPaymentRequest;
 import com.giosk.gioskcafe.admin.dto.LoginRequest;
 import com.giosk.gioskcafe.common.ApiResponse;
 import com.giosk.gioskcafe.payment.dto.AdminPaymentResponse;
@@ -8,6 +9,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.List;
 
@@ -45,6 +47,21 @@ public class AdminController {
             return ApiResponse.success(response);
         }
 
+        return ApiResponse.error(HttpStatus.FORBIDDEN, "권한이 없습니다.");
+    }
+
+    @PostMapping("/payments")
+    public ApiResponse<?> cancelPayment(CancelPaymentRequest request, HttpSession session) {
+        if (isAdmin(session)) {
+            try {
+                if (paymentService.requestCancel(request)) {
+                    AdminPaymentResponse adminPaymentResponse = paymentService.getAdminPaymentResponse(request.getPaymentKey());
+                    return ApiResponse.success(adminPaymentResponse);
+                }
+            } catch (HttpClientErrorException ex) {
+                return ApiResponse.error(HttpStatus.valueOf(ex.getStatusCode().value()), ex.getResponseBodyAsString());
+            }
+        }
         return ApiResponse.error(HttpStatus.FORBIDDEN, "권한이 없습니다.");
     }
 
