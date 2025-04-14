@@ -62,7 +62,7 @@ public class AdminController {
     }
 
     @PostMapping("/payments")
-    public ApiResponse<?> cancelPayment(CancelPaymentRequest request, HttpSession session) {
+    public ApiResponse<?> cancelPayment(@RequestBody CancelPaymentRequest request, HttpSession session) {
         if (isAdmin(session)) {
             try {
                 if (paymentService.requestCancel(request)) {

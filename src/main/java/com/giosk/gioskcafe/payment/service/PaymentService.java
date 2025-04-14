@@ -6,8 +6,8 @@ import com.giosk.gioskcafe.order.domain.Order;
 import com.giosk.gioskcafe.order.service.OrderService;
 import com.giosk.gioskcafe.payment.domain.Payment;
 import com.giosk.gioskcafe.payment.domain.PaymentStatus;
-import com.giosk.gioskcafe.payment.dto.MemberPaymentResponse;
 import com.giosk.gioskcafe.payment.dto.ConfirmPaymentRequest;
+import com.giosk.gioskcafe.payment.dto.MemberPaymentResponse;
 import com.giosk.gioskcafe.payment.dto.NonMemberPaymentResponse;
 import com.giosk.gioskcafe.payment.dto.PaymentResponse;
 import com.giosk.gioskcafe.payment.repository.PaymentRepository;
@@ -91,7 +91,7 @@ public class PaymentService {
 
         restTemplate.exchange(cancelUrl, HttpMethod.POST, httpEntity, PaymentResponse.class);
         ResponseEntity<PaymentResponse> result = restTemplate.exchange(cancelUrl, HttpMethod.POST, httpEntity, PaymentResponse.class);
-        if (result.getStatusCode().value() != HttpStatus.OK.value()) {
+        if (result.getStatusCode().value() != HttpStatus.BAD_REQUEST.value()) {
             throw new HttpClientErrorException(result.getStatusCode());
         }
 
