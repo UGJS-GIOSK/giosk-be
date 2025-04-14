@@ -89,7 +89,6 @@ public class PaymentService {
         HttpHeaders headers = createHttpHeader();
         HttpEntity<Map<String, Object>> httpEntity = new HttpEntity<>(requestBody, headers);
 
-        restTemplate.exchange(cancelUrl, HttpMethod.POST, httpEntity, PaymentResponse.class);
         ResponseEntity<PaymentResponse> result = restTemplate.exchange(cancelUrl, HttpMethod.POST, httpEntity, PaymentResponse.class);
         if (result.getStatusCode().value() != HttpStatus.BAD_REQUEST.value()) {
             throw new HttpClientErrorException(result.getStatusCode());
