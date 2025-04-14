@@ -1,559 +1,1791 @@
---- PRODUCT ---
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (1, '아메리카노', 2000, 'COFFEE_HOT', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/75a746ad-5365-4f5e-bc04-aec653fde916_%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg',
-        '[기본2샷]메가MGC커피 블렌드 원두로 추출한 에스프레소에 물을 더해, 풍부한 바디감을 느낄 수 있는 스탠다드 커피.',
-        '고카페인 함유', '710ml', 12.2, 199.7, 1.5, 0.0, 1.0, 0.0, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (2, '카페라떼', 3000, 'COFFEE_HOT', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/7cd83227-1255-42e4-9698-161d9e23f3d5_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%85%E1%85%A1%E1%84%90%E1%85%A6.jpg',
-        '진한 에스프레소와 부드러운 우유가 어우러져 고소한 풍미를 완성한 라떼.', '우유, 고카페인 함유', '591ml', 175.4, 189.9,
-        101.5, 10.8, 10.0, 5.2, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (3, '카라멜마끼아또', 3500, 'COFFEE_HOT', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/45cf8b5f-805c-4703-bf43-d2c1e92f6275_%E1%84%8F%E1%85%A1%E1%84%85%E1%85%A1%E1%84%86%E1%85%A6%E1%86%AF%E1%84%86%E1%85%A1%E1%84%81%E1%85%B5%E1%84%8B%E1%85%A1%E1%84%84%E1%85%A9.jpg',
-        '폼 밀크 속에 진한 에스프레소와 달콤한 카라멜을 가미해 부드럽게 즐기는 커피.', '우유, 고카페인 함유', '591ml', 244.9, 206.7,
-        76.1, 20.9, 8.9, 5.0, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (4, '카페모카', 3800, 'COFFEE_HOT', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/7b26996d-0ad5-4a17-9a86-0194e5313bfa_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%86%E1%85%A9%E1%84%8F%E1%85%A1.jpg',
-        '초콜릿을 만나 풍부해진 에스프레소와 고소한 우유, 부드러운 휘핑크림까지 더해 달콤하게 즐기는 커피.', '우유, 대두, 고카페인 함유', '591ml', 359.6, 233.2,
-        159.8, 40.8, 11.2, 10.6, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (5, '카푸치노', 3200, 'COFFEE_HOT', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/5576dd2a-f35a-4aa5-a8b6-32bcb64bd131_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%AE%E1%84%8E%E1%85%B5%E1%84%82%E1%85%A9.jpg',
-        '에스프레소 위에 올려진 우유 거품, 그리고 시나몬 파우더로 완성한 조화로운 맛의 커피.', '우유, 고카페인 함유', '591ml', 145.5, 201.4,
-        60.7, 3.4, 8.2, 4.1, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (6, '바닐라라떼', 3600, 'COFFEE_ICE', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/e7258388-1485-4e68-a589-86bb9a4daf5c_%E1%84%87%E1%85%A1%E1%84%82%E1%85%B5%E1%86%AF%E1%84%85%E1%85%A1%E1%84%85%E1%85%A1%E1%84%90%E1%85%A6.jpg',
-        '바닐라의 진한 향과 풍부한 폼 밀크의 조화가 인상적인 달콤한 라떼.', '우유, 고카페인 함유', '591ml', 239.2, 195.1,
-        74.1, 23.7, 7.1, 3.9, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (7, '카라멜마끼아또', 3500, 'COFFEE_ICE', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/e5758267-5b4a-4ffe-9789-2b7b9bb7e8fa_%E1%84%8F%E1%85%A1%E1%84%85%E1%85%A1%E1%84%86%E1%85%A6%E1%86%AF%E1%84%86%E1%85%A1%E1%84%81%E1%85%B5%E1%84%8B%E1%85%A1%E1%84%84%E1%85%A9_ICE.jpg',
-        '폼 밀크 속에 진한 에스프레소와 달콤한 카라멜을 가미해 부드럽게 즐기는 커피.', '우유, 고카페인 함유', '591ml', 243.9, 208.0,
-        61.1, 18.5, 7.1, 3.9, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (8, '사과유자차', 3300, 'TEA', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/a6a76be2-8c4e-4bd3-95b6-372967b67bd8_%E1%84%89%E1%85%A1%E1%84%80%E1%85%AA%E1%84%8B%E1%85%B2%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A1.jpg',
-        '애플티의 향긋함과 유자청의 상큼달콤함을 한컵에 담아낸 과일티.', '', '591ml', 227.1, 0.0,
-        89.3, 47.0, 0.3, 0.0, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (9, '왕메가사과유자', 3800, 'TEA', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/7f5b1637-05a6-4c91-84af-496a099c0744_%E1%84%8B%E1%85%AA%E1%86%BC%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%89%E1%85%A1%E1%84%80%E1%85%AA%E1%84%8B%E1%85%B2%E1%84%8C%E1%85%A1.jpg',
-        '애플티의 향긋함과 유자청의 상큼달콤함을 느낄 수 있는 메가MGC커피만의 왕메가사이즈 과일티', '', '946ml', 313.3, 0.0,
-        120.4, 76.7, 0.2, 0.1, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (10, '캐모마일', 2900, 'TEA', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/e496278b-ba9a-4628-8fb0-b7f0316a7d15_%E1%84%8F%E1%85%A2%E1%84%86%E1%85%A9%E1%84%86%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF.jpg',
-        '마음을 진정 시켜주는 산뜻한 풀내음을 느낄 수 있는 허브티.', '', '710ml', 1.3, 0.0,
-        2.5, 0.0, 0.1, 0.0, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (11, '제로 부스트 에이드', 3900, 'SMOOTHIE_FRAPPE', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/b7ee2011-60d8-4ec4-9cc4-cb18404ad4a5_%E1%84%8C%E1%85%A6%E1%84%85%E1%85%A9%E1%84%87%E1%85%AE%E1%84%89%E1%85%B3%E1%84%90%E1%85%B3%E1%84%8B%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3.jpg',
-        '지친 현대인들에게 필요한 한 잔의 에너지! 타우린 1,000mg이 들어가 활력이 충전되는 에너지드링크맛 제로 칼로리 에이드\n*대체당(알룰로스 등)을 과도하게 섭취 시 개인에 따라 복통 및 설사 등을 유발 할 수 있으니 주의하세요.',
-        '', '710ml', 15.7, 0.0,
-        66.0, 0.6, 0.8, 0.1, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (12, '피치푸룬주스', 3500, 'SMOOTHIE_FRAPPE', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/f3faff8e-e174-4672-bf4e-edae9ab87221_%E1%84%91%E1%85%B5%E1%84%8E%E1%85%B5%E1%84%91%E1%85%AE%E1%84%85%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%AE%E1%84%89%E1%85%B3.jpg',
-        '달콤한 복숭아와 식이섬유가 풍부한 푸룬, 프리바이오틱스를 더해 건강한 블렌딩 주스', '복숭아', '591ml', 257.2, 0.0,
-        62.6, 35.7, 0.7, 0.1, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg,
-                     created_at, modified_at)
-VALUES (13, '골드키위주스', 3700, 'SMOOTHIE_FRAPPE', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/8ce1a5d0-ba14-4221-abb9-01e91aa8257e_%E1%84%80%E1%85%A9%E1%86%AF%E1%84%83%E1%85%B3%E1%86%AB%E1%84%8F%E1%85%B5%E1%84%8B%E1%85%B1%E1%84%8C%E1%85%AE%E1%84%89%E1%85%B3.jpg',
-        '상큼달콤한 프리미엄 골드키위에 밀크씨슬을 더해 일상의 활력을 선사하는 건강한 블렌딩 주스', '', '591ml', 202.8, 0.0,
-        15.0, 43.1, 1.2, 0.1, NOW(), NOW());
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg, created_at, modified_at)
-VALUES (14, '(HOT)디카페인 헛개리카노', 3000, 'DECAF', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/f78a6b42-c7de-4531-9009-0fcfdc8b70ce_%E1%84%92%E1%85%A1%E1%86%BA%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%92%E1%85%A5%E1%86%BA%E1%84%80%E1%85%A2%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg',
-        '국내산 헛개수와 메가MGC커피만의 아메리카노를 더해 고소한 맛이 조화로운 디카페인 블렌딩 커피', '', '591ml', 34.2, 9.1,
-        10.2, 0.0, 0.6, 0.1, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg, created_at, modified_at)
-VALUES (15, '(ICE)디카페인 헛개리카노', 3000, 'DECAF', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/547ef9cd-4080-4493-a48f-50239b8af6b8_%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%92%E1%85%A5%E1%86%BA%E1%84%80%E1%85%A2%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg',
-        '국내산 헛개수와 메가MGC커피만의 아메리카노를 더해 고소한 맛이 조화로운 디카페인 블렌딩 커피', '', '710ml', 33.3, 5.3,
-        8.3, 0.0, 0.8, 0.1, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg, created_at, modified_at)
-VALUES (16, '딸기라떼', 4500, 'BEVERAGE', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/10d129c4-b20c-45a5-9b6e-3d1c418054b3_%E1%84%84%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg',
-        '딸기과육이 풍부히 느껴지는 스테디 셀러 산뜻하고 달콤한 딸기가 가득해 부드러운 우유와 어우러져 더욱 기분 좋게 즐기는 아이스 라떼', '우유', '591ml', 366.4, 0.0,
-        50.0, 47.3, 5.8, 3.0, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg, created_at, modified_at)
-VALUES (17, '왕메가초코', 5000, 'BEVERAGE', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/a9710960-be7c-4ee4-ab4f-1dbcc22e777a_%E1%84%8B%E1%85%AA%E1%86%BC%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9.jpg',
-        '부드러운 우유에 진한 초코소스가 어우러져 달콤하게 입맛을 깨우는 왕 메가 사이즈 초코음료', '우유', '946ml', 574.2, 35.6,
-        267.1, 77.3, 11.9, 6.7, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg, created_at, modified_at)
-VALUES (18, '왕메가 딸기라떼', 5000, 'BEVERAGE', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/5de7ab9e-9be1-4475-9f6d-8fc1dd9fb718_%E1%84%8B%E1%85%AA%E1%86%BC%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%84%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg',
-        '이보다 더 딸기가 많을 순 없다! 왕메가사이즈에 듬뿍 넣은 딸기과육과 부드러운 우유의 핑크빛 하모니를 하루종일 느낄 수 있는 딸기시즌 한정 왕메가 딸기라떼', '우유', '946ml', 544.9,
-        0.0,
-        80.0, 111.9, 8.2, 3.4, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg, created_at, modified_at)
-VALUES (19, '메가베리 아사이볼', 5200, 'DESSERT', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/cffd7677-4c41-4fc5-8f58-5a7d7eedbc7e_%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%87%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A1%E1%84%89%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A9%E1%86%AF.jpg',
-        '상큼달콤 아사이볼 속에 세 가지의 달콤한 베리와 건강한 그래놀라가 더해져 시원 달달하게 즐길 수 있는 딸기시즌 한정 디저트', '밀', '414ml', 313, 0.0,
-        12, 43, 4, 1.0, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg, created_at, modified_at)
-VALUES (20, '치즈 품은 감자빵', 2900, 'DESSERT', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/b94a4d94-0269-400e-bdc2-48ed7c252234_%E1%84%8E%E1%85%B5%E1%84%8C%E1%85%B3%E1%84%91%E1%85%AE%E1%86%B7%E1%84%8B%E1%85%B3%E1%86%AB%E1%84%80%E1%85%A1%E1%86%B7%E1%84%8C%E1%85%A1%E1%84%88%E1%85%A1%E1%86%BC.jpg',
-        '풍미 깊은 치즈와 포슬포슬한 감자를 가득 담아 낸 쌀가루로 만든 빵', '밀, 대두, 우유, 계란', 'One size', 312, 0.0,
-        559, 5, 12, 4.0, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg, created_at, modified_at)
-VALUES (21, '와앙 메가초코 크로칸슈', 2500, 'DESSERT', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/e1749ca4-5fd3-4328-9e83-409819d84395_%E1%84%8B%E1%85%AA%E1%84%8B%E1%85%A1%E1%86%BC%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8F%E1%85%A1%E1%86%AB%E1%84%89%E1%85%B2.jpg',
-        '바삭한 초코 크로칸슈 안에 부드럽고 달콤한 초코 크림을 가득 채운 디저트', '우유, 대두, 밀, 계란', 'One size', 274, 0.0,
-        97, 20, 4, 3.4, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg, created_at, modified_at)
-VALUES (22, '엠지씨네 메가칩', 2000, 'DESSERT', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/c835c905-6686-431d-9e45-bd082ae5bc24_%E1%84%8B%E1%85%A6%E1%86%B7%E1%84%8C%E1%85%B5%E1%84%8A%E1%85%B5%E1%84%82%E1%85%A6%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%8E%E1%85%B5%E1%86%B8.jpg',
-        '엠지씨 이름을 걸고 만들었다! 메밀로 만든 짭짤 고소한 김맛 건강스낵', '밀, 메밀, 우유, 대두', 'One size', 210, 0.0,
-        223, 1, 2, 5.0, NOW(), NOW());
-
-INSERT INTO product (id, name, price, category, status, image, description, allergens, volume_ml,
-                     calories, caffeine_mg, sodium_mg, sugarg, proteing, saturated_fatg, created_at, modified_at)
-VALUES (23, '초코스모어쿠키', 2800, 'DESSERT', 'SELLING',
-        'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/a19807e9-89aa-44a4-9210-3807c02f87be_%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9%E1%84%89%E1%85%B3%E1%84%86%E1%85%A9%E1%84%8B%E1%85%A5%E1%84%8F%E1%85%AE%E1%84%8F%E1%85%B5.jpg',
-        '초코칩이 콕콕 박힌 촉촉한 초코 쿠키에 달콤하게 구운 마시멜로우가 만나 더 진한 초코 맛 쿠키', '계란, 우유, 대두, 밀, 돼지고기', '133g', 578.9, 0.0,
-        590, 34, 10, 15.0, NOW(), NOW());
-
-
---- OPTION_GROUP ---
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (1, 1, '샷 추가', NOW(), NOW());
-
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (2, 2, '샷 추가', NOW(), NOW());
-
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (3, 2, '우유 선택', NOW(), NOW());
-
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (4, 3, '샷 추가', NOW(), NOW());
-
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (5, 3, '휘핑 추가', NOW(), NOW());
+INSERT INTO product (
+    id, name, price, category, status, image,
+    description, allergens, volume_ml,
+    calories, sodium_mg, proteing, saturated_fatg, sugarg, caffeine_mg,
+    created_at, modified_at
+) VALUES
+(0, '디카페인 아메리카노', 2500, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/49c95a4d-b684-4613-b524-b73027cf76e3_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg', '향과 풍미 그대로 카페인만을 낮춰 민감한 분들도 안심하고 매일매일 즐길 수 있는 디카페인 커피', NULL, '710ml', 9.5, 4.4, 0.5, 0.1, 0.0, 10.8, NOW(), NOW()),
+(1, '디카페인 꿀아메리카노', 3700, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/90b5cca8-8c76-4dda-90e0-928f3f485c63_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%81%E1%85%AE%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg', '디카페인 아메리카노의 묵직한 바디감에 달콤한 사양벌꿀이 소프트하게 어우러진 커피.', NULL, '710ml', 137.4, 5.0, 0.6, 0.1, 21.5, 8.7, NOW(), NOW()),
+(2, '디카페인 헤이즐넛 아메리카노', 3700, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/10e56bb7-d1af-4a99-9277-f2334137aa0b_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%92%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B3%E1%86%AF%E1%84%82%E1%85%A5%E1%86%BA_%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg', '디카페인 아메리카노에 헤이즐넛의 풍성한 향과 달콤함을 담아 향긋하고 부드럽게 즐기는 커피.', NULL, '710ml', 108.7, 5.2, 0.6, 0.0, 15.8, 11.2, NOW(), NOW()),
+(3, '디카페인 바닐라 아메리카노', 3700, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/afc31bee-a674-4a35-901f-32644cb6365e_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%87%E1%85%A1%E1%84%82%E1%85%B5%E1%86%AF%E1%84%85%E1%85%A1_%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg', '디카페인 아메리카노에 바닐라의 부드러운 향과 달콤함을 조화롭게 담아낸 커피.', NULL, '710ml', 112.4, 3.3, 0.4, 0.1, 21.6, 8.8, NOW(), NOW()),
+(4, '디카페인 카페라떼', 3900, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/5ea88e80-fd15-4d19-8f71-72caab93d33e_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '디카페인 에스프레소와 부드러운 우유가 어우러져 고소한 풍미를 완성한 라떼.', NULL, '591ml', 147.7, 78.0, 8.2, 4.5, 9.3, 14.4, NOW(), NOW()),
+(5, '디카페인 바닐라라떼', 4400, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/75df4d15-d27e-40cb-b3f7-24881e8dba2b_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%87%E1%85%A1%E1%84%82%E1%85%B5%E1%86%AF%E1%84%85%E1%85%A1%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '디카페인으로 즐기는 바닐라의 짙은 향과 풍부한 폼 밀크의 조화가 인상적인 달콤한 라떼.', NULL, '591ml', 225.3, 71.4, 6.8, 3.9, 29.0, 3.9, NOW(), NOW()),
+(6, '디카페인 연유라떼', 4900, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/19a97f67-65fa-46d3-9060-0c3ece918915_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%8B%E1%85%B2%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6_ice.jpg', '디카페인 에스프레소 샷, 부드러운 우유 그리고 달콤한 연유가 조화롭게 어우러진 라떼.', '우유', '591ml', 305.4, 117.7, 10.8, 7.0, 35.1, 14.9, NOW(), NOW()),
+(7, '디카페인 카라멜마끼아또', 4700, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/19a97f67-65fa-46d3-9060-0c3ece918915_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%8B%E1%85%B2%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6_ice.jpg', '폼 밀크 속에 진한 디카페인 에스프레소와 달콤한 카라멜을 가미해 부드럽게 즐기는 커피', NULL, '591ml', 232.9, 68.7, 7.0, 3.6, 26.3, 8.2, NOW(), NOW()),
+(8, '디카페인 카페모카', 4900, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/3a5e3709-d2a0-4066-886f-08b969b66bb8_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%86%E1%85%A9%E1%84%8F%E1%85%A1.jpg', '초코를 만나 풍부해진 디카페인 에스프레소와 고소한 우유, 부드러운 휘핑크림까지 더해 달콤하게 즐기는 커피.', NULL, '591ml', 319.7, 117.7, 6.9, 9.6, 32.6, 21.9, NOW(), NOW()),
+(9, '디카페인 카푸치노', 3900, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/65146f12-f0ae-46fd-90d2-d0ad03ba0153_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%AE%E1%84%8E%E1%85%B5%E1%84%82%E1%85%A9.jpg', '디카페인 에스프레소와 부드러운 우유가 어우러져 고소한 풍미를 완성한 카푸치노.', NULL, '591ml', 127.0, 71.4, 6.8, 3.9, 29.0, 11.4, NOW(), NOW()),
+(10, '디카페인 헤이즐넛라떼', 4400, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/39226f45-b9bd-4529-ac3d-23315d17657c_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%92%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B3%E1%86%AF%E1%84%82%E1%85%A5%E1%86%BA_%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '부드러운 카페라떼에 헤이즐넛의 풍부한 향과 달콤함을 담아 향긋하게 즐길 수 있는 디카페인 라떼.', NULL, '591ml', 237.0, 70.7, 7.4, 4.0, 23.4, 4.8, NOW(), NOW()),
+(11, '디카페인 티라미수라떼', 4900, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/042970b1-98c3-473e-8e85-93425a594e8d_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%90%E1%85%B5%E1%84%85%E1%85%A1%E1%84%86%E1%85%B5%E1%84%89%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '디카페인 에스프레소와 티라미수 소스 & 우유 그리고 풍미를 더해주는 달달한 크림까지 곁들여 완성한 티라미수 라떼.', NULL, '591ml', 404.3, 176.6, 7.5, 11.6, 37.5, 13.5, NOW(), NOW()),
+(12, '디카페인 메가리카노', 4500, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/89a46196-fb30-4fe4-9ece-6ec1d0aec4d5_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg', '메가MGC커피 디카페인 아메리카노를 ''960ml'' 더 크고 가볍게 즐길 수 있는 대용량 커피', NULL, '946ml', 17.1, 7.9, 0.9, 0.1, 0.0, 10.9, NOW(), NOW()),
+(16, '디카페인 카라멜마끼아또', 4700, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/b75266dd-735c-4aa0-925b-da41223c6cef_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%8F%E1%85%A1%E1%84%85%E1%85%A1%E1%84%86%E1%85%A6%E1%86%AF%E1%84%86%E1%85%A1%E1%84%81%E1%85%B5%E1%84%8B%E1%85%A1%E1%84%84%E1%85%A9_HOT.jpg', '폼 밀크 속에 진한 디카페인 에스프레소와 달콤한 카라멜을 가미해 부드럽게 즐기는 커피', NULL, '591ml', 238.5, 91.3, 8.9, 4.2, 21.3, 7.8, NOW(), NOW()),
+(17, '디카페인 카페모카', 4900, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/ad12dd2e-561a-45f9-ac0e-a5f596d1682f_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%86%E1%85%A9%E1%84%8F%E1%85%A1_HOT.jpg', '초코를 만나 풍부해진 디카페인 에스프레소와 고소한 우유, 부드러운 휘핑크림까지 더해 달콤하게 즐기는 커피.', NULL, '591ml', 430.3, 181.6, 11.0, 13.8, 36.1, 22.8, NOW(), NOW()),
+(18, '디카페인 카푸치노', 3900, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/d920a2e8-58d7-4cc5-9dda-b019cf80375d_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%AE%E1%84%8E%E1%85%B5%E1%84%82%E1%85%A9_HOT.jpg', '디카페인 에스프레소와 부드러운 우유가 어우러져 고소한 풍미를 완성한 카푸치노.', NULL, '591ml', 152.9, 80.6, 8.1, 4.5, 10.4, 11.3, NOW(), NOW()),
+(19, '디카페인 헤이즐넛라떼', 4400, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/8a191f9f-9aeb-407e-ade0-08f941a5842b_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%92%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B3%E1%86%AF%E1%84%82%E1%85%A5%E1%86%BA_%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6_HOT.jpg', '부드러운 카페라떼에 헤이즐넛의 풍부한 향과 달콤함을 담아 향긋하게 즐길 수 있는 디카페인 라떼.', NULL, '591ml', 240.0, 81.4, 8.9, 4.3, 18.2, 4.3, NOW(), NOW()),
+(20, '디카페인 티라미수라떼', 4900, 'DECAF', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/57eb2fa0-5f10-40e2-b73a-46efca64f58e_%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB_%E1%84%90%E1%85%B5%E1%84%85%E1%85%A1%E1%84%86%E1%85%B5%E1%84%89%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6_HOT.jpg', '디카페인 에스프레소와 티라미수 소스 & 우유 그리고 풍미를 더해주는 달달한 크림까지 곁들여 완성한 티라미수 라떼.', NULL, '591ml', 436.7, 194.9, 10.2, 14.2, 37.2, 12.1, NOW(), NOW()),
+(21, '코코넛 커피 스무디', 4800, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/922e8482-33a7-49d6-9bf2-b1de6421a1db_%E1%84%8F%E1%85%A9%E1%84%8F%E1%85%A9%E1%84%82%E1%85%A5%E1%86%BA_%E1%84%8F%E1%85%A5%E1%84%91%E1%85%B5_%E1%84%89%E1%85%B3%E1%84%86%E1%85%AE%E1%84%83%E1%85%B5.jpg', '바삭하고 고소한 코코넛 칩을 올리고 쌉싸름한 커피와 달콤한 코코넛이 조화로운 스무디', '우유,고카페인 함유', '591ml', 746.5, 347.1, 9.4, 29.3, 61.4, 173.8, NOW(), NOW()),
+(22, '플레인퐁크러쉬', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/e74691c2-6ed3-4b53-89c2-eb9d5fa0d589_%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%91%E1%85%A9%E1%86%BC%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A5%E1%84%89%E1%85%B1.jpg', '우유에 죠리퐁 씨리얼이 믹싱 된 얼음을 갈아 만든 시원한 프라페음료', '우유,밀,대두', '591ml', 468.6, 154.8, 10.6, 6.0, 46.2, 0.0, NOW(), NOW()),
+(23, '초코허니퐁크러쉬', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/4633780b-6525-44f1-96e4-be6a85c5024e_%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9%E1%84%92%E1%85%A5%E1%84%82%E1%85%B5%E1%84%91%E1%85%A9%E1%86%BC%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A5%E1%84%89%E1%85%B1.jpg', '리얼 벌꿀이 들어가 더 달콤한 퍼프허니 시리얼과 부드럽게 달달한 초코가 함께 만드는 즐거운 맛의 프라페.', '우유,밀,대두', '591ml', 594.6, 216.2, 11.9, 7.8, 67.6, 10.0, NOW(), NOW()),
+(24, '슈크림허니퐁크러쉬', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/bf63793c-9460-4931-83ec-a1e751808678_%E1%84%89%E1%85%B2%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B7%E1%84%92%E1%85%A5%E1%84%82%E1%85%B5%E1%84%91%E1%85%A9%E1%86%BC%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A5%E1%84%89%E1%85%B1.jpg', '바닐라빈 향을 머금은 부드러운 슈크림과 리얼 벌꿀이 들어간 퍼프허니 시리얼을 시원하게 즐기는 프라페.', '우유,밀,대두,계란', '591ml', 568.1, 198.4, 11.7, 7.8, 49.5, 0.0, NOW(), NOW()),
+(25, '딸기퐁크러쉬', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/d651c4c2-d70a-45b6-bf50-006b72371770_%E1%84%84%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5%E1%84%91%E1%85%A9%E1%86%BC%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A5%E1%84%89%E1%85%B1.jpg', '바삭하고 달달한 퐁에 상큼한 딸기와 부드러운 우유, 얼음을 함께 블렌딩해 시원하게 즐기는 프라페.', '우유,밀,대두', '591ml', 536.9, 156.1, 10.9, 7.1, 45.9, 0.0, NOW(), NOW()),
+(26, '바나나퐁크러쉬', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/92c20b1d-6e74-4a83-ad76-6299b484ffc4_%E1%84%87%E1%85%A1%E1%84%82%E1%85%A1%E1%84%82%E1%85%A1%E1%84%91%E1%85%A9%E1%86%BC%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A5%E1%84%89%E1%85%B1.jpg', '바삭하고 달달한 퐁에 부드러운 바나나와 우유, 얼음을 함께 블렌딩해 부드럽고 시원하게 즐기는 프라페.', '우유,밀,대두', '591ml', 593.8, 167.3, 10.8, 4.6, 64.2, 0.0, NOW(), NOW()),
+(27, '쿠키프라페', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/65cd7769-8beb-4baf-aa5d-856f82e5b213_%E1%84%8F%E1%85%AE%E1%84%8F%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A1%E1%84%91%E1%85%A6.jpg', '바삭하고 달콤한 오레오와 고소한 우유, 부드러운 바닐라향의 조화를 느낄 수 있는 프라페.', '우유,밀,대두', '591ml', 697.8, 411.7, 9.8, 15.6, 59.7, 6.8, NOW(), NOW()),
+(28, '딸기쿠키프라페', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/a1eafd67-b1ef-432e-a258-2a93f886dc34_%E1%84%84%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5%E1%84%8F%E1%85%AE%E1%84%8F%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A1%E1%84%91%E1%85%A6.jpg', '부드러운 바닐라와 달달한 딸기, 바삭한 오레오 쿠키가 달콤한 하모니를 선물하는 프라페.', '우유,밀,대두', '591ml', 583.3, 247.7, 7.7, 12.5, 65.4, 2.6, NOW(), NOW()),
+(29, '민트프라페', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/3284ccde-67bb-4cdd-8c30-64732dad4cf9_%E1%84%86%E1%85%B5%E1%86%AB%E1%84%90%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%A1%E1%84%91%E1%85%A6.jpg', '상쾌한 민트에 달콤하게 씹는 재미를 더한 초콜릿칩의 즐거운 하모니가 매력적인 프라페.', '우유,대두,밀', '591ml', 622.3, 192.9, 5.0, 16.1, 64.5, 5.6, NOW(), NOW()),
+(30, '커피프라페', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/fd826381-65eb-4eec-8e3b-87dc03eb72ed_%E1%84%8F%E1%85%A5%E1%84%91%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A1%E1%84%91%E1%85%A6.jpg', '바삭한 쿠키와 부드러운 바닐라에 향긋한 에스프레소를 섞어 만든 힐링 프라페.', '우유,대두,고카페인 함유', '591ml', 414.3, 168.0, 6.5, 11.9, 35.6, 162.6, NOW(), NOW()),
+(31, '리얼초코프라페', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/d1013a87-0645-4cd0-9a6b-c09f28ecfc89_%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9%E1%84%91%E1%85%B3%E1%84%85%E1%85%A1%E1%84%91%E1%85%A6.jpg', '진한 초코소스와 부드러운 바닐라향의 만남으로 질리지 않는 달콤함을 완성한 프라페.', '우유,대두,밀', '591ml', 580.8, 223.3, 8.0, 14.6, 75.4, 32.1, NOW(), NOW()),
+(32, '녹차프라페', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/e9159f79-1238-4810-abb6-3b784a518186_%E1%84%82%E1%85%A9%E1%86%A8%E1%84%8E%E1%85%A1%E1%84%91%E1%85%B3%E1%84%85%E1%85%A1%E1%84%91%E1%85%A6.jpg', '향긋한 녹차 위에 우유와 휘핑크림을 더해 더 부드럽게 즐길 수 있는 프라페.', '우유,대두', '591ml', 620.0, 129.9, 6.0, 10.2, 80.7, 198.8, NOW(), NOW()),
+(33, '유니콘프라페', 4800, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/1420899a-5ee3-4afe-b74b-ce377b0caf13_%E1%84%8B%E1%85%B2%E1%84%82%E1%85%B5%E1%84%8F%E1%85%A9%E1%86%AB_%E1%84%91%E1%85%B3%E1%84%85%E1%85%A1%E1%84%91%E1%85%A6.jpg', '다채로운 비주얼로 보는 즐거움을 채우고, 달콤함과 상큼함 색깔마다 달라지는 유쾌한 맛까지 잡은 이색프라페.', '우유,대두', '591ml', 484.4, 188.2, 7.0, 11.4, 52.4, 0.0, NOW(), NOW()),
+(34, '플레인요거트스무디', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/997e9dda-259d-48d2-899e-b5aa5bd1388f_%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%AD%E1%84%80%E1%85%A5%E1%84%90%E1%85%B3%E1%84%89%E1%85%B3%E1%84%86%E1%85%AE%E1%84%83%E1%85%B5.jpg', '더 시원하게 요거트의 새콤달콤한 맛을 오롯이 만끽할 수 있는 스무디.', '우유', '591ml', 514.9, 103.4, 7.5, 2.2, 84.5, 0.0, NOW(), NOW()),
+(35, '딸기요거트스무디', 3900, 'SMOOTHIE_FRAPPE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/c2e3534c-47de-4278-9b86-a3f078d4092e_%E1%84%84%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5%E1%84%8B%E1%85%AD%E1%84%80%E1%85%A5%E1%84%90%E1%85%B3%E1%84%89%E1%85%B3%E1%84%86%E1%85%AE%E1%84%83%E1%85%B5.jpg', '요거트의 상큼함과 딸기의 상큼함을 상냥하게 어우른 상큼 스무디.', '우유', '591ml', 388.8, 66.7, 6.0, 2.0, 62.5, 0.0, NOW(), NOW()),
+(36, '망고요거트스무디', 3900, 'NEW_PRODUCT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/515e49eb-8521-4079-bdec-fe26ac90df6b_%E1%84%86%E1%85%A1%E1%86%BC%E1%84%80%E1%85%A9%E1%84%8B%E1%85%AD%E1%84%80%E1%85%A5%E1%84%90%E1%85%B3%E1%84%89%E1%85%B3%E1%84%86%E1%85%AE%E1%84%83%E1%85%B5.jpg', '열대과일 망고의 진한 단 맛과 산뜻한 요거트의 하모니가 인상적인 스무디.', '우유', '591ml', 365.2, 76.1, 6.0, 2.3, 56.4, 0.0, NOW(), NOW()),
+(37, '레드오렌지자몽주스', 4000, 'NEW_PRODUCT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/3eaf023a-a0f7-420d-bcb5-1e2bea22b056_%E1%84%85%E1%85%A6%E1%84%83%E1%85%B3%E1%84%8B%E1%85%A9%E1%84%85%E1%85%A6%E1%86%AB%E1%84%8C%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%86%E1%85%A9%E1%86%BC%E1%84%8C%E1%85%AE%E1%84%89%E1%85%B3.jpg', '엄선된 시칠리아 레드오렌지와 자몽이 만난 상큼한 주스에 프로바이오틱스를 더해 건강한 블렌딩 주스', NULL, '591ml', 205.3, 7.9, 0.9, 0.0, 43.7, 0.0, NOW(), NOW()),
+(38, '샤인머스켓그린주스', 4000, 'NEW_PRODUCT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/d89585cb-d5b8-4423-a57c-e5aacb8b0fd4_%E1%84%89%E1%85%A3%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%86%E1%85%A5%E1%84%89%E1%85%B3%E1%84%8F%E1%85%A6%E1%86%BA%E1%84%80%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%8C%E1%85%AE%E1%84%89%E1%85%B3.jpg', '달콤한 샤인머스캣과 케일이 만난 싱그러운 주스에 칼슘을 더해 건강한 블렌딩 주스', NULL, '591ml', 218.1, 10.1, 0.8, 0.0, 46.7, 0.0, NOW(), NOW()),
+(39, '딸기주스', 4000, 'NEW_PRODUCT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/7fc31900-3b5c-4b88-9778-d57fba4a7869_%E1%84%84%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5%E1%84%8C%E1%85%AE%E1%84%89%E1%85%B3.jpg', '새콤달콤한 딸기주스에 피쉬 콜라겐을 더해 건강한 블렌딩 주스', NULL, '591ml', 228.0, 11.0, 1.5, 0.0, 54.0, 0.0, NOW(), NOW()),
+(40, '딸기바나나주스', 4000, 'ADE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/f9ddd98f-b974-4c7e-a430-89519c156e35_%E1%84%84%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5%E1%84%87%E1%85%A1%E1%84%82%E1%85%A1%E1%84%82%E1%85%A1%E1%84%8C%E1%85%AE%E1%84%89%E1%85%B3.jpg', '상큼한 딸기와 부드러운 바나나가 만나, 새콤달콤한 매력이 살아 있는 과일 음료.', '우유', '591ml', 268.5, 41.1, 4.1, 1.5, 42.2, 0.0, NOW(), NOW()),
+(41, '메가에이드', 3900, 'ADE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/be0d2c86-0b26-4ae0-b7d5-f07808b26fd6_%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%8B%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3.jpg', '상큼한 딸기와 부드러운 바나나가 만나, 새콤달콤한 매력이 살아 있는 과일 음료.', NULL, '710ml', 292.4, 9.1, 0.3, 0.0, 53.9, 0.0, NOW(), NOW()),
+(42, '레몬에이드', 3500, 'ADE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/9a738c3c-0488-410e-a329-63bc44198995_%E1%84%85%E1%85%A6%E1%84%86%E1%85%A9%E1%86%AB%E1%84%8B%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3.jpg', '시트러스향 가득한 레몬의 상큼함과 톡쏘는 탄산의 상쾌함이 만난 청량 에이드.', NULL, '710ml', 196.8, 71.3, 0.3, 0.0, 35.1, 0.0, NOW(), NOW()),
+(43, '블루레몬에이드', 3500, 'ADE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/3f0fe67f-e33f-4558-910e-fdecbe0f96c6_%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%AE%E1%84%85%E1%85%A6%E1%84%86%E1%85%A9%E1%86%AB%E1%84%8B%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3.jpg', '레몬에이드의 상큼한 청량감에 블루큐라소의 진한 향미를 더한 에이드.', NULL, '710ml', 225.0, 77.2, 0.2, 0.0, 36.5, 0.0, NOW(), NOW()),
+(44, '자몽에이드', 3500, 'ADE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/da064e51-c39b-441a-9c8f-e1984ecd246d_%E1%84%8C%E1%85%A1%E1%84%86%E1%85%A9%E1%86%BC%E1%84%8B%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3.jpg', '자몽의 달콤쌉싸름한 맛과 탄산의 톡쏘는 목넘김이 어우러진 트로피컬 에이드.', NULL, '710ml', 203.8, 3.3, 0.3, 0.0, 40.7, 0.0, NOW(), NOW()),
+(45, '청포도에이드', 3500, 'ADE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/5601e61c-ee9d-4ef5-92dd-ee80246d104d_%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%91%E1%85%A9%E1%84%83%E1%85%A9%E1%84%8B%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3.jpg', '산뜻한 청포도와 상쾌한 탄산의 달달한 조화가 인상적인 에이드.', NULL, '710ml', 317.0, 17.9, 0.2, 0.0, 77.7, 0.0, NOW(), NOW()),
+(46, '유니콘매직에이드(블루)', 3800, 'ADE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/d8e27b74-16cb-4bad-bb7d-c7455cb1e16c_%E1%84%8B%E1%85%B2%E1%84%82%E1%85%B5%E1%84%8F%E1%85%A9%E1%86%AB%E1%84%86%E1%85%A2%E1%84%8C%E1%85%B5%E1%86%A8%E1%84%8B%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%AE).jpg', '섞으면 마법처럼 색이 변하는 재미에 라임의 청량함으로 입까지 즐거운 이색 에이드.', NULL, '710ml', 268.4, 45.7, 0.1, 0.0, 65.1, 0.0, NOW(), NOW()),
+(47, '체리콕', 3300, 'ADE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/1381817a-7769-4df3-9c9f-1e51097b532c_%E1%84%8E%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A9%E1%86%A8.jpg', '체리의 새콤함과 청량감을 동시에 즐길 수 있는 환상적인 에이드.', NULL, '710ml', 323.6, 5.4, 0.2, 0.0, 55.6, 23.9, NOW(), NOW()),
+(48, '라임모히또', 3800, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/7462c8c5-be63-43f3-bd66-02fc21e4e7d1_%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%B7%E1%84%86%E1%85%A9%E1%84%92%E1%85%B5%E1%84%84%E1%85%A9.jpg', '상큼한 라임과 달콤한 향기의 애플민트가 어우러져 상쾌함을 한잔에 가득 채운 모히또 음료.', NULL, '710ml', 290.5, 41.7, 0.4, 0.0, 70.4, 0.0, NOW(), NOW()),
+(49, '딸기라떼', 3700, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/01ae1849-f5b6-428e-9f48-2bcd9b27af8d_%E1%84%84%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '산뜻하고 달콤한 딸기가 부드러운 우유와 어우러져 더욱 기분 좋게 즐기는 아이스 라떼.', NULL, '591ml', 366.4, 50.0, 5.8, 3.0, 47.3, 0.0, NOW(), NOW()),
+(50, '아이스초코', 3500, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/ca37d56d-3f9d-41c1-be1c-8eaf186f04d9_%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9.jpg', '부드러운 우유에 진한 초코소스가 어우러져 달콤하게 입맛을 깨우는 초콜릿 음료.', NULL, '591ml', 369.2, 163.0, 9.0, 4.4, 33.5, 21.3, NOW(), NOW()),
+(51, '오레오초코라떼', 3900, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/9eab85c5-555d-4914-a307-3e7b7299fcbd_%E1%84%8B%E1%85%A9%E1%84%85%E1%85%A6%E1%84%8B%E1%85%A9%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '진한 초코와 리얼 오레오를 블렌딩해 씹는 맛을 더한 달콤한 아이스 라떼.', '우유, 밀, 대두', '591ml', 475.1, 258.2, 9.7, 10.4, 30.1, 11.1, NOW(), NOW()),
+(52, '메가초코', 3800, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/821dc51c-f125-46f1-be0e-eab612b723fa_%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9.jpg', '부드러운 우유에 진한 초코소스, 달콤한 휘핑크림의 삼박자 조화로 완성한 달콤 초코 음료.', '우유', '946ml', 574.2, 267.1, 11.9, 6.7, 77.3, 35.6, NOW(), NOW()),
+(53, '녹차라떼', 3500, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/dadcf276-e4bc-4ecd-9440-29fa5a5bc992_%E1%84%82%E1%85%A9%E1%86%A8%E1%84%8E%E1%85%A1%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '향긋한 녹차에 우유를 더해 입 안에 부드러운 푸릇함을 선물하는 라떼.', '우유,고카페인 함유', '591ml', 280.4, 85.0, 9.1, 4.4, 14.3, 114.5, NOW(), NOW()),
+(54, '곡물라떼', 3000, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/8acf60d3-8afc-464f-9a67-ed59d1aa8882_%E1%84%80%E1%85%A9%E1%86%A8%E1%84%86%E1%85%AE%E1%86%AF%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '우유에 곡물을 더해 고소하고 든든하게 즐기는 라떼.', '우유, 밀, 대두', '591ml', 389.7, 87.7, 17.3, 4.8, 38.3, 0.0, NOW(), NOW()),
+(55, '고구마라떼', 3500, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/69f9ac47-9696-4295-baea-235a4f734efd_%E1%84%80%E1%85%A9%E1%84%80%E1%85%AE%E1%84%86%E1%85%A1%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '달콤하고 고소한 고구마와 부드러운 우유가 만나 누구나 즐기기 좋은 든든한 라떼.', '우유', '591ml', 248.8, 72.8, 6.5, 3.8, 21.6, 0.0, NOW(), NOW()),
+(56, '토피넛라떼', 3700, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/1533bd08-0312-4901-91c1-677582c98ab3_%E1%84%90%E1%85%A9%E1%84%91%E1%85%B5%E1%84%82%E1%85%A5%E1%86%BA%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '은은하게 퍼지는 카라멜의 달달한 향기와 견과의 고소함을 한입에 즐길 수 있는 라떼.', '우유, 대두', '591ml', 368.0, 172.7, 9.4, 7.0, 17.8, 56.2, NOW(), NOW()),
+(57, '로얄밀크티라떼', 3700, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/a92dd7c7-9fc1-41c6-8655-56ade1305653_%E1%84%85%E1%85%A9%E1%84%8B%E1%85%A3%E1%86%AF%E1%84%86%E1%85%B5%E1%86%AF%E1%84%8F%E1%85%B3%E1%84%90%E1%85%B5%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '우유와 은은한 홍차가 어우러져 부드럽고 향긋한 한 모금을 완성한 라떼.', '우유,고카페인 함유', '591ml', 232.0, 85.2, 8.3, 4.5, 14.7, 106.2, NOW(), NOW()),
+(58, '흑당라떼', 3300, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/e45229ad-9fd7-4b91-a12b-a8b81d89921d_%E1%84%92%E1%85%B3%E1%86%A8%E1%84%83%E1%85%A1%E1%86%BC%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '모리셔스의 진한 흑당과 부드러운 우유가 달콤하게 조화를 이루는 라떼.', '우유', '591ml', 322.0, 107.6, 8.3, 5.2, 33.6, 0.0, NOW(), NOW()),
+(59, '흑당밀크티라떼', 3500, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/a456a8aa-e1a5-4ae1-a7a1-88e4b783e54f_%E1%84%92%E1%85%B3%E1%86%A8%E1%84%83%E1%85%A1%E1%86%BC%E1%84%86%E1%85%B5%E1%86%AF%E1%84%8F%E1%85%B3%E1%84%90%E1%85%B5%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '타바론 얼그레이 홍차의 깊은 맛을 살린 일크티 라떼에 진한 흑당의 달콤함을 채운 음료.', '우유', '591ml', 300.5, 104.4, 8.4, 4.5, 22.6, 30.6, NOW(), NOW()),
+(60, '흑당버블라떼', 3700, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/b991b514-2195-44ac-a99b-c5fa21e03766_%E1%84%92%E1%85%B3%E1%86%A8%E1%84%83%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '모리셔스의 진한 흑당과 부드러운 우유가 달콤한 조화에 흑당 버블을 함께 즐기는 라떼.', '우유', '591ml', 320.3, 104.9, 7.2, 4.1, 27.2, 0.0, NOW(), NOW()),
+(61, '흑당버블밀크티라떼', 3800, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/cbf487ee-ef84-4712-b6c0-7653b3d310d4_%E1%84%92%E1%85%B3%E1%86%A8%E1%84%83%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%84%87%E1%85%B3%E1%86%AF%E1%84%86%E1%85%B5%E1%86%AF%E1%84%8F%E1%85%B3%E1%84%90%E1%85%B5%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '타바론 얼그레이 홍차의 깊은 맛을 살린 일크티 라떼에 진한 흑당과 흑당 버블의 달콤함을 채운 음료.', '우유', '591ml', 330.2, 106.7, 7.6, 4.3, 24.4, 14.3, NOW(), NOW()),
+(62, '핫초코', 3500, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/8a0fffdb-f0e5-4fc1-8678-ca34cfdb7bd0_%E1%84%92%E1%85%A1%E1%86%BA%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9.jpg', '부드러운 우유에 진한 초코소스가 어우러져 달콤하게 입맛을 깨우는 초콜릿 음료.', '우유', '591ml', 383.4, 177.3, 10.9, 5.3, 53.2, 21.9, NOW(), NOW()),
+(63, '메가초코', 3800, 'BEVERAGE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/15b360b6-7e4e-45ad-b559-c7669906a4de_%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9.jpg', '부드러운 우유에 진한 초코소스, 달콤한 휘핑크림의 삼박자 조화로 완성한 달콤 초코 음료.', '우유', '946ml', 574.2, 267.1, 11.9, 6.7, 77.3, 35.6, NOW(), NOW()),
+(69, '콜드브루오리지널', 3500, 'COFFEE_COLDBREW', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/fb550dfc-811a-4e3c-9eac-208505f8e53b_%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%83%E1%85%B3%E1%84%87%E1%85%B3%E1%84%85%E1%85%AE%E1%84%8B%E1%85%A9%E1%84%85%E1%85%B5%E1%84%8C%E1%85%B5%E1%84%82%E1%85%A5%E1%86%AF.jpg', '차가운 물에 장시간 우려내 깔끔한 목넘김을 느낄 수 있는 콜드브루.', '고카페인 함유', '591ml', 10.6, 1.5, 1.0, 0.0, 0.0, 217.0, NOW(), NOW()),
+(70, '콜드브루라떼', 4000, 'COFFEE_COLDBREW', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/beb86dcc-c211-449f-a372-b1e5561d03d7_%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%83%E1%85%B3%E1%84%87%E1%85%B3%E1%84%85%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '콜드브루에 고소한 우유를 섞어, 깔끔함과 부드러움을 잡은 라떼.', '우유,고카페인 함유', '591ml', 164.2, 54.4, 9.0, 5.2, 2.1, 216.7, NOW(), NOW()),
+(71, '콜드브루오리지널', 3500, 'COFFEE_COLDBREW', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/b47f417c-a4e4-4a08-a62f-7f37ad5d8e00_%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%83%E1%85%B3%E1%84%87%E1%85%B3%E1%84%85%E1%85%AE%E1%84%8B%E1%85%A9%E1%84%85%E1%85%B5%E1%84%8C%E1%85%B5%E1%84%82%E1%85%A5%E1%86%AF(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '차가운 물에 장시간 우려내 깔끔한 목넘김을 느낄 수 있는 콜드브루.', '고카페인 함유', '710ml', 7.2, 0.4, 0.8, 0.0, 0.0, 156.4, NOW(), NOW()),
+(72, '콜드브루라떼', 4000, 'COFFEE_COLDBREW', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/927eaca3-4afc-423f-9234-55912b4f218d_%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%83%E1%85%B3%E1%84%87%E1%85%B3%E1%84%85%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '콜드브루에 고소한 우유를 섞어, 깔끔함과 부드러움을 잡은 라떼.', '우유,고카페인 함유', '591ml', 167.6, 35.4, 7.0, 4.1, 2.3, 131.7, NOW(), NOW()),
+(73, '콜드브루 디카페인', 3500, 'COFFEE_COLDBREW', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/072930cc-3b85-4edf-afa4-7a69cb113639_%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%83%E1%85%B3%E1%84%87%E1%85%B3%E1%84%85%E1%85%AE%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '카페인을 줄였지만, 원두 본연의 향미를 풍부하게 살려 맛을 잡은 콜드브루 디카페인', NULL, '710ml', 7.7, 0.1, 0.5, 0.0, 0.0, 8.7, NOW(), NOW()),
+(74, '콜드브루 디카페인', 4000, 'COFFEE_COLDBREW', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/11df15e7-c1b5-4d2b-aaf1-485eda1da832_%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%83%E1%85%B3%E1%84%87%E1%85%B3%E1%84%85%E1%85%AE%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB.jpg', '카페인을 줄였지만, 원두 본연의 향미를 풍부하게 살려 맛을 잡은 콜드브루 디카페인', NULL, '591ml', 9.4, 1.9, 0.6, 0.0, 0.0, 13.1, NOW(), NOW()),
+(75, '콜드브루 디카페인라떼', 3500, 'COFFEE_COLDBREW', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/1b52acdd-9096-4a45-9bff-724938378439_%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%83%E1%85%B3%E1%84%87%E1%85%B3%E1%84%85%E1%85%AE%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '고소한 우유를 섞어, 커피향에 부드러운 풍미를 가미한 콜드브루 디카페인 라떼', '우유', '591ml', 140.8, 45.6, 7.9, 4.0, 0.0, 9.9, NOW(), NOW()),
+(76, '콜드브루 디카페인라떼', 4000, 'COFFEE_COLDBREW', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/95a9839e-4d46-45e6-b019-3c344068c280_%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%83%E1%85%B3%E1%84%87%E1%85%B3%E1%84%85%E1%85%AE%E1%84%83%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '고소한 우유를 섞어, 커피향에 부드러운 풍미를 가미한 콜드브루 디카페인 라떼', '우유', '591ml', 153.8, 55.2, 8.6, 3.8, 0.0, 14.0, NOW(), NOW()),
+(77, '아메리카노', 1500, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/d60d861e-066c-4a8b-8425-3b9708c1820d_%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg', '메가MGC커피 블렌드 원두로 추출한 에스프레소에 물을 더해, 풍부한 바디감을 느낄 수 있는 스탠다드 커피.', NULL, '591ml', 12.2, 2.4, 0.9, 0.0, 0.0, 204.2, NOW(), NOW()),
+(78, '꿀아메리카노', 2500, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/b7c8714b-e6f5-4493-812f-54fe89ced432_%E1%84%81%E1%85%AE%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg', '아메리카노의 묵직한 바디감에 달콤한 사양벌꿀이 소프트하게 어우러진 커피.', NULL, '591ml', 172.4, 12.7, 0.9, 0.1, 30.4, 199.4, NOW(), NOW()),
+(79, '헤이즐넛아메리카노', 2500, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/eb594256-d4a1-4713-add9-a1501e7e6ed6_%E1%84%92%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B3%E1%86%AF%E1%84%82%E1%85%A5%E1%86%BA%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg', '아메리카노에 헤이즐넛의 풍성한 향과 달콤함을 담아 향긋하고 부드럽게', NULL, '591ml', 237.4, 57.0, 7.3, 4.6, 10.8, 216.9, NOW(), NOW()),
+(80, '바닐라아메리카노', 2700, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/f74311a0-238d-418b-bac3-f90af85fdab8_%E1%84%87%E1%85%A1%E1%84%82%E1%85%B5%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg', '아메리카노에 바닐라의 부드러운 향과 달콤함을 조화롭게 담아낸 커피.', '고카페인 함유', '591ml', 97.8, 5.3, 1.4, 0.1, 15.7, 220.7, NOW(), NOW()),
+(81, '카페라떼', 2900, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/bdf26ce1-c806-4afd-ac38-aa4ed7e55d93_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '진한 에스프레소와 부드러운 우유가 어우러져 고소한 풍미를 완성한 라떼.', '우유,고카페인 함유', '591ml', 145.1, 88.5, 8.5, 3.8, 9.2, 199.1, NOW(), NOW()),
+(82, '바닐라라떼', 3400, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/52e474ff-fcc5-4a34-ba07-dd498026466d_%E1%84%87%E1%85%A1%E1%84%82%E1%85%B5%E1%86%AF%E1%84%85%E1%85%A1%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '바닐라의 짙은 향과 풍부한 폼 밀크의 조화가 인상적인 달콤한 라떼.', '우유,고카페인 함유', '591ml', 239.2, 74.1, 7.1, 3.9, 23.7, 195.1, NOW(), NOW()),
+(83, '연유라떼', 3900, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/c427687b-9f17-4d2c-bf09-fb271e23fb98_%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%8B%E1%85%B2%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '향기로운 에스프레소 샷, 부드러운 우유 그리고 달콤한 연유가 조화롭게 어우러진 라떼.', '우유,고카페인 함유', '591ml', 321.6, 144.6, 13.0, 6.4, 32.8, 194.2, NOW(), NOW()),
+(84, '카라멜마끼야또', 3700, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/4abbec5e-06e8-4e26-b2e3-a2149a116a64_%E1%84%8F%E1%85%A1%E1%84%85%E1%85%A1%E1%84%86%E1%85%A6%E1%86%AF%E1%84%86%E1%85%A1%E1%84%81%E1%85%B5%E1%84%8B%E1%85%A3%E1%84%84%E1%85%A9.jpg', '폼 밀크 속에 진한 에스프레소와 달콤한 카라멜을 가미해 부드럽게 즐기는 커피.', '우유,고카페인 함유', '591ml', 244.9, 76.1, 8.9, 5.0, 20.9, 206.7, NOW(), NOW()),
+(85, '카페모카', 3900, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/52cc38d5-0cf8-4512-8a6a-b38a0af9cece_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%86%E1%85%A9%E1%84%8F%E1%85%A1.jpg', '초코를 만나 풍부해진 에스프레소와 고소한 우유, 부드러운 휘핑크림까지 더해 달콤하게 즐기는 커피.', '우유,대두,고카페인 함유', '591ml', 359.6, 159.8, 11.2, 10.6, 40.8, 233.2, NOW(), NOW()),
+(86, '카푸치노', 2900, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/a291ef2d-f8cd-4a45-b39d-ec58b86fc3a3_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%AE%E1%84%8E%E1%85%B5%E1%84%82%E1%85%A9.jpg', '에스프레소 위에 올려진 우유 거품, 그리고 시나몬 파우더로 완성한 조화로운 맛의 커피.', '우유,고카페인 함유', '591ml', 145.5, 60.7, 8.2, 4.1, 3.4, 201.4, NOW(), NOW()),
+(87, '헤이즐넛라떼', 3400, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/9fd71ede-85b6-46b8-bb15-d474e3036c0b_%E1%84%92%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B3%E1%86%AF%E1%84%82%E1%85%A5%E1%86%BA%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '부드러운 카페라떼에 헤이즐넛의 풍부한 향과 달콤함을 담아 향긋하게 즐길 수 있는 라떼.', '우유,고카페인 함유', '591ml', 240.5, 63.1, 9.1, 5.1, 9.7, 204.6, NOW(), NOW()),
+(88, '티라미수라떼', 3900, 'COFFEE_HOT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/fbcf5421-6290-43c8-a949-21b48c04a5b4_%E1%84%90%E1%85%B5%E1%84%85%E1%85%A1%E1%84%86%E1%85%B5%E1%84%89%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '에스프레소와 티라미수 소스 & 우유 그리고 풍미를 더해주는 달달한 크림까지 곁들여 완성한 티라미수 라떼.', '우유,대두,고카페인 함유', '591ml', 419.5, 194.5, 10.4, 13.1, 38.4, 206.9, NOW(), NOW()),
+(89, '메가리카노', 3000, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/fb448d02-fda5-447a-95c8-6c6592d473f3_%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9.jpg', '깊고 진한 메가MGC커피 아메리카노를 ''960ml'' 더 큼직하게 즐길 수 있는 대용량 커피.', '고카페인 함유', '946ml', 16.7, 0.7, 1.5, 0.0, 0.0, 290.8, NOW(), NOW()),
+(90, '아메리카노', 2000, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/59da8684-d5d7-4c24-bc70-0d9077e27c57_%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '메가MGC커피 블렌드 원두로 추출한 에스프레소에 물을 더해, 풍부한 바디감을 느낄 수 있는 스탠다드 커피.', NULL, '591ml', 12.2, 2.4, 0.9, 0.0, 0.0, 204.2, NOW(), NOW()),
+(91, '꿀아메리카노', 2500, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/b268e5b5-b4dc-4a06-ac94-c2461d8c47ea_%E1%84%81%E1%85%AE%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '아메리카노의 묵직한 바디감에 달콤한 사양벌꿀이 소프트하게 어우러진 커피.', NULL, '710ml', 162.2, 7.2, 0.9, 0.1, 30.6, 198.6, NOW(), NOW()),
+(92, '헤이즐넛아메리카노', 2500, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/7a0ebc1a-c0d1-49dd-a766-1b79a2e00998_%E1%84%92%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B3%E1%86%AF%E1%84%82%E1%85%A5%E1%86%BA%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '아메리카노에 헤이즐넛의 풍성한 향과 달콤함을 담아 향긋하고 부드럽게 즐기는 커피.', NULL, '710ml', 113.6, 0.6, 1.0, 0.0, 15.8, 196.7, NOW(), NOW()),
+(93, '바닐라아메리카노', 2500, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/12ddc29c-a57b-4786-9672-941c0e95ed26_%E1%84%87%E1%85%A1%E1%84%82%E1%85%B5%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8B%E1%85%A1%E1%84%86%E1%85%A6%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A1%E1%84%82%E1%85%A9(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '아메리카노에 바닐라의 부드러운 향과 달콤함을 조화롭게 담아낸 커피.', '고카페인 함유', '710ml', 122.7, 3.6, 1.1, 0.1, 20.0, 211.5, NOW(), NOW()),
+(94, '큐브라떼', 4200, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/05604705-c3da-4963-a3ea-9663dcb931fa_%E1%84%8F%E1%85%B2%E1%84%87%E1%85%B3%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6.jpg', '연유를 섞은 라떼에 에스프레소를 얼린 커피큐브를 올려, 녹을수록 더 진한 커피가 느껴지는 라떼.', '우유', '591ml', 304.4, 72.1, 11.2, 7.8, 15.0, 313.4, NOW(), NOW()),
+(95, '카페라떼', 2900, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/2df756cd-ce03-49ce-9744-5fea397886e5_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '진한 에스프레소와 부드러운 우유가 어우러져 고소한 풍미를 완성한 라떼.', '우유', '591ml', 145.1, 88.5, 8.5, 3.8, 9.2, 199.1, NOW(), NOW()),
+(96, '바닐라라떼', 3400, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/8749e40e-02af-40bf-930f-30e1e571b161_%E1%84%87%E1%85%A1%E1%84%82%E1%85%B5%E1%86%AF%E1%84%85%E1%85%A1%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '바닐라의 짙은 향과 풍부한 폼 밀크의 조화가 인상적인 달콤한 라떼.', '우유', '591ml', 244.2, 47.7, 8.2, 5.1, 20.3, 210.0, NOW(), NOW()),
+(97, '카라멜마끼아또', 3500, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/df4eea99-cda9-4a19-bbff-0f1c2d5275d4_%E1%84%8F%E1%85%A1%E1%84%85%E1%85%A1%E1%84%86%E1%85%A6%E1%86%AF%E1%84%86%E1%85%A1%E1%84%81%E1%85%B5%E1%84%8B%E1%85%A3%E1%84%84%E1%85%A9(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '폼 밀크 속에 진한 에스프레소와 달콤한 카라멜을 가미해 부드럽게 즐기는 커피.', '우유', '591ml', 243.9, 61.1, 7.1, 3.9, 18.5, 208.0, NOW(), NOW()),
+(98, '카페모카', 3700, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/b825bf10-fd37-44e0-b824-ec4ec653efe3_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%A6%E1%84%86%E1%85%A9%E1%84%8F%E1%85%A1(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '초코를 만나 풍부해진 에스프레소와 고소한 우유, 부드러운 휘핑크림까지 더해 달콤하게 즐기는 커피.', '우유, 대두', '591ml', 298.0, 130.4, 6.7, 9.3, 30.5, 223.2, NOW(), NOW()),
+(99, '카푸치노', 2700, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/a94d226c-3baf-4f16-8016-55e4756eea10_%E1%84%8F%E1%85%A1%E1%84%91%E1%85%AE%E1%84%8E%E1%85%B5%E1%84%82%E1%85%A9(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '에스프레소 위에 올려진 우유 거품, 그리고 시나몬 파우더로 완성한 조화로운 맛의 커피.', '우유', '591ml', 132.4, 54.8, 7.0, 4.2, 1.1, 192.3, NOW(), NOW()),
+(100, '헤이즐넛라떼', 3400, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/2d83689d-fbab-4dee-82a9-2a0813efb9ce_%E1%84%92%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B3%E1%86%AF%E1%84%82%E1%85%A5%E1%86%BA%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '부드러운 카페라떼에 헤이즐넛의 풍부한 향과 달콤함을 담아 향긋하게 즐길 수 있는 라떼.', '우유', '591ml', 237.4, 57.0, 7.3, 4.6, 10.8, 216.9, NOW(), NOW()),
+(101, '티라미수라떼', 3900, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/04ec86e5-1135-4764-bfb8-500effbdb3fc_%E1%84%90%E1%85%B5%E1%84%85%E1%85%A1%E1%84%86%E1%85%B5%E1%84%89%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '에스프레소와 티라미수 소스 & 우유 그리고 풍미를 더해주는 달달한 크림까지 곁들여 완성한 티라미수 라떼.', '우유, 대두, 고카페인 함유', '591ml', 400.6, 174.3, 7.8, 12.6, 37.8, 196.0, NOW(), NOW()),
+(102, '연유라떼', 3900, 'COFFEE_ICE', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/fe565839-1317-4f79-bcd9-d79278a499d1_%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%8B%E1%85%B2%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6(%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3).jpg', '향기로운 에스프레소 샷, 부드러운 우유 그리고 달콤한 연유가 조화롭게 어우러진 라떼', '우유,고카페인 함유', '591ml', 351.5, 123.6, 11.8, 8.5, 31.9, 165.9, NOW(), NOW()),
+(103, '트로피컬 용과 티플레져', 3800, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/27a7dba1-7c73-4db3-a5c3-1c71d87b2e14_%E1%84%90%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%84%8F%E1%85%A5%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%80%E1%85%AA%E1%84%90%E1%85%B5%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A6%E1%84%8C%E1%85%A7.jpg', '상큼 달콤한 트로피컬 과일, 강렬한 레드 용과 에이드에 아식한 알로에 펄이 들어간 그린티 베이스의 티플레저', NULL, '710ml', 241.1, 19.3, 0.3, 0.1, 45.8, 1.0, NOW(), NOW()),
+(104, '복숭아아이스티', 3000, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/5c8f98ad-7ea8-43e8-972c-ebfb56c7c762_%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%AE%E1%86%BC%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5.jpg', '홍차의 깊은 맛과 풍부한 복숭아 향이 어우러진 달콤한 여름철 인기 음료', '복숭아, 아황산류', '710ml', 297.1, 67.5, 0.1, 0.0, 62.6, 24.0, NOW(), NOW()),
+(105, '허니자몽블랙티', 3700, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/b1ef3cb5-8554-4687-939e-f0f9d93bdaf7_%E1%84%92%E1%85%A5%E1%84%82%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%86%E1%85%A9%E1%86%BC%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A2%E1%86%A8%E1%84%90%E1%85%B5.jpg', '달콤한 꿀청에 재운 자몽에 홍차의 부드러움을 어우른 상큼한 과일티.', NULL, '591ml', 302.2, 97.5, 0.6, 0.0, 53.6, 61.5, NOW(), NOW()),
+(106, '사과유자차', 3500, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/c7f9d0ba-ceba-451a-a6cc-4cc4a11861ac_%E1%84%89%E1%85%A1%E1%84%80%E1%85%AA%E1%84%8B%E1%85%B2%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A1_hot.jpg', '애플티의 향긋함과 유자청의 상큼달콤함을 한컵에 담아낸 과일티.', NULL, '591ml', 227.1, 89.3, 0.3, 0.0, 47.0, 0.0, NOW(), NOW()),
+(107, '유자차', 3300, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/63015239-1655-4ba6-9889-d38e7222476d_%E1%84%8B%E1%85%B2%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A1_hot.jpg', '비타민이 가득 든 상큼달콤한 유자를 듬뿍 넣어 향긋한 즐거움을 전하는 과일티.', NULL, '591ml', 286.4, 104.0, 0.3, 0.0, 47.9, 0.0, NOW(), NOW()),
+(108, '레몬차', 3300, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/a141a281-756c-46c4-b13b-4bb9023cfbc0_%E1%84%85%E1%85%A6%E1%84%86%E1%85%A9%E1%86%AB%E1%84%8E%E1%85%A1_hot.jpg', '상큼한 레몬의 맛과 향을 오롯이 살린 비타민C 가득한 과일티.', NULL, '591ml', 275.5, 94.2, 0.3, 0.0, 56.1, 0.0, NOW(), NOW()),
+(109, '자몽차', 3300, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/3b9fc3b4-4a2b-4b26-a0ed-b8f3bbb70dd8_%E1%84%8C%E1%85%A1%E1%84%86%E1%85%A9%E1%86%BC%E1%84%8E%E1%85%A1_hot.jpg', '달콤쌉싸름한 자몽의 조화로운 맛을 한 잔 가득 느낄 수 있는 과일티.', NULL, '591ml', 294.0, 84.2, 0.4, 0.0, 58.1, 0.0, NOW(), NOW()),
+(110, '녹차', 2500, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/3bbac75f-4e97-41f3-8193-17cf9360ad00_%E1%84%82%E1%85%A9%E1%86%A8%E1%84%8E%E1%85%A1_hot.jpg', '고소한 감칠맛과 부드러운 목넘김으로 산뜻하게 마음을 위로하는 국내산 녹차.', NULL, '591ml', 0.7, 4.2, 0.2, 0.0, 0.0, 65.3, NOW(), NOW()),
+(111, '페퍼민트', 2500, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/3915bac3-99fd-4bf0-a1fd-de3fddf5ce96_%E1%84%91%E1%85%A6%E1%84%91%E1%85%A5%E1%84%86%E1%85%B5%E1%86%AB%E1%84%90%E1%85%B3_hot.jpg', '멘톨향의 묵직한 청량감, 상쾌한 맛과 향이 인상적인 허브티.', NULL, '591ml', 0.2, 5.3, 0.0, 0.0, 0.0, 0.0, NOW(), NOW()),
+(112, '캐모마일', 2500, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/e1ead8f7-545d-4244-b098-23101adbfa4c_%E1%84%8F%E1%85%A2%E1%84%86%E1%85%A9%E1%84%86%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF_hot.jpg', '마음을 진정 시켜주는 산뜻한 풀내음을 느낄 수 있는 허브티.', NULL, '591ml', 0.5, 5.5, 0.0, 0.0, 0.0, 0.0, NOW(), NOW()),
+(113, '얼그레이', 2500, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/89097028-5c79-4ed5-afd5-f35e9e8fd4b6_%E1%84%8B%E1%85%A5%E1%86%AF%E1%84%80%E1%85%B3%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5_hot.jpg', '홍차 특유의 풍부한 플레이버를 만끽할 수 있는 허브티.', NULL, '591ml', 0.7, 4.2, 0.2, 0.0, 0.0, 73.4, NOW(), NOW()),
+(114, '허니자몽블랙티', 3700, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/2a195718-bc37-419e-9286-15cb97188c8f_%E1%84%92%E1%85%A5%E1%84%82%E1%85%B5%E1%84%8C%E1%85%A1%E1%84%86%E1%85%A9%E1%86%BC%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A2%E1%86%A8%E1%84%90%E1%85%B5_ice.jpg', '달콤한 꿀청에 재운 자몽에 홍차의 부드러움을 어우른 상큼한 과일티.', NULL, '710ml', 265.8, 133.0, 0.4, 0.0, 42.7, 70.9, NOW(), NOW()),
+(115, '사과유자차', 3500, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/a60a4ae6-26a7-469f-b440-4908e8d8c910_%E1%84%89%E1%85%A1%E1%84%80%E1%85%AA%E1%84%8B%E1%85%B2%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A1_ice.jpg', '애플티의 향긋함과 유자청의 상큼달콤함을 한컵에 담아낸 과일티.', NULL, '710ml', 242.2, 74.5, 0.3, 0.0, 37.5, 0.0, NOW(), NOW()),
+(116, '유자차', 3300, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/c520f1c9-a837-4bdd-9e20-232a6472dbeb_%E1%84%8B%E1%85%B2%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A1_ice.jpg', '비타민이 가득 든 상큼달콤한 유자를 듬뿍 넣어 향긋한 즐거움을 전하는 과일티.', NULL, '710ml', 303.1, 99.1, 0.3, 0.0, 59.4, 0.0, NOW(), NOW()),
+(117, '레몬차', 3300, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/3117f8f7-f0fc-4cc9-adca-5b09d1c58795_%E1%84%85%E1%85%A6%E1%84%86%E1%85%A9%E1%86%AB%E1%84%8E%E1%85%A1_ice.jpg', '상큼한 레몬의 맛과 향을 오롯이 살린 비타민C 가득한 과일티.', NULL, '710ml', 327.5, 101.3, 0.3, 0.0, 68.9, 0.0, NOW(), NOW()),
+(118, '자몽차', 3300, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/18a1e648-8a63-48b8-b17c-edc90991004f_%E1%84%8C%E1%85%A1%E1%84%86%E1%85%A9%E1%86%BC%E1%84%8E%E1%85%A1_ice.jpg', '달콤쌉싸름한 자몽의 조화로운 맛을 한 잔 가득 느낄 수 있는 과일티.', NULL, '710ml', 297.6, 89.1, 0.4, 0.0, 58.5, 0.0, NOW(), NOW()),
+(119, '녹차', 2500, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/1b6af783-38ee-42de-a5b9-fdcaf0b3db3b_%E1%84%82%E1%85%A9%E1%86%A8%E1%84%8E%E1%85%A1_ice.jpg', '고소한 감칠맛과 부드러운 목넘김으로 산뜻하게 마음을 위로하는 국내산 녹차.', NULL, '710ml', 1.0, 2.1, 0.3, 0.0, 0.0, 78.5, NOW(), NOW()),
+(120, '페퍼민트', 2500, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/9c4caf21-1f8f-4935-b099-86d0d4c028f4_%E1%84%91%E1%85%A6%E1%84%91%E1%85%A5%E1%84%86%E1%85%B5%E1%86%AB%E1%84%90%E1%85%B3_ice.jpg', '멘톨향의 묵직한 청량감, 상쾌한 맛과 향이 인상적인 허브티.', NULL, '710ml', 2.5, 3.0, 0.1, 0.0, 0.0, 0.0, NOW(), NOW()),
+(121, '캐모마일', 2500, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/458980e4-40cd-48b6-89bb-32eabf053db0_%E1%84%8F%E1%85%A2%E1%84%86%E1%85%A9%E1%84%86%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF_ice.jpg', '마음을 진정 시켜주는 산뜻한 풀내음을 느낄 수 있는 허브티.', NULL, '710ml', 1.3, 2.5, 0.1, 0.0, 0.0, 0.0, NOW(), NOW()),
+(122, '얼그레이', 2500, 'TEA', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/925dddb5-9d45-4cc0-b960-eb1c0631ae89_%E1%84%8B%E1%85%A5%E1%86%AF%E1%84%80%E1%85%B3%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5_ice.jpg', '홍차 특유의 풍부한 플레이버를 만끽할 수 있는 허브티.', NULL, '710ml', 1.3, 2.1, 0.3, 0.0, 0.0, 87.2, NOW(), NOW()),
+(123, '첨벙첨벙간식꾸러미', 3900, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/15af6ea0-5e66-44a5-b5ea-f834718243e3_%E1%84%8E%E1%85%A5%E1%86%B7%E1%84%87%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%A5%E1%86%B7%E1%84%87%E1%85%A5%E1%86%BC%E1%84%80%E1%85%A1%E1%86%AB%E1%84%89%E1%85%B5%E1%86%A8%E1%84%81%E1%85%AE%E1%84%85%E1%85%A5%E1%84%86%E1%85%B5.png', '핫도그 보물섬을 찾아서 생크림 오믈렛 파도를 헤엄치는 커스타드맛 상어로 구성 된 여름 간식 꾸러미', NULL, '140g', 455.0, 270.0, 7.0, 10.0, 23.0, 0.0, NOW(), NOW()),
+(124, '오레오초코퐁파르페', 4400, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/998b2f20-c313-4ffc-9e12-5c9a97f03027_%E1%84%8B%E1%85%A9%E1%84%85%E1%85%A6%E1%84%8B%E1%85%A9%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9%E1%84%91%E1%85%A9%E1%86%BC%E1%84%91%E1%85%A1%E1%84%85%E1%85%B3%E1%84%91%E1%85%A6.png', '진한 초코 스무디에 바삭바삭한 허니 퐁시리얼, 리얼 오레오와 아이스크림을 올려 낸 파르페', NULL, '397g', 675.4, 345.6, 9.4, 13.3, 57.0, 0.0, NOW(), NOW()),
+(125, '딸기크림퐁파르페', 4400, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/e2a1fd82-b5e9-413e-b078-13ec16e42904_%E1%84%84%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B7%E1%84%91%E1%85%A9%E1%86%BC%E1%84%91%E1%85%A1%E1%84%85%E1%85%B3%E1%84%91%E1%85%A6.png', '달콤한 딸기 요거트 스무디에 바삭바삭한 허니 퐁시리얼, 이탈리아 과자 보노미 글라사떼와 아이스크림을 올려 낸 파르페', NULL, '362.5g', 478.8, 139.6, 6.7, 8.2, 44.7, 0.0, NOW(), NOW()),
+(126, '그레놀라스모어쿠키', 2900, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/9a9defdc-bab3-477f-b852-cd69f3eea24a_%E1%84%80%E1%85%B3%E1%84%85%E1%85%A6%E1%84%82%E1%85%A9%E1%86%AF%E1%84%85%E1%85%A1%E1%84%89%E1%85%B3%E1%84%86%E1%85%A9%E1%84%8B%E1%85%A5%E1%84%8F%E1%85%AE%E1%84%8F%E1%85%B5.jpg', '그래놀라가 콕콕 박힌 통곡물 쿠키에 달콤하게 구운 마시멜로우가 만나 더욱 건강한 쿠키', '계란, 우유, 대두, 밀, 돼지고기', '133g', 583.9, 590.0, 10.0, 15.0, 35.0, 10.5, NOW(), NOW()),
+(127, '크로크무슈', 3800, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/17fadb1b-c6eb-43cf-8888-9c0f10ef0ede_%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8F%E1%85%B3%E1%84%86%E1%85%AE%E1%84%89%E1%85%B2.png', '고소한 식빵 사이에 햄과 치즈를 샌드하고, 빵 윗면에 멜팅치즈를 토핑해 든든한 한끼를 선물하는 샌드위치.', '계란, 우유, 대두, 밀, 돼지고기, 쇠고기', '140g', 364.0, 719.0, 16.0, 9.0, 4.0, 0.0, NOW(), NOW()),
+(128, '미트파이', 4400, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/326f6a04-6857-4c9a-8fac-3c916cfce45a_%E1%84%86%E1%85%B5%E1%84%90%E1%85%B3%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5.jpg', '풍미 가득한 치즈와 바비큐 소스로 맛을 낸 소고기를 듬뿍 담은 미트파이', NULL, '120g', 375.0, 518.0, 15.0, 10.0, NULL, 0.0, NOW(), NOW()),
+(129, '버터버터소금빵', 3200, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/1b6bc7df-e3a0-44e2-b28f-794080e0035b_%E1%84%87%E1%85%A5%E1%84%90%E1%85%A5%E1%84%87%E1%85%A5%E1%84%90%E1%85%A5%E1%84%89%E1%85%A9%E1%84%80%E1%85%B3%E1%86%B7%E1%84%88%E1%85%A1%E1%86%BC.png', '고소한 프랑스산 프레지덩 버터를 듬뿍넣어 더 부드럽고 짭쪼롬하게 즐길 수 있는 베이커리 메뉴', '밀, 대두, 우유', '75g', 336.0, 417.0, 5.0, 12.0, 1.0, 0.0, NOW(), NOW()),
+(130, '제주당근에그마요샌드위치', 3400, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/95e98bc3-f0e1-49b4-b94e-97e1a46d82e2_%E1%84%8C%E1%85%A6%E1%84%8C%E1%85%AE%E1%84%83%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B3%E1%86%AB%E1%84%86%E1%85%A1%E1%84%8B%E1%85%AD%E1%84%89%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%E1%84%8B%E1%85%B1%E1%84%8E%E1%85%B5.jpg', '제주 당근과 에그마요를 품은 간편하고 든든한 한 손 샌드위치.', '계란, 우유, 대두, 밀, 조개류(굴)', '139g', 363.0, 486.0, 13.9, 3.8, 3.0, 0.0, NOW(), NOW()),
+(131, '경산대추과즐', 1900, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/cbb66cb5-c1d7-4fe4-ba51-89156eda2265_%E1%84%80%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A1%E1%86%AB%E1%84%83%E1%85%A2%E1%84%8E%E1%85%AE%E1%84%80%E1%85%AA%E1%84%8C%E1%85%B3%E1%86%AF.png', '경산 대추와 우리 밀을 넣은 달콤 쫀득한 피에 국내산 조청과 쌀 튀밥을 입혀 바삭하게 구운 한과', '밀, 대두', '28g', 116.0, 27.2, 1.7, 1.3, 5.3, 0.0, NOW(), NOW()),
+(132, '장수사과비건젤리', 1900, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/fff33505-dd25-4e01-b6f2-5cdba5c8ef7f_%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%89%E1%85%AE%E1%84%89%E1%85%A1%E1%84%80%E1%85%AA%E1%84%87%E1%85%B5%E1%84%80%E1%85%A5%E1%86%AB%E1%84%8C%E1%85%A6%E1%86%AF%E1%84%85%E1%85%B5.png', '전라북도 장수 고원에서 자란 사과를 품은 말랑 촉촉한 동물 모양 비건 젤리', '돼지고기, 우유, 대두, 복숭아, 땅콩', '50g', 180.0, 75.0, 0.0, 0.0, 15.0, 0.0, NOW(), NOW()),
+(133, '햄앤치즈샌드', 2000, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/6c8d72ce-4a47-4f73-afd0-205bd74b3bce_%E1%84%92%E1%85%A2%E1%86%B7%E1%84%8B%E1%85%A2%E1%86%AB%E1%84%8E%E1%85%B5%E1%84%8C%E1%85%B3%E1%84%89%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3.jpg', '햄과 치즈의 조화로운 한끼를 만끽할 수 있는 메가커피 샌드위치.', '대두, 밀, 우유, 계란, 돼지고기, 소고기, 조개류(굴), 닭고기', '75g', 215.0, 360.0, 7.0, 5.0, 5.0, 0.0, NOW(), NOW()),
+(134, '아이스허니와앙슈', 2400, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/cdecd76d-8fca-47c3-806f-d27fe893700c_%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%E1%84%92%E1%85%A5%E1%84%82%E1%85%B5%E1%84%8B%E1%85%AA%E1%84%8B%E1%85%AA%E1%86%BC%E1%84%89%E1%85%B2.jpg', '꿀을 섞은 크림을 바삭한 쿠키슈 안에 넣어, 건강하고 맛있게 완성한 디저트.', '계란, 우유, 대두, 밀', '75g', 200.0, 110.0, 4.0, 4.5, 10.0, 0.0, NOW(), NOW()),
+(135, '몽쉘케이크', 5300, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/bc40f5a1-dfcd-4486-bd42-c69fb81106d8_%E1%84%86%E1%85%A9%E1%86%BC%E1%84%89%E1%85%B0%E1%86%AF%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8F%E1%85%B3.jpg', '진하고 폭신한 초콜릿 스펀지 사이에 부드러운 생크림이 듬뿍 들어간 몽쉘 케이크.', '계란, 우유, 대두, 밀', '101g', 384.0, 210.0, 5.0, 14.0, 26.0, 0.0, NOW(), NOW()),
+(136, '말차스모어쿠키', 2900, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/37460383-7830-4d25-a5c2-064e578df234_%E1%84%86%E1%85%A1%E1%86%AF%E1%84%8E%E1%85%A1%E1%84%89%E1%85%B3%E1%84%86%E1%85%A9%E1%84%8B%E1%85%A5%E1%84%8F%E1%85%AE%E1%84%8F%E1%85%B5.jpg', '화이트 초코칩이 가득 박힌 말차 쿠키에 달콤하게 구운 마시멜로우를 얹어 달콤쌉싸름한 매력을 간직한 쿠키.', '계란, 우유, 대두, 밀, 돼지고기', '133g', 583.9, 590.0, 10.0, 15.0, 35.0, 10.5, NOW(), NOW()),
+(137, '초코스모어쿠키', 2900, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/61e6404c-a51b-4bc4-abe3-c4a254041a40_%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9%E1%84%89%E1%85%B3%E1%84%86%E1%85%A9%E1%84%8B%E1%85%A5%E1%84%8F%E1%85%AE%E1%84%8F%E1%85%B5.jpg', '초코칩이 콕콕 박힌 촉촉한 초코 쿠키에 달콤하게 구운 마시멜로우가 만나 더 진한 초코 맛 쿠키.', '계란, 우유, 대두, 밀, 돼지고기', '133g', 579.0, 590.0, 10.0, 15.0, 34.0, 0.0, NOW(), NOW()),
+(138, '감자빵', 3500, 'DESSERT', 'SELLING', 'image', '쫄깃한 빵 속 포슬포슬한 감자를 가득 담아낸 베이커리 메뉴.', '계란, 우유, 대두', '120g', 295.0, 230.0, 6.0, 6.0, 3.0, 0.0, NOW(), NOW()),
+(139, '유니콘프라페마카롱', 2100, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/e6a89027-3427-4fbf-8954-8f5b99d7885b_%E1%84%8B%E1%85%B2%E1%84%82%E1%85%B5%E1%84%8F%E1%85%A9%E1%86%AB%E1%84%91%E1%85%B3%E1%84%85%E1%85%A1%E1%84%91%E1%85%A6%E1%84%86%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%85%E1%85%A9%E1%86%BC.jpg', '메가커피 인기 음료인 유니콘 프라페를 모티브로 만든 매지컬 비주얼 마카롱.', '계란, 우유, 대두, 밀', '50g', 243.0, 28.0, 3.0, 6.0, 21.0, 0.0, NOW(), NOW()),
+(140, '쿠키프라페마카롱', 2100, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/d2b838cc-56c7-409a-9479-e096945d3c45_%E1%84%8F%E1%85%AE%E1%84%8F%E1%85%B5%E1%84%91%E1%85%B3%E1%84%85%E1%85%A1%E1%84%91%E1%85%A6%E1%84%86%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%85%E1%85%A9%E1%86%BC.png', '메가커피 인기메뉴인 쿠키프라페를 모티브로 만든 달콤한 마카롱.', '계란, 우유, 대두, 밀, 오징어', '50g', 240.0, 68.6, 3.5, 5.5, 22.2, 0.0, NOW(), NOW()),
+(141, '메가초코마카롱', 2100, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/6b99936b-ed9e-461b-b259-665f83395a61_%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9%E1%84%86%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%85%E1%85%A9%E1%86%BC.jpg', '메가커피 시그니처 음료 메가초코를 모티브로 만든 초코맛 마카롱.', '계란, 우유, 대두, 밀, 오징어, 땅콩', '50g', 251.0, 46.0, 4.0, 7.0, 20.0, 0.0, NOW(), NOW()),
+(142, '딸기요거트마카롱', 2100, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/904e29c1-92cd-4e68-bbd4-5678a0b21ed3_%E1%84%84%E1%85%A1%E1%86%AF%E1%84%80%E1%85%B5%E1%84%8B%E1%85%AD%E1%84%80%E1%85%A5%E1%84%90%E1%85%B3%E1%84%86%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%85%E1%85%A9%E1%86%BC.jpg', '딸기요거트 스무디를 연상하게 하는 상큼한 마카롱.', '계란, 우유, 대두, 밀', '50g', 226.0, 32.0, 3.0, 6.0, 18.0, 0.0, NOW(), NOW()),
+(143, '치즈케익', 3500, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/8ad7b1ee-53c3-4e02-9bce-3c12417381da_%E1%84%8E%E1%85%B5%E1%84%8C%E1%85%B3%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%A8.jpg', '진한 치즈의 맛을 달콤하고 부드럽게 느낄 수 있는 케이크.', '계란, 우유, 대두, 밀, 돼지고기, 호두, 땅콩', '91g', 272.0, 184.0, 6.0, 9.0, 18.0, 0.0, NOW(), NOW()),
+(144, '초코케익', 3500, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/bca33d9a-1849-4e61-a894-ba3a01f85ef7_%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%A8.jpg', '달콤한 초콜릿 본연의 맛을 더 진하게 느낄 수 있는 케이크.', '계란, 우유, 대두, 밀, 돼지고기, 호두, 땅콩', '101g', 377.0, 31.0, 6.0, 15.0, 20.0, 0.0, NOW(), NOW()),
+(145, '티라미수케익', 3500, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/758be02a-db84-4a81-a8b2-0dfae9aa5242_%E1%84%90%E1%85%B5%E1%84%85%E1%85%A1%E1%84%86%E1%85%B5%E1%84%89%E1%85%AE%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%A8.jpg', '부드러운 치즈 맛과 코코아의 조화로운 향으로 호불호 없이 즐기는 케이크.', '계란, 우유, 대두, 밀, 호두, 땅콩', '86g', 244.0, 130.0, 4.0, 8.0, 16.0, 0.0, NOW(), NOW()),
+(146, '허니브레드', 4500, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/5b24e7e4-8472-4bec-b850-f0fc8e095f0f_%E1%84%92%E1%85%A5%E1%84%82%E1%85%B5%E1%84%87%E1%85%B3%E1%84%85%E1%85%A6%E1%84%83%E1%85%B3.jpg', '바삭하고 쫄깃하게 구워낸 빵에 달콤한 크림을 올려 즐기는 조화로운 베이커리 메뉴.', '밀, 대두, 우유', '228g', 734.0, 889.0, 16.0, 20.0, 16.0, 0.0, NOW(), NOW()),
+(147, '메가쿠키(초코칩)', 2000, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/f219cff8-865d-4573-8053-6ed7de0fcb49_%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%8F%E1%85%AE%E1%84%8F%E1%85%B5(%E1%84%8E%E1%85%A9%E1%84%8F%E1%85%A9%E1%84%8E%E1%85%B5%E1%86%B8).jpg', '진한 초콜릿칩을 넣어 만든 메가MGC커피 시그니처 쿠키.', '계란, 우유, 대두, 밀', '70g', 319.0, 247.0, 3.0, 6.0, 23.0, 0.0, NOW(), NOW()),
+(148, '메가쿠키(마카다미아)', 2000, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/d7ff61cb-b108-4360-b618-9dd88822da42_%E1%84%86%E1%85%A6%E1%84%80%E1%85%A1%E1%84%8F%E1%85%AE%E1%84%8F%E1%85%B5(%E1%84%86%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%83%E1%85%A1%E1%84%86%E1%85%B5%E1%84%8B%E1%85%A1).jpg', '고소한 마카다미아를 넣어 만든 메가MGC커피 시그니처 쿠키.', '계란, 우유, 대두, 밀, 이산화황', '70g', 318.0, 198.0, 5.0, 5.0, 26.0, 0.0, NOW(), NOW()),
+(149, '플레인크로플', 2500, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/0b26ca4f-d9af-4a16-ad2b-51f23c2b68ef_%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B3%E1%86%AF.jpg', '버터풍미가 가득한 크루와상의 바삭함과 와플의 부드러움을 합친 겉바속촉 베이커리 메뉴.', '계란, 우유, 밀', '58g', 252.0, 252.0, 5.0, 8.0, 7.0, 0.0, NOW(), NOW()),
+(150, '아이스크림크로플', 3500, 'DESSERT', 'SELLING', 'https://giosk-bucket.s3.ap-northeast-2.amazonaws.com/product/b4d4de43-8f2d-40bb-bd33-67b1e524deac_%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%B7%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B3%E1%86%AF.jpg', '따뜻하고 바삭한 크로플 위에 차갑고 달콤한 바닐라 아이스크림을 올려 만든 매력적인 베이커리 메뉴.', '계란, 우유, 밀', '111g', 368.0, 327.0, 7.0, 11.0, 11.0, 0.0, NOW(), NOW());
+
+-- option_group --
+
+-- 디카페인 커피류 (product_id: 0~12)
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (1, 0, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (2, 1, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (3, 2, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (4, 3, '샷 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (5, 4, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (6, 4, '우유 선택', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (7, 5, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (8, 5, '바닐라 시럽 조절', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (9, 6, '샷 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (10, 7, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (11, 7, '휘핑 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (12, 8, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (13, 8, '휘핑 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (14, 9, '샷 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (15, 10, '샷 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (16, 11, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (17, 11, '휘핑 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (18, 12, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (19, 12, '당도 조절', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (28, 16, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (29, 16, '당도 조절', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (30, 17, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (31, 17, '휘핑 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (32, 18, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (33, 18, '휘핑 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (34, 19, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (35, 19, '과육 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (36, 20, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (37, 20, '당도 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (6, 4, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (38, 21, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (39, 21, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (7, 4, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (40, 22, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (41, 22, '당도 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (8, 5, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (42, 23, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (43, 23, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (9, 5, '시나몬 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (44, 24, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (45, 24, '과육 추가', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (10, 6, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (46, 25, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (47, 25, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (11, 6, '바닐라 시럽 조절', NOW(), NOW());
+-- 디카페인 티/에이드/기타 (product_id: 26~40)
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (48, 26, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (49, 26, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (12, 7, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (50, 27, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (51, 27, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (13, 7, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (52, 28, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (53, 28, '탄산 강도 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (14, 8, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (54, 29, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (55, 29, '탄산 강도 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (15, 9, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (56, 30, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (57, 30, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (16, 9, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (58, 31, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (59, 31, '탄산 강도 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (17, 12, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (60, 32, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (61, 32, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (18, 12, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (62, 33, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (63, 33, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (19, 13, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (64, 34, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (65, 34, '당도 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (20, 13, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (66, 35, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (67, 35, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (21, 14, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (68, 36, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (69, 36, '당도 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (22, 15, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (70, 37, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (71, 37, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (23, 15, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (72, 38, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (73, 38, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (24, 16, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (74, 39, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (75, 39, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (25, 16, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (76, 40, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (77, 40, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (26, 17, '휘핑 추가', NOW(), NOW());
+-- 디카페인 스무디/프라페 (product_id: 41~60)
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (78, 41, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (79, 41, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (27, 17, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (80, 42, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (81, 42, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (28, 18, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (82, 43, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (83, 43, '당도 조절', NOW(), NOW());
 
-INSERT INTO option_group (id, product_id, name, created_at, modified_at)
-VALUES (29, 18, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (84, 44, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (85, 44, '휘핑 추가', NOW(), NOW());
 
---- OPTION ---
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (1, 1, '1샷 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (86, 45, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (87, 45, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (2, 1, '2샷 추가', 1000, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (88, 46, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (89, 46, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (3, 1, '추가 안함', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (90, 47, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (91, 47, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (4, 2, '1샷 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (92, 48, '시럽 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (93, 48, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (5, 2, '2샷 추가', 1000, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (94, 49, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (95, 49, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (6, 2, '추가 안함', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (96, 50, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (97, 50, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (7, 3, '일반우유', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (98, 51, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (99, 51, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (8, 3, '무지방우유', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (100, 52, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (101, 52, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (9, 3, '두유', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (102, 53, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (103, 53, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (10, 4, '1샷 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (104, 54, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (105, 54, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (11, 4, '2샷 추가', 1000, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (106, 55, '시럽 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (107, 55, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (12, 4, '추가 안함', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (108, 56, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (109, 56, '과육 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (13, 5, '휘핑 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (110, 57, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (111, 57, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (14, 5, '없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (112, 58, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (113, 58, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (15, 6, '1샷 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (114, 59, '시럽 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (115, 59, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (16, 6, '2샷 추가', 1000, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (116, 60, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (117, 60, '과육 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (17, 6, '추가 안함', 0, NOW(), NOW());
+-- 디카페인 커피/티/기타 확장 메뉴 (product_id: 61~80)
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (118, 61, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (119, 61, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (18, 7, '휘핑 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (120, 62, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (121, 62, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (19, 7, '없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (122, 63, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (123, 63, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (20, 8, '1샷 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (134, 69, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (135, 69, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (21, 8, '2샷 추가', 1000, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (136, 70, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (137, 70, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (22, 8, '추가 안함', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (138, 71, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (139, 71, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (23, 9, '시나몬 추가', 300, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (140, 72, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (141, 72, '우유 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (24, 9, '없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (142, 73, '시럽 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (143, 73, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (25, 10, '1샷 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (144, 74, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (145, 74, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (26, 10, '2샷 추가', 1000, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (146, 75, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (147, 75, '우유 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (27, 10, '추가 안함', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (148, 76, '시럽 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (149, 76, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (28, 11, '기본', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (150, 77, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (151, 77, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (29, 11, '반만 넣기', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (152, 78, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (153, 78, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (30, 11, '제거', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (154, 79, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (155, 79, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (31, 12, '1샷 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (156, 80, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (157, 80, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (32, 12, '2샷 추가', 1000, NOW(), NOW());
+-- 디카페인 커피/티/기타 확장 메뉴 (product_id: 81~100)
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (158, 81, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (159, 81, '우유 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (33, 12, '추가 안함', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (160, 82, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (161, 82, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (34, 13, '휘핑 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (162, 83, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (163, 83, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (35, 13, '없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (164, 84, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (165, 84, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (36, 14, '기본', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (166, 85, '시럽 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (167, 85, '우유 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (37, 14, '70%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (168, 86, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (169, 86, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (38, 14, '50%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (170, 87, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (171, 87, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (39, 14, '30%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (172, 88, '시럽 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (173, 88, '우유 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (40, 14, '0%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (174, 89, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (175, 89, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (41, 15, '기본', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (176, 90, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (177, 90, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (42, 15, '70%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (178, 91, '시럽 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (179, 91, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (43, 15, '50%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (180, 92, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (181, 92, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (44, 15, '30%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (182, 93, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (183, 93, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (45, 15, '0%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (184, 94, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (185, 94, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (46, 16, '얼음 많음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (186, 95, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (187, 95, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (47, 16, '보통', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (188, 96, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (189, 96, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (48, 16, '적게', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (190, 97, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (191, 97, '우유 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (49, 16, '얼음 없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (192, 98, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (193, 98, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (50, 17, '얼음 많음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (194, 99, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (195, 99, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (51, 17, '보통', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (196, 100, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (197, 100, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (52, 17, '적게', 0, NOW(), NOW());
+-- 디카페인 커피/스무디/프라페 옵션 (product_id: 101~120)
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (198, 101, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (199, 101, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (53, 17, '얼음 없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (200, 102, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (201, 102, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (54, 18, '기본', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (202, 103, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (203, 103, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (55, 18, '70%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (204, 104, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (205, 104, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (56, 18, '50%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (206, 105, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (207, 105, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (57, 18, '30%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (208, 106, '시럽 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (209, 106, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (58, 18, '0%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (210, 107, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (211, 107, '우유 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (59, 19, '얼음 많음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (212, 108, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (213, 108, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (60, 19, '보통', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (214, 109, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (215, 109, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (61, 19, '적게', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (216, 110, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (217, 110, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (62, 19, '얼음 없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (218, 111, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (219, 111, '우유 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (63, 20, '과육 추가', 1000, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (220, 112, '시럽 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (221, 112, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (64, 20, '기본', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (222, 113, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (223, 113, '과육 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (65, 21, '1샷 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (224, 114, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (225, 114, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (66, 21, '2샷 추가', 1000, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (226, 115, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (227, 115, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (67, 21, '추가 안함', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (228, 116, '시럽 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (229, 116, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (68, 22, '1샷 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (230, 117, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (231, 117, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (69, 22, '2샷 추가', 1000, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (232, 118, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (233, 118, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (70, 22, '추가 안함', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (234, 119, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (235, 119, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (71, 23, '얼음 많음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (236, 120, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (237, 120, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (72, 23, '보통', 0, NOW(), NOW());
+-- 디카페인 커피/스무디/프라페 옵션 (product_id: 121~140)
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (238, 121, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (239, 121, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (73, 23, '적게', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (240, 122, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (241, 122, '우유 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (74, 23, '얼음 없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (242, 123, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (243, 123, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (75, 24, '얼음 많음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (244, 124, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (245, 124, '시나몬 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (76, 24, '보통', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (246, 125, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (247, 125, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (77, 24, '적게', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (248, 126, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (249, 126, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (78, 24, '얼음 없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (250, 127, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (251, 127, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (79, 25, '기본', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (252, 128, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (253, 128, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (80, 25, '70%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (254, 129, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (255, 129, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (81, 25, '50%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (256, 130, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (257, 130, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (82, 25, '30%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (258, 131, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (259, 131, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (83, 25, '0%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (260, 132, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (261, 132, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (84, 26, '휘핑 추가', 500, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (262, 133, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (263, 133, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (85, 26, '없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (264, 134, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (265, 134, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (86, 27, '얼음 많음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (266, 135, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (267, 135, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (87, 27, '보통', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (268, 136, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (269, 136, '당도 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (88, 27, '적게', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (270, 137, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (271, 137, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (89, 27, '얼음 없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (272, 138, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (273, 138, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (90, 28, '얼음 많음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (274, 139, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (275, 139, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (91, 28, '보통', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (276, 140, '얼음 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (277, 140, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (92, 28, '적게', 0, NOW(), NOW());
+-- 디카페인 커피/스무디/프라페 옵션 (product_id: 141~150)
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (278, 141, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (279, 141, '휘핑 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (93, 28, '얼음 없음', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (280, 142, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (281, 142, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (94, 29, '기본', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (282, 143, '당도 조절', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (283, 143, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (95, 29, '70%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (284, 144, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (285, 144, '샷 추가', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (96, 29, '50%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (286, 145, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (287, 145, '시럽 조절', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (97, 29, '30%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (288, 146, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (289, 146, '얼음 선택', NOW(), NOW());
 
-INSERT INTO option (id, option_group_id, name, price, created_at, modified_at)
-VALUES (98, 29, '0%', 0, NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (290, 147, '휘핑 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (291, 147, '샷 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (292, 148, '우유 선택', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (293, 148, '시럽 조절', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (294, 149, '샷 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (295, 149, '휘핑 추가', NOW(), NOW());
+
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (296, 150, '과육 추가', NOW(), NOW());
+INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (297, 150, '얼음 선택', NOW(), NOW());
+
+-- option --
+
+-- 샷 추가 옵션 (id: 1 ~ 15, option_group_id: 1 ~ 5)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(1, 1, '샷 추가 안함', 0, NOW(), NOW()),
+(2, 1, '1샷 추가', 500, NOW(), NOW()),
+(3, 1, '2샷 추가', 1000, NOW(), NOW()),
+
+(4, 2, '샷 추가 안함', 0, NOW(), NOW()),
+(5, 2, '1샷 추가', 500, NOW(), NOW()),
+(6, 2, '2샷 추가', 1000, NOW(), NOW()),
+
+(7, 3, '샷 추가 안함', 0, NOW(), NOW()),
+(8, 3, '1샷 추가', 500, NOW(), NOW()),
+(9, 3, '2샷 추가', 1000, NOW(), NOW()),
+
+(10, 4, '샷 추가 안함', 0, NOW(), NOW()),
+(11, 4, '1샷 추가', 500, NOW(), NOW()),
+(12, 4, '2샷 추가', 1000, NOW(), NOW()),
+
+(13, 5, '샷 추가 안함', 0, NOW(), NOW()),
+(14, 5, '1샷 추가', 500, NOW(), NOW()),
+(15, 5, '2샷 추가', 1000, NOW(), NOW());
+
+-- 우유 선택 (option_group_id: 6, id: 16~19)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(16, 6, '일반 우유', 0, NOW(), NOW()),
+(17, 6, '저지방 우유', 0, NOW(), NOW()),
+(18, 6, '무지방 우유', 0, NOW(), NOW()),
+(19, 6, '두유', 500, NOW(), NOW());
+
+-- 샷 추가 (option_group_id: 7, id: 20~22)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(20, 7, '샷 추가 안함', 0, NOW(), NOW()),
+(21, 7, '1샷 추가', 500, NOW(), NOW()),
+(22, 7, '2샷 추가', 1000, NOW(), NOW());
+
+-- 바닐라 시럽 조절 (option_group_id: 8, id: 23~25)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(23, 8, '시럽 없음', 0, NOW(), NOW()),
+(24, 8, '기본', 0, NOW(), NOW()),
+(25, 8, '시럽 추가', 300, NOW(), NOW());
+
+-- 샷 추가 (option_group_id: 9, id: 26~28)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(26, 9, '샷 추가 안함', 0, NOW(), NOW()),
+(27, 9, '1샷 추가', 500, NOW(), NOW()),
+(28, 9, '2샷 추가', 1000, NOW(), NOW());
+
+-- 얼음 선택 옵션
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(41, 28, '얼음 없음', 0, NOW(), NOW()),
+(42, 28, '적게', 0, NOW(), NOW()),
+(43, 28, '기본', 0, NOW(), NOW()),
+(44, 28, '많이', 0, NOW(), NOW()),
+
+(45, 30, '얼음 없음', 0, NOW(), NOW()),
+(46, 30, '적게', 0, NOW(), NOW()),
+(47, 30, '기본', 0, NOW(), NOW()),
+(48, 30, '많이', 0, NOW(), NOW()),
+
+(49, 32, '얼음 없음', 0, NOW(), NOW()),
+(50, 32, '적게', 0, NOW(), NOW()),
+(51, 32, '기본', 0, NOW(), NOW()),
+(52, 32, '많이', 0, NOW(), NOW()),
+
+(53, 34, '얼음 없음', 0, NOW(), NOW()),
+(54, 34, '적게', 0, NOW(), NOW()),
+(55, 34, '기본', 0, NOW(), NOW()),
+(56, 34, '많이', 0, NOW(), NOW()),
+
+(57, 36, '얼음 없음', 0, NOW(), NOW()),
+(58, 36, '적게', 0, NOW(), NOW()),
+(59, 36, '기본', 0, NOW(), NOW()),
+(60, 36, '많이', 0, NOW(), NOW()),
+
+(61, 38, '얼음 없음', 0, NOW(), NOW()),
+(62, 38, '적게', 0, NOW(), NOW()),
+(63, 38, '기본', 0, NOW(), NOW()),
+(64, 38, '많이', 0, NOW(), NOW()),
+
+(65, 40, '얼음 없음', 0, NOW(), NOW()),
+(66, 40, '적게', 0, NOW(), NOW()),
+(67, 40, '기본', 0, NOW(), NOW()),
+(68, 40, '많이', 0, NOW(), NOW()),
+
+(69, 42, '얼음 없음', 0, NOW(), NOW()),
+(70, 42, '적게', 0, NOW(), NOW()),
+(71, 42, '기본', 0, NOW(), NOW()),
+(72, 42, '많이', 0, NOW(), NOW()),
+
+(73, 44, '얼음 없음', 0, NOW(), NOW()),
+(74, 44, '적게', 0, NOW(), NOW()),
+(75, 44, '기본', 0, NOW(), NOW()),
+(76, 44, '많이', 0, NOW(), NOW());
+
+-- 당도 조절
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(102, 29, '무가당', 0, NOW(), NOW()),
+(103, 29, '30%', 0, NOW(), NOW()),
+(104, 29, '50%', 0, NOW(), NOW()),
+(105, 29, '70%', 0, NOW(), NOW()),
+(106, 29, '100%', 0, NOW(), NOW()),
+
+(107, 37, '무가당', 0, NOW(), NOW()),
+(108, 37, '30%', 0, NOW(), NOW()),
+(109, 37, '50%', 0, NOW(), NOW()),
+(110, 37, '70%', 0, NOW(), NOW()),
+(111, 37, '100%', 0, NOW(), NOW()),
+
+(112, 41, '무가당', 0, NOW(), NOW()),
+(113, 41, '30%', 0, NOW(), NOW()),
+(114, 41, '50%', 0, NOW(), NOW()),
+(115, 41, '70%', 0, NOW(), NOW()),
+(116, 41, '100%', 0, NOW(), NOW());
+
+-- 당도 조절
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(117, 48, '무가당', 0, NOW(), NOW()),
+(118, 48, '30%', 0, NOW(), NOW()),
+(119, 48, '50%', 0, NOW(), NOW()),
+(120, 48, '70%', 0, NOW(), NOW()),
+(121, 48, '100%', 0, NOW(), NOW()),
+
+(122, 50, '무가당', 0, NOW(), NOW()),
+(123, 50, '30%', 0, NOW(), NOW()),
+(124, 50, '50%', 0, NOW(), NOW()),
+(125, 50, '70%', 0, NOW(), NOW()),
+(126, 50, '100%', 0, NOW(), NOW()),
+
+(127, 52, '무가당', 0, NOW(), NOW()),
+(128, 52, '30%', 0, NOW(), NOW()),
+(129, 52, '50%', 0, NOW(), NOW()),
+(130, 52, '70%', 0, NOW(), NOW()),
+(131, 52, '100%', 0, NOW(), NOW()),
+
+(132, 54, '무가당', 0, NOW(), NOW()),
+(133, 54, '30%', 0, NOW(), NOW()),
+(134, 54, '50%', 0, NOW(), NOW()),
+(135, 54, '70%', 0, NOW(), NOW()),
+(136, 54, '100%', 0, NOW(), NOW()),
+
+(137, 56, '무가당', 0, NOW(), NOW()),
+(138, 56, '30%', 0, NOW(), NOW()),
+(139, 56, '50%', 0, NOW(), NOW()),
+(140, 56, '70%', 0, NOW(), NOW()),
+(141, 56, '100%', 0, NOW(), NOW()),
+
+(142, 58, '무가당', 0, NOW(), NOW()),
+(143, 58, '30%', 0, NOW(), NOW()),
+(144, 58, '50%', 0, NOW(), NOW()),
+(145, 58, '70%', 0, NOW(), NOW()),
+(146, 58, '100%', 0, NOW(), NOW()),
+
+(147, 60, '무가당', 0, NOW(), NOW()),
+(148, 60, '30%', 0, NOW(), NOW()),
+(149, 60, '50%', 0, NOW(), NOW()),
+(150, 60, '70%', 0, NOW(), NOW()),
+(151, 60, '100%', 0, NOW(), NOW()),
+
+(152, 65, '무가당', 0, NOW(), NOW()),
+(153, 65, '30%', 0, NOW(), NOW()),
+(154, 65, '50%', 0, NOW(), NOW()),
+(155, 65, '70%', 0, NOW(), NOW()),
+(156, 65, '100%', 0, NOW(), NOW()),
+
+(157, 69, '무가당', 0, NOW(), NOW()),
+(158, 69, '30%', 0, NOW(), NOW()),
+(159, 69, '50%', 0, NOW(), NOW()),
+(160, 69, '70%', 0, NOW(), NOW()),
+(161, 69, '100%', 0, NOW(), NOW());
+
+-- 얼음 선택
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(162, 49, '없음', 0, NOW(), NOW()),
+(163, 49, '적게', 0, NOW(), NOW()),
+(164, 49, '보통', 0, NOW(), NOW()),
+(165, 49, '많이', 0, NOW(), NOW()),
+
+(166, 51, '없음', 0, NOW(), NOW()),
+(167, 51, '적게', 0, NOW(), NOW()),
+(168, 51, '보통', 0, NOW(), NOW()),
+(169, 51, '많이', 0, NOW(), NOW()),
+
+(170, 57, '없음', 0, NOW(), NOW()),
+(171, 57, '적게', 0, NOW(), NOW()),
+(172, 57, '보통', 0, NOW(), NOW()),
+(173, 57, '많이', 0, NOW(), NOW()),
+
+(174, 61, '없음', 0, NOW(), NOW()),
+(175, 61, '적게', 0, NOW(), NOW()),
+(176, 61, '보통', 0, NOW(), NOW()),
+(177, 61, '많이', 0, NOW(), NOW()),
+
+(178, 64, '없음', 0, NOW(), NOW()),
+(179, 64, '적게', 0, NOW(), NOW()),
+(180, 64, '보통', 0, NOW(), NOW()),
+(181, 64, '많이', 0, NOW(), NOW()),
+
+(182, 68, '없음', 0, NOW(), NOW()),
+(183, 68, '적게', 0, NOW(), NOW()),
+(184, 68, '보통', 0, NOW(), NOW()),
+(185, 68, '많이', 0, NOW(), NOW()),
+
+(186, 76, '없음', 0, NOW(), NOW()),
+(187, 76, '적게', 0, NOW(), NOW()),
+(188, 76, '보통', 0, NOW(), NOW()),
+(189, 76, '많이', 0, NOW(), NOW());
+
+-- 탄산 강도 조절
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(190, 53, '약하게', 0, NOW(), NOW()),
+(191, 53, '보통', 0, NOW(), NOW()),
+(192, 53, '강하게', 0, NOW(), NOW()),
+
+(193, 55, '약하게', 0, NOW(), NOW()),
+(194, 55, '보통', 0, NOW(), NOW()),
+(195, 55, '강하게', 0, NOW(), NOW()),
+
+(196, 59, '약하게', 0, NOW(), NOW()),
+(197, 59, '보통', 0, NOW(), NOW()),
+(198, 59, '강하게', 0, NOW(), NOW());
+
+-- 우유 선택
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(199, 62, '일반 우유', 0, NOW(), NOW()),
+(200, 62, '저지방 우유', 500, NOW(), NOW()),
+(201, 62, '오트 밀크', 700, NOW(), NOW()),
+
+(202, 66, '일반 우유', 0, NOW(), NOW()),
+(203, 66, '저지방 우유', 500, NOW(), NOW()),
+(204, 66, '오트 밀크', 700, NOW(), NOW()),
+
+(205, 70, '일반 우유', 0, NOW(), NOW()),
+(206, 70, '저지방 우유', 500, NOW(), NOW()),
+(207, 70, '오트 밀크', 700, NOW(), NOW()),
+
+(208, 72, '일반 우유', 0, NOW(), NOW()),
+(209, 72, '저지방 우유', 500, NOW(), NOW()),
+(210, 72, '오트 밀크', 700, NOW(), NOW());
+
+-- 시럽 조절
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(211, 63, '시럽 없음', 0, NOW(), NOW()),
+(212, 63, '기본 시럽', 0, NOW(), NOW()),
+(213, 63, '시럽 추가', 500, NOW(), NOW()),
+
+(214, 67, '시럽 없음', 0, NOW(), NOW()),
+(215, 67, '기본 시럽', 0, NOW(), NOW()),
+(216, 67, '시럽 추가', 500, NOW(), NOW()),
+
+(217, 73, '시럽 없음', 0, NOW(), NOW()),
+(218, 73, '기본 시럽', 0, NOW(), NOW()),
+(219, 73, '시럽 추가', 500, NOW(), NOW());
+
+-- 휘핑 추가
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(220, 71, '휘핑 없음', 0, NOW(), NOW()),
+(221, 71, '휘핑 추가', 500, NOW(), NOW()),
+
+(222, 74, '휘핑 없음', 0, NOW(), NOW()),
+(223, 74, '휘핑 추가', 500, NOW(), NOW()),
+
+(224, 77, '휘핑 없음', 0, NOW(), NOW()),
+(225, 77, '휘핑 추가', 500, NOW(), NOW());
+
+-- 과육 추가
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(226, 78, '과육 추가 안 함', 0, NOW(), NOW()),
+(227, 78, '망고 과육 추가', 1000, NOW(), NOW()),
+(228, 78, '딸기 과육 추가', 1000, NOW(), NOW()),
+
+(229, 82, '과육 추가 안 함', 0, NOW(), NOW()),
+(230, 82, '망고 과육 추가', 1000, NOW(), NOW()),
+(231, 82, '딸기 과육 추가', 1000, NOW(), NOW()),
+
+(232, 90, '과육 추가 안 함', 0, NOW(), NOW()),
+(233, 90, '망고 과육 추가', 1000, NOW(), NOW()),
+(234, 90, '딸기 과육 추가', 1000, NOW(), NOW()),
+
+(235, 96, '과육 추가 안 함', 0, NOW(), NOW()),
+(236, 96, '망고 과육 추가', 1000, NOW(), NOW()),
+(237, 96, '딸기 과육 추가', 1000, NOW(), NOW()),
+
+(238, 100, '과육 추가 안 함', 0, NOW(), NOW()),
+(239, 100, '망고 과육 추가', 1000, NOW(), NOW()),
+(240, 100, '딸기 과육 추가', 1000, NOW(), NOW()),
+
+(241, 109, '과육 추가 안 함', 0, NOW(), NOW()),
+(242, 109, '망고 과육 추가', 1000, NOW(), NOW()),
+(243, 109, '딸기 과육 추가', 1000, NOW(), NOW()),
+
+(244, 112, '과육 추가 안 함', 0, NOW(), NOW()),
+(245, 112, '망고 과육 추가', 1000, NOW(), NOW()),
+(246, 112, '딸기 과육 추가', 1000, NOW(), NOW()),
+
+(247, 117, '과육 추가 안 함', 0, NOW(), NOW()),
+(248, 117, '망고 과육 추가', 1000, NOW(), NOW()),
+(249, 117, '딸기 과육 추가', 1000, NOW(), NOW());
+
+-- 얼음 선택
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(250, 79, '얼음 없음', 0, NOW(), NOW()),
+(251, 79, '조금', 0, NOW(), NOW()),
+(252, 79, '보통', 0, NOW(), NOW()),
+(253, 79, '많이', 0, NOW(), NOW()),
+
+(254, 86, '얼음 없음', 0, NOW(), NOW()),
+(255, 86, '조금', 0, NOW(), NOW()),
+(256, 86, '보통', 0, NOW(), NOW()),
+(257, 86, '많이', 0, NOW(), NOW()),
+
+(258, 91, '얼음 없음', 0, NOW(), NOW()),
+(259, 91, '조금', 0, NOW(), NOW()),
+(260, 91, '보통', 0, NOW(), NOW()),
+(261, 91, '많이', 0, NOW(), NOW()),
+
+(262, 98, '얼음 없음', 0, NOW(), NOW()),
+(263, 98, '조금', 0, NOW(), NOW()),
+(264, 98, '보통', 0, NOW(), NOW()),
+(265, 98, '많이', 0, NOW(), NOW()),
+
+(266, 104, '얼음 없음', 0, NOW(), NOW()),
+(267, 104, '조금', 0, NOW(), NOW()),
+(268, 104, '보통', 0, NOW(), NOW()),
+(269, 104, '많이', 0, NOW(), NOW()),
+
+(270, 113, '얼음 없음', 0, NOW(), NOW()),
+(271, 113, '조금', 0, NOW(), NOW()),
+(272, 113, '보통', 0, NOW(), NOW()),
+(273, 113, '많이', 0, NOW(), NOW());
+
+-- 휘핑 추가
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(274, 80, '휘핑 없음', 0, NOW(), NOW()),
+(275, 80, '휘핑 추가', 500, NOW(), NOW()),
+
+(276, 85, '휘핑 없음', 0, NOW(), NOW()),
+(277, 85, '휘핑 추가', 500, NOW(), NOW()),
+
+(278, 89, '휘핑 없음', 0, NOW(), NOW()),
+(279, 89, '휘핑 추가', 500, NOW(), NOW()),
+
+(280, 93, '휘핑 없음', 0, NOW(), NOW()),
+(281, 93, '휘핑 추가', 500, NOW(), NOW()),
+
+(282, 95, '휘핑 없음', 0, NOW(), NOW()),
+(283, 95, '휘핑 추가', 500, NOW(), NOW()),
+
+(284, 99, '휘핑 없음', 0, NOW(), NOW()),
+(285, 99, '휘핑 추가', 500, NOW(), NOW()),
+
+(286, 103, '휘핑 없음', 0, NOW(), NOW()),
+(287, 103, '휘핑 추가', 500, NOW(), NOW()),
+
+(288, 107, '휘핑 없음', 0, NOW(), NOW()),
+(289, 107, '휘핑 추가', 500, NOW(), NOW()),
+
+(290, 111, '휘핑 없음', 0, NOW(), NOW()),
+(291, 111, '휘핑 추가', 500, NOW(), NOW()),
+
+(292, 115, '휘핑 없음', 0, NOW(), NOW()),
+(293, 115, '휘핑 추가', 500, NOW(), NOW());
+
+-- 시럽 조절
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(294, 81, '시럽 없음', 0, NOW(), NOW()),
+(295, 81, '시럽 반만', 0, NOW(), NOW()),
+(296, 81, '시럽 보통', 0, NOW(), NOW()),
+(297, 81, '시럽 많이', 0, NOW(), NOW()),
+
+(298, 92, '시럽 없음', 0, NOW(), NOW()),
+(299, 92, '시럽 반만', 0, NOW(), NOW()),
+(300, 92, '시럽 보통', 0, NOW(), NOW()),
+(301, 92, '시럽 많이', 0, NOW(), NOW()),
+
+(302, 101, '시럽 없음', 0, NOW(), NOW()),
+(303, 101, '시럽 반만', 0, NOW(), NOW()),
+(304, 101, '시럽 보통', 0, NOW(), NOW()),
+(305, 101, '시럽 많이', 0, NOW(), NOW()),
+
+(306, 106, '시럽 없음', 0, NOW(), NOW()),
+(307, 106, '시럽 반만', 0, NOW(), NOW()),
+(308, 106, '시럽 보통', 0, NOW(), NOW()),
+(309, 106, '시럽 많이', 0, NOW(), NOW()),
+
+(310, 114, '시럽 없음', 0, NOW(), NOW()),
+(311, 114, '시럽 반만', 0, NOW(), NOW()),
+(312, 114, '시럽 보통', 0, NOW(), NOW()),
+(313, 114, '시럽 많이', 0, NOW(), NOW());
+
+-- 당도 조절
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(314, 83, '무가당', 0, NOW(), NOW()),
+(315, 83, '30% 당도', 0, NOW(), NOW()),
+(316, 83, '50% 당도', 0, NOW(), NOW()),
+(317, 83, '100% 당도', 0, NOW(), NOW()),
+
+(318, 87, '무가당', 0, NOW(), NOW()),
+(319, 87, '30% 당도', 0, NOW(), NOW()),
+(320, 87, '50% 당도', 0, NOW(), NOW()),
+(321, 87, '100% 당도', 0, NOW(), NOW()),
+
+(322, 97, '무가당', 0, NOW(), NOW()),
+(323, 97, '30% 당도', 0, NOW(), NOW()),
+(324, 97, '50% 당도', 0, NOW(), NOW()),
+(325, 97, '100% 당도', 0, NOW(), NOW()),
+
+(326, 105, '무가당', 0, NOW(), NOW()),
+(327, 105, '30% 당도', 0, NOW(), NOW()),
+(328, 105, '50% 당도', 0, NOW(), NOW()),
+(329, 105, '100% 당도', 0, NOW(), NOW()),
+
+(330, 110, '무가당', 0, NOW(), NOW()),
+(331, 110, '30% 당도', 0, NOW(), NOW()),
+(332, 110, '50% 당도', 0, NOW(), NOW()),
+(333, 110, '100% 당도', 0, NOW(), NOW());
+
+-- 샷 추가
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(334, 84, '샷 없음', 0, NOW(), NOW()),
+(335, 84, '1샷 추가', 500, NOW(), NOW()),
+(336, 84, '2샷 추가', 1000, NOW(), NOW()),
+
+(337, 88, '샷 없음', 0, NOW(), NOW()),
+(338, 88, '1샷 추가', 500, NOW(), NOW()),
+(339, 88, '2샷 추가', 1000, NOW(), NOW()),
+
+(340, 94, '샷 없음', 0, NOW(), NOW()),
+(341, 94, '1샷 추가', 500, NOW(), NOW()),
+(342, 94, '2샷 추가', 1000, NOW(), NOW()),
+
+(343, 102, '샷 없음', 0, NOW(), NOW()),
+(344, 102, '1샷 추가', 500, NOW(), NOW()),
+(345, 102, '2샷 추가', 1000, NOW(), NOW()),
+
+(346, 108, '샷 없음', 0, NOW(), NOW()),
+(347, 108, '1샷 추가', 500, NOW(), NOW()),
+(348, 108, '2샷 추가', 1000, NOW(), NOW()),
+
+(349, 116, '샷 없음', 0, NOW(), NOW()),
+(350, 116, '1샷 추가', 500, NOW(), NOW()),
+(351, 116, '2샷 추가', 1000, NOW(), NOW());
+
+-- option_group_id: 158~197의 옵션 항목 (id: 464~)
+
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(464, 158, '샷 추가 안함', 0, NOW(), NOW()),
+(465, 158, '1샷 추가', 500, NOW(), NOW()),
+(466, 158, '2샷 추가', 1000, NOW(), NOW()),
+
+(467, 159, '일반 우유', 0, NOW(), NOW()),
+(468, 159, '저지방 우유', 0, NOW(), NOW()),
+(469, 159, '무지방 우유', 0, NOW(), NOW()),
+(470, 159, '두유', 500, NOW(), NOW()),
+
+(471, 160, '휘핑 없음', 0, NOW(), NOW()),
+(472, 160, '휘핑 추가', 300, NOW(), NOW()),
+
+(473, 161, '시럽 없음', 0, NOW(), NOW()),
+(474, 161, '바닐라 시럽', 300, NOW(), NOW()),
+(475, 161, '카라멜 시럽', 300, NOW(), NOW()),
+(476, 161, '헤이즐넛 시럽', 300, NOW(), NOW()),
+
+(477, 162, '당도 0%', 0, NOW(), NOW()),
+(478, 162, '당도 50%', 0, NOW(), NOW()),
+(479, 162, '당도 100%', 0, NOW(), NOW()),
+
+(480, 163, '얼음 없음', 0, NOW(), NOW()),
+(481, 163, '얼음 적게', 0, NOW(), NOW()),
+(482, 163, '얼음 보통', 0, NOW(), NOW()),
+(483, 163, '얼음 많게', 0, NOW(), NOW()),
+
+(484, 164, '샷 추가 안함', 0, NOW(), NOW()),
+(485, 164, '1샷 추가', 500, NOW(), NOW()),
+(486, 164, '2샷 추가', 1000, NOW(), NOW()),
+
+(487, 165, '휘핑 없음', 0, NOW(), NOW()),
+(488, 165, '휘핑 추가', 300, NOW(), NOW()),
+
+(489, 166, '시럽 없음', 0, NOW(), NOW()),
+(490, 166, '바닐라 시럽', 300, NOW(), NOW()),
+(491, 166, '카라멜 시럽', 300, NOW(), NOW()),
+(492, 166, '헤이즐넛 시럽', 300, NOW(), NOW()),
+
+(493, 167, '일반 우유', 0, NOW(), NOW()),
+(494, 167, '저지방 우유', 0, NOW(), NOW()),
+(495, 167, '무지방 우유', 0, NOW(), NOW()),
+(496, 167, '두유', 500, NOW(), NOW()),
+
+(497, 168, '당도 0%', 0, NOW(), NOW()),
+(498, 168, '당도 50%', 0, NOW(), NOW()),
+(499, 168, '당도 100%', 0, NOW(), NOW()),
+
+(500, 169, '샷 추가 안함', 0, NOW(), NOW()),
+(501, 169, '1샷 추가', 500, NOW(), NOW()),
+(502, 169, '2샷 추가', 1000, NOW(), NOW());
+
+-- option_group_id: 170~197의 옵션 항목 (id: 503~)
+
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(503, 170, '얼음 없음', 0, NOW(), NOW()),
+(504, 170, '얼음 적게', 0, NOW(), NOW()),
+(505, 170, '얼음 보통', 0, NOW(), NOW()),
+(506, 170, '얼음 많게', 0, NOW(), NOW()),
+
+(507, 171, '휘핑 없음', 0, NOW(), NOW()),
+(508, 171, '휘핑 추가', 300, NOW(), NOW()),
+
+(509, 172, '시럽 없음', 0, NOW(), NOW()),
+(510, 172, '바닐라 시럽', 300, NOW(), NOW()),
+(511, 172, '카라멜 시럽', 300, NOW(), NOW()),
+(512, 172, '헤이즐넛 시럽', 300, NOW(), NOW()),
+
+(513, 173, '일반 우유', 0, NOW(), NOW()),
+(514, 173, '저지방 우유', 0, NOW(), NOW()),
+(515, 173, '무지방 우유', 0, NOW(), NOW()),
+(516, 173, '두유', 500, NOW(), NOW()),
+
+(517, 174, '당도 0%', 0, NOW(), NOW()),
+(518, 174, '당도 50%', 0, NOW(), NOW()),
+(519, 174, '당도 100%', 0, NOW(), NOW()),
+
+(520, 175, '샷 추가 안함', 0, NOW(), NOW()),
+(521, 175, '1샷 추가', 500, NOW(), NOW()),
+(522, 175, '2샷 추가', 1000, NOW(), NOW()),
+
+(523, 176, '얼음 없음', 0, NOW(), NOW()),
+(524, 176, '얼음 적게', 0, NOW(), NOW()),
+(525, 176, '얼음 보통', 0, NOW(), NOW()),
+(526, 176, '얼음 많게', 0, NOW(), NOW()),
+
+(527, 177, '휘핑 없음', 0, NOW(), NOW()),
+(528, 177, '휘핑 추가', 300, NOW(), NOW()),
+
+(529, 178, '시럽 없음', 0, NOW(), NOW()),
+(530, 178, '바닐라 시럽', 300, NOW(), NOW()),
+(531, 178, '카라멜 시럽', 300, NOW(), NOW()),
+(532, 178, '헤이즐넛 시럽', 300, NOW(), NOW()),
+
+(533, 179, '샷 추가 안함', 0, NOW(), NOW()),
+(534, 179, '1샷 추가', 500, NOW(), NOW()),
+(535, 179, '2샷 추가', 1000, NOW(), NOW()),
+
+(536, 180, '일반 우유', 0, NOW(), NOW()),
+(537, 180, '저지방 우유', 0, NOW(), NOW()),
+(538, 180, '무지방 우유', 0, NOW(), NOW()),
+(539, 180, '두유', 500, NOW(), NOW()),
+
+(540, 181, '당도 0%', 0, NOW(), NOW()),
+(541, 181, '당도 50%', 0, NOW(), NOW()),
+(542, 181, '당도 100%', 0, NOW(), NOW()),
+
+(543, 182, '휘핑 없음', 0, NOW(), NOW()),
+(544, 182, '휘핑 추가', 300, NOW(), NOW()),
+
+(545, 183, '얼음 없음', 0, NOW(), NOW()),
+(546, 183, '얼음 적게', 0, NOW(), NOW()),
+(547, 183, '얼음 보통', 0, NOW(), NOW()),
+(548, 183, '얼음 많게', 0, NOW(), NOW()),
+
+(549, 184, '샷 추가 안함', 0, NOW(), NOW()),
+(550, 184, '1샷 추가', 500, NOW(), NOW()),
+(551, 184, '2샷 추가', 1000, NOW(), NOW()),
+
+(552, 185, '시럽 없음', 0, NOW(), NOW()),
+(553, 185, '바닐라 시럽', 300, NOW(), NOW()),
+(554, 185, '카라멜 시럽', 300, NOW(), NOW()),
+(555, 185, '헤이즐넛 시럽', 300, NOW(), NOW()),
+
+(556, 186, '일반 우유', 0, NOW(), NOW()),
+(557, 186, '저지방 우유', 0, NOW(), NOW()),
+(558, 186, '무지방 우유', 0, NOW(), NOW()),
+(559, 186, '두유', 500, NOW(), NOW()),
+
+(560, 187, '휘핑 없음', 0, NOW(), NOW()),
+(561, 187, '휘핑 추가', 300, NOW(), NOW()),
+
+(562, 188, '당도 0%', 0, NOW(), NOW()),
+(563, 188, '당도 50%', 0, NOW(), NOW()),
+(564, 188, '당도 100%', 0, NOW(), NOW()),
+
+(565, 189, '샷 추가 안함', 0, NOW(), NOW()),
+(566, 189, '1샷 추가', 500, NOW(), NOW()),
+(567, 189, '2샷 추가', 1000, NOW(), NOW()),
+
+(568, 190, '얼음 없음', 0, NOW(), NOW()),
+(569, 190, '얼음 적게', 0, NOW(), NOW()),
+(570, 190, '얼음 보통', 0, NOW(), NOW()),
+(571, 190, '얼음 많게', 0, NOW(), NOW()),
+
+(572, 191, '일반 우유', 0, NOW(), NOW()),
+(573, 191, '저지방 우유', 0, NOW(), NOW()),
+(574, 191, '무지방 우유', 0, NOW(), NOW()),
+(575, 191, '두유', 500, NOW(), NOW()),
+
+(576, 192, '휘핑 없음', 0, NOW(), NOW()),
+(577, 192, '휘핑 추가', 300, NOW(), NOW()),
+
+(578, 193, '시럽 없음', 0, NOW(), NOW()),
+(579, 193, '바닐라 시럽', 300, NOW(), NOW()),
+(580, 193, '카라멜 시럽', 300, NOW(), NOW()),
+(581, 193, '헤이즐넛 시럽', 300, NOW(), NOW()),
+
+(582, 194, '당도 0%', 0, NOW(), NOW()),
+(583, 194, '당도 50%', 0, NOW(), NOW()),
+(584, 194, '당도 100%', 0, NOW(), NOW()),
+
+(585, 195, '샷 추가 안함', 0, NOW(), NOW()),
+(586, 195, '1샷 추가', 500, NOW(), NOW()),
+(587, 195, '2샷 추가', 1000, NOW(), NOW()),
+
+(588, 196, '일반 우유', 0, NOW(), NOW()),
+(589, 196, '저지방 우유', 0, NOW(), NOW()),
+(590, 196, '무지방 우유', 0, NOW(), NOW()),
+(591, 196, '두유', 500, NOW(), NOW()),
+
+(592, 197, '시럽 없음', 0, NOW(), NOW()),
+(593, 197, '바닐라 시럽', 300, NOW(), NOW()),
+(594, 197, '카라멜 시럽', 300, NOW(), NOW()),
+(595, 197, '헤이즐넛 시럽', 300, NOW(), NOW());
+
+-- option_group_id: 198 (샷 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(596, 198, '샷 추가 안함', 0, NOW(), NOW()),
+(597, 198, '1샷 추가', 500, NOW(), NOW()),
+(598, 198, '2샷 추가', 1000, NOW(), NOW());
+
+-- option_group_id: 199 (휘핑 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(599, 199, '휘핑 제외', 0, NOW(), NOW()),
+(600, 199, '휘핑 추가', 300, NOW(), NOW());
+
+-- option_group_id: 200 (얼음 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(601, 200, '얼음 없음', 0, NOW(), NOW()),
+(602, 200, '얼음 적게', 0, NOW(), NOW()),
+(603, 200, '얼음 보통', 0, NOW(), NOW()),
+(604, 200, '얼음 많이', 0, NOW(), NOW());
+
+-- option_group_id: 201 (시럽 조절)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(605, 201, '시럽 없음', 0, NOW(), NOW()),
+(606, 201, '시럽 적게', 0, NOW(), NOW()),
+(607, 201, '시럽 보통', 0, NOW(), NOW()),
+(608, 201, '시럽 많이', 0, NOW(), NOW());
+
+-- option_group_id: 202 (우유 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(609, 202, '일반 우유', 0, NOW(), NOW()),
+(610, 202, '저지방 우유', 0, NOW(), NOW()),
+(611, 202, '무지방 우유', 0, NOW(), NOW()),
+(612, 202, '두유', 500, NOW(), NOW());
+
+-- option_group_id: 203 (샷 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(613, 203, '샷 추가 안함', 0, NOW(), NOW()),
+(614, 203, '1샷 추가', 500, NOW(), NOW()),
+(615, 203, '2샷 추가', 1000, NOW(), NOW());
+
+-- option_group_id: 204 (과육 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(616, 204, '과육 없음', 0, NOW(), NOW()),
+(617, 204, '과육 추가', 700, NOW(), NOW());
+
+-- option_group_id: 205 (휘핑 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(618, 205, '휘핑 제외', 0, NOW(), NOW()),
+(619, 205, '휘핑 추가', 300, NOW(), NOW());
+
+-- option_group_id: 206 (얼음 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(620, 206, '얼음 없음', 0, NOW(), NOW()),
+(621, 206, '얼음 적게', 0, NOW(), NOW()),
+(622, 206, '얼음 보통', 0, NOW(), NOW()),
+(623, 206, '얼음 많이', 0, NOW(), NOW());
+
+-- option_group_id: 207 (당도 조절)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(624, 207, '무가당', 0, NOW(), NOW()),
+(625, 207, '30% 당도', 0, NOW(), NOW()),
+(626, 207, '50% 당도', 0, NOW(), NOW()),
+(627, 207, '70% 당도', 0, NOW(), NOW()),
+(628, 207, '100% 당도', 0, NOW(), NOW());
+
+-- option_group_id: 208 (시럽 조절)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(629, 208, '시럽 없음', 0, NOW(), NOW()),
+(630, 208, '시럽 적게', 0, NOW(), NOW()),
+(631, 208, '시럽 보통', 0, NOW(), NOW()),
+(632, 208, '시럽 많이', 0, NOW(), NOW());
+
+-- option_group_id: 209 (휘핑 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(633, 209, '휘핑 제외', 0, NOW(), NOW()),
+(634, 209, '휘핑 추가', 300, NOW(), NOW());
+
+-- option_group_id: 210 (샷 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(635, 210, '샷 추가 안함', 0, NOW(), NOW()),
+(636, 210, '1샷 추가', 500, NOW(), NOW()),
+(637, 210, '2샷 추가', 1000, NOW(), NOW());
+
+-- option_group_id: 211 (우유 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(638, 211, '일반 우유', 0, NOW(), NOW()),
+(639, 211, '저지방 우유', 0, NOW(), NOW()),
+(640, 211, '무지방 우유', 0, NOW(), NOW()),
+(641, 211, '두유', 500, NOW(), NOW());
+
+-- option_group_id: 212 (얼음 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(642, 212, '얼음 없음', 0, NOW(), NOW()),
+(643, 212, '얼음 적게', 0, NOW(), NOW()),
+(644, 212, '얼음 보통', 0, NOW(), NOW()),
+(645, 212, '얼음 많이', 0, NOW(), NOW());
+
+-- option_group_id: 213 (당도 조절)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(646, 213, '무가당', 0, NOW(), NOW()),
+(647, 213, '30% 당도', 0, NOW(), NOW()),
+(648, 213, '50% 당도', 0, NOW(), NOW()),
+(649, 213, '70% 당도', 0, NOW(), NOW()),
+(650, 213, '100% 당도', 0, NOW(), NOW());
+
+-- option_group_id: 214 (과육 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(651, 214, '과육 없음', 0, NOW(), NOW()),
+(652, 214, '과육 추가', 700, NOW(), NOW());
+
+-- option_group_id: 215 (시럽 조절)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(653, 215, '시럽 없음', 0, NOW(), NOW()),
+(654, 215, '시럽 적게', 0, NOW(), NOW()),
+(655, 215, '시럽 보통', 0, NOW(), NOW()),
+(656, 215, '시럽 많이', 0, NOW(), NOW());
+
+-- option_group_id: 216 (휘핑 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(657, 216, '휘핑 제외', 0, NOW(), NOW()),
+(658, 216, '휘핑 추가', 300, NOW(), NOW());
+
+-- option_group_id: 217 (얼음 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(659, 217, '얼음 없음', 0, NOW(), NOW()),
+(660, 217, '얼음 적게', 0, NOW(), NOW()),
+(661, 217, '얼음 보통', 0, NOW(), NOW()),
+(662, 217, '얼음 많이', 0, NOW(), NOW());
+
+-- option_group_id: 218 (샷 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(663, 218, '샷 추가 안함', 0, NOW(), NOW()),
+(664, 218, '1샷 추가', 500, NOW(), NOW()),
+(665, 218, '2샷 추가', 1000, NOW(), NOW());
+
+-- option_group_id: 219 (우유 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(666, 219, '일반 우유', 0, NOW(), NOW()),
+(667, 219, '저지방 우유', 0, NOW(), NOW()),
+(668, 219, '무지방 우유', 0, NOW(), NOW()),
+(669, 219, '두유', 500, NOW(), NOW());
+
+-- option_group_id: 220 (시럽 조절)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(670, 220, '시럽 없음', 0, NOW(), NOW()),
+(671, 220, '시럽 적게', 0, NOW(), NOW()),
+(672, 220, '시럽 보통', 0, NOW(), NOW()),
+(673, 220, '시럽 많이', 0, NOW(), NOW());
+
+-- option_group_id: 221 (휘핑 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(674, 221, '휘핑 제외', 0, NOW(), NOW()),
+(675, 221, '휘핑 추가', 300, NOW(), NOW());
+
+-- option_group_id: 222 (얼음 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(676, 222, '얼음 없음', 0, NOW(), NOW()),
+(677, 222, '얼음 적게', 0, NOW(), NOW()),
+(678, 222, '얼음 보통', 0, NOW(), NOW()),
+(679, 222, '얼음 많이', 0, NOW(), NOW());
+
+-- option_group_id: 223 (과육 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(680, 223, '과육 없음', 0, NOW(), NOW()),
+(681, 223, '과육 추가', 700, NOW(), NOW());
+
+-- option_group_id: 224 (우유 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(682, 224, '일반 우유', 0, NOW(), NOW()),
+(683, 224, '저지방 우유', 0, NOW(), NOW()),
+(684, 224, '무지방 우유', 0, NOW(), NOW()),
+(685, 224, '두유', 500, NOW(), NOW());
+
+-- option_group_id: 225 (당도 조절)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(686, 225, '무가당', 0, NOW(), NOW()),
+(687, 225, '30% 당도', 0, NOW(), NOW()),
+(688, 225, '50% 당도', 0, NOW(), NOW()),
+(689, 225, '70% 당도', 0, NOW(), NOW()),
+(690, 225, '100% 당도', 0, NOW(), NOW());
+
+-- option_group_id: 226 (휘핑 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(691, 226, '휘핑 제외', 0, NOW(), NOW()),
+(692, 226, '휘핑 추가', 300, NOW(), NOW());
+
+-- option_group_id: 227 (샷 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(693, 227, '샷 추가 안함', 0, NOW(), NOW()),
+(694, 227, '1샷 추가', 500, NOW(), NOW()),
+(695, 227, '2샷 추가', 1000, NOW(), NOW());
+
+-- option_group_id: 228 (시럽 조절)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(696, 228, '시럽 없음', 0, NOW(), NOW()),
+(697, 228, '시럽 적게', 0, NOW(), NOW()),
+(698, 228, '시럽 보통', 0, NOW(), NOW()),
+(699, 228, '시럽 많이', 0, NOW(), NOW());
+
+-- option_group_id: 229 (얼음 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(700, 229, '얼음 없음', 0, NOW(), NOW()),
+(701, 229, '얼음 적게', 0, NOW(), NOW()),
+(702, 229, '얼음 보통', 0, NOW(), NOW()),
+(703, 229, '얼음 많이', 0, NOW(), NOW());
+
+-- option_group_id: 230 (과육 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(704, 230, '과육 없음', 0, NOW(), NOW()),
+(705, 230, '과육 추가', 700, NOW(), NOW());
+
+-- option_group_id: 231 (당도 조절)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(706, 231, '무가당', 0, NOW(), NOW()),
+(707, 231, '30% 당도', 0, NOW(), NOW()),
+(708, 231, '50% 당도', 0, NOW(), NOW()),
+(709, 231, '70% 당도', 0, NOW(), NOW()),
+(710, 231, '100% 당도', 0, NOW(), NOW());
+
+-- option_group_id: 232 (휘핑 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(711, 232, '휘핑 제외', 0, NOW(), NOW()),
+(712, 232, '휘핑 추가', 300, NOW(), NOW());
+
+-- option_group_id: 233 (샷 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(713, 233, '샷 추가 안함', 0, NOW(), NOW()),
+(714, 233, '1샷 추가', 500, NOW(), NOW()),
+(715, 233, '2샷 추가', 1000, NOW(), NOW());
+
+-- option_group_id: 234 (우유 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(716, 234, '일반 우유', 0, NOW(), NOW()),
+(717, 234, '저지방 우유', 0, NOW(), NOW()),
+(718, 234, '무지방 우유', 0, NOW(), NOW()),
+(719, 234, '두유', 500, NOW(), NOW());
+
+-- option_group_id: 235 (얼음 선택)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(720, 235, '얼음 없음', 0, NOW(), NOW()),
+(721, 235, '얼음 적게', 0, NOW(), NOW()),
+(722, 235, '얼음 보통', 0, NOW(), NOW()),
+(723, 235, '얼음 많이', 0, NOW(), NOW());
+
+-- option_group_id: 236 (과육 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(724, 236, '과육 없음', 0, NOW(), NOW()),
+(725, 236, '과육 추가', 700, NOW(), NOW());
+
+-- option_group_id: 237 (휘핑 추가)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(726, 237, '휘핑 제외', 0, NOW(), NOW()),
+(727, 237, '휘핑 추가', 300, NOW(), NOW());
+
+-- 디카페인 커피/스무디/프라페 옵션 (product_id: 121~140)
+
+-- 샷 추가 (product_id: 121)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(728, 238, '샷 추가 안함', 0, NOW(), NOW()),
+(729, 238, '1샷 추가', 500, NOW(), NOW()),
+(730, 238, '2샷 추가', 1000, NOW(), NOW());
+
+-- 휘핑 추가 (product_id: 121)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(731, 239, '휘핑 추가 안함', 0, NOW(), NOW()),
+(732, 239, '휘핑 추가', 300, NOW(), NOW());
+
+-- 얼음 선택 (product_id: 122)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(733, 240, '얼음 안함', 0, NOW(), NOW()),
+(734, 240, '얼음 추가', 0, NOW(), NOW());
+
+-- 우유 선택 (product_id: 122)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(735, 241, '우유 선택 안함', 0, NOW(), NOW()),
+(736, 241, '저지방 우유', 0, NOW(), NOW()),
+(737, 241, '아몬드 우유', 200, NOW(), NOW()),
+(738, 241, '두유', 200, NOW(), NOW());
+
+-- 과육 추가 (product_id: 123)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(739, 242, '과육 없음', 0, NOW(), NOW()),
+(740, 242, '과육 추가', 700, NOW(), NOW());
+
+-- 시럽 조절 (product_id: 123)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(741, 243, '시럽 없음', 0, NOW(), NOW()),
+(742, 243, '시럽 추가', 300, NOW(), NOW());
+
+-- 샷 추가 (product_id: 124)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(743, 244, '샷 추가 안함', 0, NOW(), NOW()),
+(744, 244, '1샷 추가', 500, NOW(), NOW()),
+(745, 244, '2샷 추가', 1000, NOW(), NOW());
+
+-- 시나몬 선택 (product_id: 124)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(746, 245, '시나몬 없음', 0, NOW(), NOW()),
+(747, 245, '시나몬 추가', 200, NOW(), NOW());
+
+-- 휘핑 추가 (product_id: 125)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(748, 246, '휘핑 추가 안함', 0, NOW(), NOW()),
+(749, 246, '휘핑 추가', 300, NOW(), NOW());
+
+-- 당도 조절 (product_id: 125)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(750, 247, '당도 없음', 0, NOW(), NOW()),
+(751, 247, '당도 낮음', 0, NOW(), NOW()),
+(752, 247, '당도 중간', 0, NOW(), NOW()),
+(753, 247, '당도 높음', 0, NOW(), NOW());
+
+-- 우유 선택 (product_id: 126)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(754, 248, '우유 선택 안함', 0, NOW(), NOW()),
+(755, 248, '저지방 우유', 0, NOW(), NOW()),
+(756, 248, '아몬드 우유', 200, NOW(), NOW()),
+(757, 248, '두유', 200, NOW(), NOW());
+
+-- 샷 추가 (product_id: 126)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(758, 249, '샷 추가 안함', 0, NOW(), NOW()),
+(759, 249, '1샷 추가', 500, NOW(), NOW()),
+(760, 249, '2샷 추가', 1000, NOW(), NOW());
+
+-- 얼음 선택 (product_id: 127)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(761, 250, '얼음 안함', 0, NOW(), NOW()),
+(762, 250, '얼음 추가', 0, NOW(), NOW());
+
+-- 휘핑 추가 (product_id: 127)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(763, 251, '휘핑 추가 안함', 0, NOW(), NOW()),
+(764, 251, '휘핑 추가', 300, NOW(), NOW());
+
+-- 과육 추가 (product_id: 128)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(765, 252, '과육 없음', 0, NOW(), NOW()),
+(766, 252, '과육 추가', 700, NOW(), NOW());
+
+-- 시럽 조절 (product_id: 128)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(767, 253, '시럽 없음', 0, NOW(), NOW()),
+(768, 253, '시럽 추가', 300, NOW(), NOW());
+
+-- 우유 선택 (product_id: 129)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(769, 254, '우유 선택 안함', 0, NOW(), NOW()),
+(770, 254, '저지방 우유', 0, NOW(), NOW()),
+(771, 254, '아몬드 우유', 200, NOW(), NOW()),
+(772, 254, '두유', 200, NOW(), NOW());
+
+-- 당도 조절 (product_id: 129)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(773, 255, '당도 없음', 0, NOW(), NOW()),
+(774, 255, '당도 낮음', 0, NOW(), NOW()),
+(775, 255, '당도 중간', 0, NOW(), NOW()),
+(776, 255, '당도 높음', 0, NOW(), NOW());
+
+-- 샷 추가 (product_id: 130)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(777, 256, '샷 추가 안함', 0, NOW(), NOW()),
+(778, 256, '1샷 추가', 500, NOW(), NOW()),
+(779, 256, '2샷 추가', 1000, NOW(), NOW());
+
+-- 휘핑 추가 (product_id: 130)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(780, 257, '휘핑 추가 안함', 0, NOW(), NOW()),
+(781, 257, '휘핑 추가', 300, NOW(), NOW());
+
+-- 얼음 선택 (product_id: 131)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(782, 258, '얼음 안함', 0, NOW(), NOW()),
+(783, 258, '얼음 추가', 0, NOW(), NOW());
+
+-- 시럽 조절 (product_id: 131)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(784, 259, '시럽 없음', 0, NOW(), NOW()),
+(785, 259, '시럽 추가', 300, NOW(), NOW());
+
+-- 우유 선택 (product_id: 132)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(786, 260, '우유 선택 안함', 0, NOW(), NOW()),
+(787, 260, '저지방 우유', 0, NOW(), NOW()),
+(788, 260, '아몬드 우유', 200, NOW(), NOW()),
+(789, 260, '두유', 200, NOW(), NOW());
+
+-- 샷 추가 (product_id: 132)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(790, 261, '샷 추가 안함', 0, NOW(), NOW()),
+(791, 261, '1샷 추가', 500, NOW(), NOW()),
+(792, 261, '2샷 추가', 1000, NOW(), NOW());
+
+-- 디카페인 커피/스무디/프라페 옵션 (product_id: 121~140)
+
+-- 샷 추가 (product_id: 121)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(793, 262, '샷 추가 안함', 0, NOW(), NOW()),
+(794, 262, '1샷 추가', 500, NOW(), NOW()),
+(795, 262, '2샷 추가', 1000, NOW(), NOW());
+
+-- 휘핑 추가 (product_id: 121)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(796, 263, '휘핑 추가 안함', 0, NOW(), NOW()),
+(797, 263, '휘핑 추가', 300, NOW(), NOW());
+
+-- 얼음 선택 (product_id: 122)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(798, 264, '얼음 안함', 0, NOW(), NOW()),
+(799, 264, '얼음 추가', 0, NOW(), NOW());
+
+-- 우유 선택 (product_id: 122)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(800, 265, '우유 선택 안함', 0, NOW(), NOW()),
+(801, 265, '저지방 우유', 0, NOW(), NOW()),
+(802, 265, '아몬드 우유', 200, NOW(), NOW()),
+(803, 265, '두유', 200, NOW(), NOW());
+
+-- 과육 추가 (product_id: 123)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(804, 266, '과육 없음', 0, NOW(), NOW()),
+(805, 266, '과육 추가', 700, NOW(), NOW());
+
+-- 시럽 조절 (product_id: 123)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(806, 267, '시럽 없음', 0, NOW(), NOW()),
+(807, 267, '시럽 추가', 300, NOW(), NOW());
+
+-- 샷 추가 (product_id: 124)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(808, 268, '샷 추가 안함', 0, NOW(), NOW()),
+(809, 268, '1샷 추가', 500, NOW(), NOW()),
+(810, 268, '2샷 추가', 1000, NOW(), NOW());
+
+-- 시나몬 선택 (product_id: 124)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(811, 269, '시나몬 없음', 0, NOW(), NOW()),
+(812, 269, '시나몬 추가', 200, NOW(), NOW());
+
+-- 휘핑 추가 (product_id: 125)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(813, 270, '휘핑 추가 안함', 0, NOW(), NOW()),
+(814, 270, '휘핑 추가', 300, NOW(), NOW());
+
+-- 당도 조절 (product_id: 125)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(815, 271, '당도 없음', 0, NOW(), NOW()),
+(816, 271, '당도 낮음', 0, NOW(), NOW()),
+(817, 271, '당도 중간', 0, NOW(), NOW());
+
+-- 과육 추가 (product_id: 138)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(818, 272, '과육 없음', 0, NOW(), NOW()),
+(819, 272, '과육 추가', 700, NOW(), NOW());
+
+-- 휘핑 추가 (product_id: 138)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(820, 273, '휘핑 추가 안함', 0, NOW(), NOW()),
+(821, 273, '휘핑 추가', 300, NOW(), NOW());
+
+-- 우유 선택 (product_id: 139)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(822, 274, '우유 선택 안함', 0, NOW(), NOW()),
+(823, 274, '저지방 우유', 0, NOW(), NOW()),
+(824, 274, '아몬드 우유', 200, NOW(), NOW()),
+(825, 274, '두유', 200, NOW(), NOW());
+
+-- 샷 추가 (product_id: 139)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(826, 275, '샷 추가 안함', 0, NOW(), NOW()),
+(827, 275, '1샷 추가', 500, NOW(), NOW()),
+(828, 275, '2샷 추가', 1000, NOW(), NOW());
+
+-- 얼음 선택 (product_id: 140)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(829, 276, '얼음 안함', 0, NOW(), NOW()),
+(830, 276, '얼음 추가', 0, NOW(), NOW());
+
+-- 시럽 조절 (product_id: 140)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(831, 277, '시럽 없음', 0, NOW(), NOW()),
+(832, 277, '시럽 추가', 300, NOW(), NOW());
+
+-- 샷 추가 (product_id: 141)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(833, 278, '샷 추가 안함', 0, NOW(), NOW()),
+(834, 278, '1샷 추가', 500, NOW(), NOW()),
+(835, 278, '2샷 추가', 1000, NOW(), NOW());
+
+-- 휘핑 추가 (product_id: 141)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(836, 279, '휘핑 추가 안함', 0, NOW(), NOW()),
+(837, 279, '휘핑 추가', 300, NOW(), NOW());
+
+-- 우유 선택 (product_id: 142)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(838, 280, '우유 선택 안함', 0, NOW(), NOW()),
+(839, 280, '저지방 우유', 0, NOW(), NOW()),
+(840, 280, '아몬드 우유', 200, NOW(), NOW()),
+(841, 280, '두유', 200, NOW(), NOW());
+
+-- 시럽 조절 (product_id: 142)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(842, 281, '시럽 없음', 0, NOW(), NOW()),
+(843, 281, '시럽 추가', 300, NOW(), NOW());
+
+-- 당도 조절 (product_id: 143)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(844, 282, '당도 없음', 0, NOW(), NOW()),
+(845, 282, '당도 추가', 300, NOW(), NOW());
+
+-- 얼음 선택 (product_id: 143)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(846, 283, '얼음 안함', 0, NOW(), NOW()),
+(847, 283, '얼음 추가', 0, NOW(), NOW());
+
+-- 휘핑 추가 (product_id: 144)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(848, 284, '휘핑 추가 안함', 0, NOW(), NOW()),
+(849, 284, '휘핑 추가', 300, NOW(), NOW());
+
+-- 샷 추가 (product_id: 144)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(850, 285, '샷 추가 안함', 0, NOW(), NOW()),
+(851, 285, '1샷 추가', 500, NOW(), NOW()),
+(852, 285, '2샷 추가', 1000, NOW(), NOW());
+
+-- 우유 선택 (product_id: 145)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(853, 286, '우유 선택 안함', 0, NOW(), NOW()),
+(854, 286, '저지방 우유', 0, NOW(), NOW()),
+(855, 286, '아몬드 우유', 200, NOW(), NOW()),
+(856, 286, '두유', 200, NOW(), NOW());
+
+-- 시럽 조절 (product_id: 145)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(857, 287, '시럽 없음', 0, NOW(), NOW()),
+(858, 287, '시럽 추가', 300, NOW(), NOW());
+
+-- 과육 추가 (product_id: 146)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(859, 288, '과육 없음', 0, NOW(), NOW()),
+(860, 288, '과육 추가', 700, NOW(), NOW());
+
+-- 얼음 선택 (product_id: 146)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(861, 289, '얼음 안함', 0, NOW(), NOW()),
+(862, 289, '얼음 추가', 0, NOW(), NOW());
+
+-- 휘핑 추가 (product_id: 147)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(863, 290, '휘핑 추가 안함', 0, NOW(), NOW()),
+(864, 290, '휘핑 추가', 300, NOW(), NOW());
+
+-- 샷 추가 (product_id: 147)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(865, 291, '샷 추가 안함', 0, NOW(), NOW()),
+(866, 291, '1샷 추가', 500, NOW(), NOW()),
+(867, 291, '2샷 추가', 1000, NOW(), NOW());
+
+-- 우유 선택 (product_id: 148)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(868, 292, '우유 선택 안함', 0, NOW(), NOW()),
+(869, 292, '저지방 우유', 0, NOW(), NOW()),
+(870, 292, '아몬드 우유', 200, NOW(), NOW()),
+(871, 292, '두유', 200, NOW(), NOW());
+
+-- 시럽 조절 (product_id: 148)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(872, 293, '시럽 없음', 0, NOW(), NOW()),
+(873, 293, '시럽 추가', 300, NOW(), NOW());
+
+-- 샷 추가 (product_id: 149)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(874, 294, '샷 추가 안함', 0, NOW(), NOW()),
+(875, 294, '1샷 추가', 500, NOW(), NOW()),
+(876, 294, '2샷 추가', 1000, NOW(), NOW());
+
+-- 휘핑 추가 (product_id: 149)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(877, 295, '휘핑 추가 안함', 0, NOW(), NOW()),
+(878, 295, '휘핑 추가', 300, NOW(), NOW());
+
+-- 과육 추가 (product_id: 150)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(879, 296, '과육 없음', 0, NOW(), NOW()),
+(880, 296, '과육 추가', 700, NOW(), NOW());
+
+-- 얼음 선택 (product_id: 150)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
+(881, 297, '얼음 안함', 0, NOW(), NOW()),
+(882, 297, '얼음 추가', 0, NOW(), NOW());
