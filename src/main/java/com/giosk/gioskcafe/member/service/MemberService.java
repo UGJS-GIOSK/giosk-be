@@ -60,7 +60,7 @@ public class MemberService {
                     .orElseThrow(() -> new NoSuchElementException("존재하지 않는 회원 정보입니다."));
 
             int stampCount = countDrinkOrderProduct(request.getCart());
-            member.revokeStampAndCoupon(stampCount);
+            member.revokeStamp(stampCount);
         }
     }
 

@@ -33,7 +33,11 @@ public class Member extends BaseEntity {
         alterCoupon();
     }
 
-    public void revokeStampAndCoupon(int stamp) {
+    public void revokeCoupon() {
+        this.coupon += 1;
+    }
+
+    public void revokeStamp(int stamp) {
         alterStamp();
         this.stamp -= stamp;
         alterCoupon();

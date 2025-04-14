@@ -100,10 +100,15 @@ public class PaymentService {
         payment.changeStatus(PaymentStatus.CANCELED);
 
         Order order = payment.getOrder();
+        if (order.isCoupon()) {
+            Member member = order.getMember();
+            member.revokeCoupon();
+            return true;
+        }
         if (order.isStamp()) {
             Member member = order.getMember();
             int cancelStamp = order.countStamp();
-            member.revokeStampAndCoupon(cancelStamp);
+            member.revokeStamp(cancelStamp);
         }
 
         return true;
