@@ -14,7 +14,7 @@ public interface PaymentRepository extends JpaRepository<Payment, Long> {
     @Query("SELECT p FROM Payment p WHERE p.order.member IS NOT NULL")
     List<Payment> findPaymentsWithMember();
 
-    @Query("SELECT p FROM Payment p WHERE p.order.member IS NULL")
+    @Query("SELECT p FROM Payment p WHERE p.order.coupon IS FALSE AND p.order.stamp IS FALSE")
     List<Payment> findPaymentsWithoutMember();
 
 }
