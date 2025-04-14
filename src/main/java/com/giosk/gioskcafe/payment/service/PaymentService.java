@@ -110,6 +110,7 @@ public class PaymentService {
             member.revokeCoupon();
             return true;
         }
+
         if (order.isStamp()) {
             Member member = order.getMember();
             int cancelStamp = order.countStamp();

@@ -40,6 +40,9 @@ public class Member extends BaseEntity {
     public void revokeStamp(int stamp) {
         alterStamp();
         this.stamp -= stamp;
+        if (stamp < 0) {
+            this.stamp = 0;
+        }
         alterCoupon();
     }
 
