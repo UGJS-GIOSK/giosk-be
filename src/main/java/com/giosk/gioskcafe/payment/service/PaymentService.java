@@ -90,7 +90,7 @@ public class PaymentService {
         HttpEntity<Map<String, Object>> httpEntity = new HttpEntity<>(requestBody, headers);
 
         ResponseEntity<PaymentResponse> result = restTemplate.exchange(cancelUrl, HttpMethod.POST, httpEntity, PaymentResponse.class);
-        if (result.getStatusCode().value() != HttpStatus.BAD_REQUEST.value()) {
+        if (result.getStatusCode().value() != HttpStatus.OK.value()) {
             throw new HttpClientErrorException(result.getStatusCode());
         }
 
