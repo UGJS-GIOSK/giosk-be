@@ -116,7 +116,7 @@ public class PaymentService {
     }
 
     public List<MemberPaymentResponse> getMemberPaymentResponses() {
-        List<Payment> payments = paymentRepository.findAll();
+        List<Payment> payments = paymentRepository.findPaymentsWithMember();
 
         return payments.stream()
                 .map(payment -> MemberPaymentResponse.from(payment))
@@ -124,7 +124,7 @@ public class PaymentService {
     }
 
     public List<NonMemberPaymentResponse> getNonMemberPaymentResponses() {
-        List<Payment> payments = paymentRepository.findAll();
+        List<Payment> payments = paymentRepository.findPaymentsWithoutMember();
 
         return payments.stream()
                 .map(payment -> NonMemberPaymentResponse.from(payment))
