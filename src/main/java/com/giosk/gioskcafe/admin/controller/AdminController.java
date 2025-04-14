@@ -3,7 +3,8 @@ package com.giosk.gioskcafe.admin.controller;
 import com.giosk.gioskcafe.admin.dto.CancelPaymentRequest;
 import com.giosk.gioskcafe.admin.dto.LoginRequest;
 import com.giosk.gioskcafe.common.ApiResponse;
-import com.giosk.gioskcafe.payment.dto.AdminPaymentResponse;
+import com.giosk.gioskcafe.payment.dto.MemberPaymentResponse;
+import com.giosk.gioskcafe.payment.dto.NonMemberPaymentResponse;
 import com.giosk.gioskcafe.payment.service.PaymentService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -40,10 +41,20 @@ public class AdminController {
         return ApiResponse.error(HttpStatus.FORBIDDEN, "권한이 없습니다.");
     }
 
-    @GetMapping("/payments")
-    public ApiResponse<List<AdminPaymentResponse>> getAdminPaymentResponses(HttpSession session) {
+    @GetMapping("/payments/members")
+    public ApiResponse<List<MemberPaymentResponse>> getMemberPaymentResponses(HttpSession session) {
         if (isAdmin(session)) {
-            List<AdminPaymentResponse> response = paymentService.getAdminPaymentResponses();
+            List<MemberPaymentResponse> response = paymentService.getMemberPaymentResponses();
+            return ApiResponse.success(response);
+        }
+
+        return ApiResponse.error(HttpStatus.FORBIDDEN, "권한이 없습니다.");
+    }
+
+    @GetMapping("/payments/non-members")
+    public ApiResponse<List<NonMemberPaymentResponse>> getNonMemberPaymentResponses(HttpSession session) {
+        if (isAdmin(session)) {
+            List<NonMemberPaymentResponse> response = paymentService.getNonMemberPaymentResponses();
             return ApiResponse.success(response);
         }
 
@@ -55,8 +66,8 @@ public class AdminController {
         if (isAdmin(session)) {
             try {
                 if (paymentService.requestCancel(request)) {
-                    AdminPaymentResponse adminPaymentResponse = paymentService.getAdminPaymentResponse(request.getPaymentKey());
-                    return ApiResponse.success(adminPaymentResponse);
+                    MemberPaymentResponse memberPaymentResponse = paymentService.getAdminPaymentResponse(request.getPaymentKey());
+                    return ApiResponse.success(memberPaymentResponse);
                 }
             } catch (HttpClientErrorException ex) {
                 return ApiResponse.error(HttpStatus.valueOf(ex.getStatusCode().value()), ex.getResponseBodyAsString());

@@ -1,6 +1,6 @@
 package com.giosk.gioskcafe.payment.dto;
 
-import com.giosk.gioskcafe.order.dto.OrderResponse;
+import com.giosk.gioskcafe.order.dto.MemberOrderResponse;
 import com.giosk.gioskcafe.payment.domain.Payment;
 import com.giosk.gioskcafe.payment.domain.PaymentStatus;
 import lombok.Builder;
@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Builder
-public class AdminPaymentResponse {
+public class MemberPaymentResponse {
 
     private Long id;
     private String paymentKey;
@@ -18,17 +18,17 @@ public class AdminPaymentResponse {
     private LocalDateTime requestedAt;
     private LocalDateTime approvedAt;
     private int totalAmount;
-    private OrderResponse orderResponse;
+    private MemberOrderResponse memberOrderResponse;
 
-    public static AdminPaymentResponse from(Payment payment) {
-        return AdminPaymentResponse.builder()
+    public static MemberPaymentResponse from(Payment payment) {
+        return MemberPaymentResponse.builder()
                 .id(payment.getId())
                 .paymentKey(payment.getPaymentKey())
                 .status(payment.getStatus())
                 .requestedAt(payment.getRequestedAt())
                 .approvedAt(payment.getApprovedAt())
                 .totalAmount(payment.getAmount())
-                .orderResponse(OrderResponse.from(payment.getOrder()))
+                .memberOrderResponse(MemberOrderResponse.from(payment.getOrder()))
                 .build();
     }
 }

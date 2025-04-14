@@ -6,8 +6,9 @@ import com.giosk.gioskcafe.order.domain.Order;
 import com.giosk.gioskcafe.order.service.OrderService;
 import com.giosk.gioskcafe.payment.domain.Payment;
 import com.giosk.gioskcafe.payment.domain.PaymentStatus;
-import com.giosk.gioskcafe.payment.dto.AdminPaymentResponse;
+import com.giosk.gioskcafe.payment.dto.MemberPaymentResponse;
 import com.giosk.gioskcafe.payment.dto.ConfirmPaymentRequest;
+import com.giosk.gioskcafe.payment.dto.NonMemberPaymentResponse;
 import com.giosk.gioskcafe.payment.dto.PaymentResponse;
 import com.giosk.gioskcafe.payment.repository.PaymentRepository;
 import lombok.RequiredArgsConstructor;
@@ -114,11 +115,19 @@ public class PaymentService {
         return true;
     }
 
-    public List<AdminPaymentResponse> getAdminPaymentResponses() {
+    public List<MemberPaymentResponse> getMemberPaymentResponses() {
         List<Payment> payments = paymentRepository.findAll();
 
         return payments.stream()
-                .map(payment -> AdminPaymentResponse.from(payment))
+                .map(payment -> MemberPaymentResponse.from(payment))
+                .toList();
+    }
+
+    public List<NonMemberPaymentResponse> getNonMemberPaymentResponses() {
+        List<Payment> payments = paymentRepository.findAll();
+
+        return payments.stream()
+                .map(payment -> NonMemberPaymentResponse.from(payment))
                 .toList();
     }
 
@@ -149,10 +158,10 @@ public class PaymentService {
         return "Basic " + encodedKey;
     }
 
-    public AdminPaymentResponse getAdminPaymentResponse(String paymentKey) {
+    public MemberPaymentResponse getAdminPaymentResponse(String paymentKey) {
         Payment payment = paymentRepository.findByPaymentKey(paymentKey)
                 .orElseThrow(() -> new NoSuchElementException("존재하지 않는 결제 정보입니다."));
 
-        return AdminPaymentResponse.from(payment);
+        return MemberPaymentResponse.from(payment);
     }
 }
