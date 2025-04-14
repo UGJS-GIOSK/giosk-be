@@ -84,15 +84,20 @@ public class PaymentService {
         String paymentKey = request.getPaymentKey();
         String cancelUrl = String.format(CANCEL_URL, paymentKey);
         String cancelReason = "결제 취소";
+        log.info("cancelUrl = {}", cancelUrl);
 
         HashMap<String, Object> requestBody = createRequestBody(cancelReason);
         HttpHeaders headers = createHttpHeader();
         HttpEntity<Map<String, Object>> httpEntity = new HttpEntity<>(requestBody, headers);
 
+        log.info("호출 전");
         ResponseEntity<PaymentResponse> result = restTemplate.exchange(cancelUrl, HttpMethod.POST, httpEntity, PaymentResponse.class);
-        if (result.getStatusCode().value() != HttpStatus.OK.value()) {
+
+        log.info("호출 후");
+        if (result.getBody().getStatus() != PaymentStatus.CANCELED) {
             throw new HttpClientErrorException(result.getStatusCode());
         }
+        log.info("조건 통과");
 
         PaymentResponse paymentResponse = result.getBody();
         Payment payment = paymentRepository.findByPaymentKey(paymentResponse.getPaymentKey())

@@ -45,7 +45,9 @@ public class PaymentController {
 
         try {
             paymentService.requestConfirm(request);
-            memberService.applyStampWithCouponRule(request);
+            if (request.isCoupon() || request.isStamp()) {
+                memberService.applyStampWithCouponRule(request);
+            }
         } catch (RestClientResponseException ex) {
             paymentService.requestCancel(request);
             memberService.revoke(request);

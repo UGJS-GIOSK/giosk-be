@@ -66,8 +66,7 @@ public class AdminController {
         if (isAdmin(session)) {
             try {
                 if (paymentService.requestCancel(request)) {
-                    MemberPaymentResponse memberPaymentResponse = paymentService.getAdminPaymentResponse(request.getPaymentKey());
-                    return ApiResponse.success(memberPaymentResponse);
+                    return ApiResponse.success(null);
                 }
             } catch (HttpClientErrorException ex) {
                 return ApiResponse.error(HttpStatus.valueOf(ex.getStatusCode().value()), ex.getResponseBodyAsString());
