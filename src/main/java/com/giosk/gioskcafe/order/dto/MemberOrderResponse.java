@@ -10,7 +10,7 @@ import java.util.List;
 
 @Data
 @Builder
-public class OrderResponse {
+public class MemberOrderResponse {
 
     private Long id;
     private MemberResponse memberResponse;
@@ -21,8 +21,8 @@ public class OrderResponse {
     private List<OrderProductResponse> orderProductResponses;
 
 
-    public static OrderResponse from(Order order) {
-        return OrderResponse.builder()
+    public static MemberOrderResponse from(Order order) {
+        return MemberOrderResponse.builder()
                 .id(order.getId())
                 .memberResponse(MemberResponse.from(order.getMember()))
                 .stamp(order.isStamp())
