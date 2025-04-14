@@ -48,13 +48,6 @@ public class OrderService {
                 .orderedAt(LocalDateTime.now())
                 .build();
 
-        if (request.isCoupon()) {
-            Long memberId = request.getMemberId();
-            Member member = memberRepository.findByMemberId(memberId)
-                    .orElseThrow(() -> new NoSuchElementException("존재하지 않는 회원 정보입니다."));
-            order.setMember(member);
-        }
-
         if (request.isStamp()) {
             Long memberId = request.getMemberId();
             Member member = memberRepository.findByMemberId(memberId)
