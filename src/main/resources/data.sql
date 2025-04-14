@@ -2,7 +2,7 @@ INSERT INTO product (
     id, name, price, category, status, image,
     description, allergens, volume_ml,
     calories, sodium_mg, proteing, saturated_fatg, sugarg, caffeine_mg,
-    created_at, updated_at
+    created_at, modified_at
 ) VALUES
 (0, '디카페인 아메리카노', 2500, 'DECAF', 'SELLING', 'image', '향과 풍미 그대로 카페인만을 낮춰 민감한 분들도 안심하고 매일매일 즐길 수 있는 디카페인 커피', NULL, '710ml', 9.5, 4.4, 0.5, 0.1, 0.0, 10.8, NOW(), NOW()),
 (1, '디카페인 꿀아메리카노', 3700, 'DECAF', 'SELLING', 'image', '디카페인 아메리카노의 묵직한 바디감에 달콤한 사양벌꿀이 소프트하게 어우러진 커피.', NULL, '710ml', 137.4, 5.0, 0.6, 0.1, 21.5, 8.7, NOW(), NOW()),
@@ -184,18 +184,6 @@ INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES 
 
 INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (18, 12, '얼음 선택', NOW(), NOW());
 INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (19, 12, '당도 조절', NOW(), NOW());
-
--- 디카페인 스무디/프라페류 (product_id: 13~25)
-INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (20, 13, '얼음 선택', NOW(), NOW());
-INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (21, 13, '과육 추가', NOW(), NOW());
-
-INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (22, 14, '얼음 선택', NOW(), NOW());
-INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (23, 14, '휘핑 추가', NOW(), NOW());
-INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (24, 14, '초코 시럽 조절', NOW(), NOW());
-
-INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (25, 15, '얼음 선택', NOW(), NOW());
-INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (26, 15, '휘핑 추가', NOW(), NOW());
-INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (27, 15, '초코 시럽 조절', NOW(), NOW());
 
 INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (28, 16, '얼음 선택', NOW(), NOW());
 INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES (29, 16, '당도 조절', NOW(), NOW());
@@ -611,8 +599,8 @@ INSERT INTO option_group (id, product_id, name, created_at, modified_at) VALUES 
 
 -- option --
 
--- 샷 추가 옵션 (id: 1 ~ 15, optionGroupId: 1 ~ 5)
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+-- 샷 추가 옵션 (id: 1 ~ 15, option_group_id: 1 ~ 5)
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (1, 1, '샷 추가 안함', 0, NOW(), NOW()),
 (2, 1, '1샷 추가', 500, NOW(), NOW()),
 (3, 1, '2샷 추가', 1000, NOW(), NOW()),
@@ -634,47 +622,32 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (15, 5, '2샷 추가', 1000, NOW(), NOW());
 
 -- 우유 선택 (option_group_id: 6, id: 16~19)
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (16, 6, '일반 우유', 0, NOW(), NOW()),
 (17, 6, '저지방 우유', 0, NOW(), NOW()),
 (18, 6, '무지방 우유', 0, NOW(), NOW()),
 (19, 6, '두유', 500, NOW(), NOW());
 
 -- 샷 추가 (option_group_id: 7, id: 20~22)
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (20, 7, '샷 추가 안함', 0, NOW(), NOW()),
 (21, 7, '1샷 추가', 500, NOW(), NOW()),
 (22, 7, '2샷 추가', 1000, NOW(), NOW());
 
 -- 바닐라 시럽 조절 (option_group_id: 8, id: 23~25)
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (23, 8, '시럽 없음', 0, NOW(), NOW()),
 (24, 8, '기본', 0, NOW(), NOW()),
 (25, 8, '시럽 추가', 300, NOW(), NOW());
 
 -- 샷 추가 (option_group_id: 9, id: 26~28)
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (26, 9, '샷 추가 안함', 0, NOW(), NOW()),
 (27, 9, '1샷 추가', 500, NOW(), NOW()),
 (28, 9, '2샷 추가', 1000, NOW(), NOW());
 
 -- 얼음 선택 옵션
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
-(29, 20, '얼음 없음', 0, NOW(), NOW()),
-(30, 20, '적게', 0, NOW(), NOW()),
-(31, 20, '기본', 0, NOW(), NOW()),
-(32, 20, '많이', 0, NOW(), NOW()),
-
-(33, 22, '얼음 없음', 0, NOW(), NOW()),
-(34, 22, '적게', 0, NOW(), NOW()),
-(35, 22, '기본', 0, NOW(), NOW()),
-(36, 22, '많이', 0, NOW(), NOW()),
-
-(37, 25, '얼음 없음', 0, NOW(), NOW()),
-(38, 25, '적게', 0, NOW(), NOW()),
-(39, 25, '기본', 0, NOW(), NOW()),
-(40, 25, '많이', 0, NOW(), NOW()),
-
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (41, 28, '얼음 없음', 0, NOW(), NOW()),
 (42, 28, '적게', 0, NOW(), NOW()),
 (43, 28, '기본', 0, NOW(), NOW()),
@@ -718,48 +691,10 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (73, 44, '얼음 없음', 0, NOW(), NOW()),
 (74, 44, '적게', 0, NOW(), NOW()),
 (75, 44, '기본', 0, NOW(), NOW()),
-(76, 44, '많이', 0, NOW(), NOW()),
-
-(77, 46, '얼음 없음', 0, NOW(), NOW()),
-(78, 46, '적게', 0, NOW(), NOW()),
-(79, 46, '기본', 0, NOW(), NOW()),
-(80, 46, '많이', 0, NOW(), NOW());
-
--- 과육 추가
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
-(81, 21, '딸기 과육 추가', 500, NOW(), NOW()),
-(82, 21, '망고 과육 추가', 500, NOW(), NOW()),
-
-(83, 35, '딸기 과육 추가', 500, NOW(), NOW()),
-(84, 35, '망고 과육 추가', 500, NOW(), NOW()),
-
-(85, 45, '딸기 과육 추가', 500, NOW(), NOW()),
-(86, 45, '망고 과육 추가', 500, NOW(), NOW());
-
--- 휘핑 추가
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
-(87, 23, '휘핑 추가', 300, NOW(), NOW()),
-(88, 26, '휘핑 추가', 300, NOW(), NOW()),
-(89, 31, '휘핑 추가', 300, NOW(), NOW()),
-(90, 33, '휘핑 추가', 300, NOW(), NOW()),
-(91, 39, '휘핑 추가', 300, NOW(), NOW()),
-(92, 43, '휘핑 추가', 300, NOW(), NOW()),
-(93, 47, '휘핑 추가', 300, NOW(), NOW());
-
--- 초코 시럽 조절
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
-(94, 24, '시럽 없음', 0, NOW(), NOW()),
-(95, 24, '적게', 0, NOW(), NOW()),
-(96, 24, '기본', 0, NOW(), NOW()),
-(97, 24, '많이', 0, NOW(), NOW()),
-
-(98, 27, '시럽 없음', 0, NOW(), NOW()),
-(99, 27, '적게', 0, NOW(), NOW()),
-(100, 27, '기본', 0, NOW(), NOW()),
-(101, 27, '많이', 0, NOW(), NOW());
+(76, 44, '많이', 0, NOW(), NOW());
 
 -- 당도 조절
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (102, 29, '무가당', 0, NOW(), NOW()),
 (103, 29, '30%', 0, NOW(), NOW()),
 (104, 29, '50%', 0, NOW(), NOW()),
@@ -779,7 +714,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (116, 41, '100%', 0, NOW(), NOW());
 
 -- 당도 조절
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (117, 48, '무가당', 0, NOW(), NOW()),
 (118, 48, '30%', 0, NOW(), NOW()),
 (119, 48, '50%', 0, NOW(), NOW()),
@@ -835,7 +770,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (161, 69, '100%', 0, NOW(), NOW());
 
 -- 얼음 선택
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (162, 49, '없음', 0, NOW(), NOW()),
 (163, 49, '적게', 0, NOW(), NOW()),
 (164, 49, '보통', 0, NOW(), NOW()),
@@ -872,7 +807,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (189, 76, '많이', 0, NOW(), NOW());
 
 -- 탄산 강도 조절
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (190, 53, '약하게', 0, NOW(), NOW()),
 (191, 53, '보통', 0, NOW(), NOW()),
 (192, 53, '강하게', 0, NOW(), NOW()),
@@ -886,7 +821,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (198, 59, '강하게', 0, NOW(), NOW());
 
 -- 우유 선택
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (199, 62, '일반 우유', 0, NOW(), NOW()),
 (200, 62, '저지방 우유', 500, NOW(), NOW()),
 (201, 62, '오트 밀크', 700, NOW(), NOW()),
@@ -904,7 +839,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (210, 72, '오트 밀크', 700, NOW(), NOW());
 
 -- 시럽 조절
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (211, 63, '시럽 없음', 0, NOW(), NOW()),
 (212, 63, '기본 시럽', 0, NOW(), NOW()),
 (213, 63, '시럽 추가', 500, NOW(), NOW()),
@@ -918,7 +853,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (219, 73, '시럽 추가', 500, NOW(), NOW());
 
 -- 휘핑 추가
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (220, 71, '휘핑 없음', 0, NOW(), NOW()),
 (221, 71, '휘핑 추가', 500, NOW(), NOW()),
 
@@ -929,7 +864,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (225, 77, '휘핑 추가', 500, NOW(), NOW());
 
 -- 과육 추가
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (226, 78, '과육 추가 안 함', 0, NOW(), NOW()),
 (227, 78, '망고 과육 추가', 1000, NOW(), NOW()),
 (228, 78, '딸기 과육 추가', 1000, NOW(), NOW()),
@@ -963,7 +898,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (249, 117, '딸기 과육 추가', 1000, NOW(), NOW());
 
 -- 얼음 선택
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (250, 79, '얼음 없음', 0, NOW(), NOW()),
 (251, 79, '조금', 0, NOW(), NOW()),
 (252, 79, '보통', 0, NOW(), NOW()),
@@ -995,7 +930,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (273, 113, '많이', 0, NOW(), NOW());
 
 -- 휘핑 추가
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (274, 80, '휘핑 없음', 0, NOW(), NOW()),
 (275, 80, '휘핑 추가', 500, NOW(), NOW()),
 
@@ -1027,7 +962,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (293, 115, '휘핑 추가', 500, NOW(), NOW());
 
 -- 시럽 조절
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (294, 81, '시럽 없음', 0, NOW(), NOW()),
 (295, 81, '시럽 반만', 0, NOW(), NOW()),
 (296, 81, '시럽 보통', 0, NOW(), NOW()),
@@ -1054,7 +989,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (313, 114, '시럽 많이', 0, NOW(), NOW());
 
 -- 당도 조절
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (314, 83, '무가당', 0, NOW(), NOW()),
 (315, 83, '30% 당도', 0, NOW(), NOW()),
 (316, 83, '50% 당도', 0, NOW(), NOW()),
@@ -1081,7 +1016,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (333, 110, '100% 당도', 0, NOW(), NOW());
 
 -- 샷 추가
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (334, 84, '샷 없음', 0, NOW(), NOW()),
 (335, 84, '1샷 추가', 500, NOW(), NOW()),
 (336, 84, '2샷 추가', 1000, NOW(), NOW()),
@@ -1107,7 +1042,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (351, 116, '2샷 추가', 1000, NOW(), NOW());
 
 -- 샷 추가 (그룹 ID: 118, 124, 132, 140, 145, 151)
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (352, 118, '샷 없음', 0, NOW(), NOW()),
 (353, 118, '1샷 추가', 500, NOW(), NOW()),
 (354, 118, '2샷 추가', 1000, NOW(), NOW()),
@@ -1133,7 +1068,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (369, 151, '2샷 추가', 1000, NOW(), NOW());
 
 -- 휘핑 추가
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (370, 119, '휘핑 제외', 0, NOW(), NOW()),
 (371, 119, '휘핑 추가', 300, NOW(), NOW()),
 
@@ -1156,7 +1091,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (383, 157, '휘핑 추가', 300, NOW(), NOW());
 
 -- 우유 선택
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (384, 120, '일반 우유', 0, NOW(), NOW()),
 (385, 120, '저지방 우유', 0, NOW(), NOW()),
 (386, 120, '두유 변경', 500, NOW(), NOW()),
@@ -1182,7 +1117,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (401, 154, '두유 변경', 500, NOW(), NOW());
 
 -- 시럽 조절
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (402, 121, '시럽 없음', 0, NOW(), NOW()),
 (403, 121, '1번 펌프', 0, NOW(), NOW()),
 (404, 121, '2번 펌프', 0, NOW(), NOW()),
@@ -1208,7 +1143,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (419, 153, '2번 펌프', 0, NOW(), NOW());
 
 -- 얼음 선택
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (420, 122, '얼음 없음', 0, NOW(), NOW()),
 (421, 122, '적게', 0, NOW(), NOW()),
 (422, 122, '보통', 0, NOW(), NOW()),
@@ -1235,7 +1170,7 @@ INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VAL
 (439, 155, '많이', 0, NOW(), NOW());
 
 -- 당도 조절
-INSERT INTO option (id, optionGroupId, name, price, created_at, modified_at) VALUES
+INSERT INTO option (id, option_group_id, name, price, created_at, modified_at) VALUES
 (440, 124, '무가당', 0, NOW(), NOW()),
 (441, 124, '30% 당도', 0, NOW(), NOW()),
 (442, 124, '50% 당도', 0, NOW(), NOW()),
